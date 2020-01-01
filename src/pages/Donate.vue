@@ -70,13 +70,15 @@
             <div class="max-w-lg px-2 py-8 my-2 mt-8 bg-white shadow rounded-xl md:p-8">
               <h2 class="mb-2 text-xl font-bold text-pink-900">Personal Info</h2>
               <div class="flex flex-wrap justify-between mb-4 -mx-2">
-                <input-group-with-star
+                <input-group
+                  required
                   v-model="form.firstName"
                   name="first name "
                   placeholder="John"
                   class="flex-1"
                 />
-                <input-group-with-star
+                <input-group
+                  required
                   v-model="form.lastName"
                   name="last name "
                   placeholder="Doe"
@@ -84,7 +86,8 @@
                 />
               </div>
               <div class="flex flex-wrap justify-between mb-4 -mx-2">
-                <input-group-with-star
+                <input-group
+                  required
                   v-model="form.email"
                   name="email "
                   type="email"
@@ -93,7 +96,8 @@
                 />
               </div>
               <div class="flex flex-wrap mb-4 -mx-2">
-                <input-group-with-star
+                <input-group
+                  required
                   v-model="form.address"
                   name="address "
                   placeholder="1234 Washington Avenue"
@@ -101,12 +105,13 @@
                 />
               </div>
               <div class="flex flex-wrap -mx-2">
-                <input-group-with-star v-model="form.city" name="city " class="flex-1" />
-                <input-group-with-star v-model="form.state" name="state " class="flex-1" />
-                <input-group-with-star v-model="form.zip" name="Zip/Postal Code " class="flex-1" />
+                <input-group required v-model="form.city" name="city " class="flex-1" />
+                <input-group required v-model="form.state" name="state " class="flex-1" />
+                <input-group required v-model="form.zip" name="Zip/Postal Code " class="flex-1" />
               </div>
               <div class="flex flex-wrap -mx-2">
-                <input-group-with-star
+                <input-group
+                  required
                   v-model="form.phone"
                   name="phone number "
                   type="tel"
@@ -194,7 +199,6 @@ import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons";
 import DonateOptions from "~/components/Donations/DonateOptions";
 import PaymentMethods from "~/components/Donations/PaymentMethods";
 import InputGroup from "~/components/InputGroup";
-import InputGroupWithStar from "~/components/InputGroupWithStar";
 import { loadScript } from "~/utils/loadScript";
 import {
   PAYMENT_METHODS,
@@ -222,7 +226,6 @@ export default {
     DonateOptionsButtons,
     DonateOptions,
     InputGroup,
-    InputGroupWithStar,
     PaymentMethods,
   },
   data() {
