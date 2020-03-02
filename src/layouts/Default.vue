@@ -2,7 +2,7 @@
 <template>
   <div id="app">
 
-    <header class="bg-gray-200 flex lg:h-20">
+    <header class="bg-gray-200 flex fixed left-0 right-0 lg:static lg:h-20">
       <div class="hidden lg:w-2/4 lg:inline-flex justify-center items-center">
         <a href="/" class="px-3 font-roboto text-sm font-semibold hover:text-purple-800 transition duration-100 ease-linear">Home</a>
         <a href="/volunteer" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">Volunteer</a>
@@ -27,12 +27,13 @@
       </div>
       
       
-      <div class="hidden">
-        <a href="/about" class="">About</a>
-        <a href="/endorsements" class="">Endorsments</a>
-        <!-- <a href="/news" class="">News & Press</a> -->
-        <a href="/volunteer" class="">Volunteer</a>
-      </div>
+       <div id="mySidenav" :class="{open: isActive}" class="sidenav" @click="isActive = !isActive">
+        <a href="/" class="mobile">Home</a>
+        <a href="/volunteer" class="mobile">Volunteer</a>
+        <a href="/contact" class="mobile">Contact</a>
+        <a href="/contact" class="mobile">News & Press</a>
+        <a href="/about" class="mobile">About</a>
+    </div>
     </header>
 
     <main class="main min-h-screen">
@@ -105,7 +106,7 @@ export default {
   },
   data() {
     return{
-    isActive: false
+    isActive: false,
     }
   },
   methods: {
@@ -118,8 +119,63 @@ export default {
 
 <style scoped>
 
+/* sidenav  */
+.sidenav{
+  display: inline;
+}
 
+.sidenav {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 60px;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+  font-family: 'source sans pro', sans-serif;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .open {
+  height: 40% !important;
+  background: #cbd5e0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .open {
+  height: 30% !important;
+  background: #cbd5e0;
+  }
+}
+.sidenav a {
+  width: 40%;
+  max-width: 150px;
+  position: relative;
+  padding: 5px 0 5px 0px;
+  border-bottom: 1px solid purple;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: purple;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #2c3e50;
+}
+.sidenav a:active {
+  color: #2c3e50;
+}
   
+/* hamburgur */
 .c-button {
   display: inline-block;
   text-decoration: none;
@@ -130,7 +186,6 @@ export default {
   background-color: transparent;
   cursor: pointer;
 }
-
 
 .p-hamburger {
   right: 1.3rem;
