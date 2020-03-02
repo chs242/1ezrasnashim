@@ -2,15 +2,17 @@
 <template>
   <div id="app">
 
-    <header class="bg-white flex lg:h-20">
-      <div class="hidden lg:inline-flex w-2/4 items-center">
-        <a href="/about" class="">About</a>
-        <a href="/endorsements" class="">Endorsments</a>
+    <header class="bg-gray-200 flex lg:h-20">
+      <div class="hidden lg:w-2/4 lg:inline-flex justify-center items-center">
+        <a href="/" class="px-3 font-roboto text-sm font-semibold hover:text-purple-800 transition duration-100 ease-linear">Home</a>
+        <a href="/volunteer" class="px-3 font-roboto text-sm font-semibold hover:text-purple-800 transition duration-100 ease-linear">Volunteer</a>
+        <a href="/contact" class="px-3 font-roboto text-sm font-semibold hover:text-purple-800 transition duration-100 ease-linear">Contact</a>
+        <a href="/contact" class="px-3 font-roboto text-sm font-semibold hover:text-purple-800 transition duration-100 ease-linear">News & Press</a>
+        <a href="/about" class="px-3 font-roboto text-sm font-semibold hover:text-purple-800 transition duration-100 ease-linear">About</a>
         <!-- <a href="/news" class="">News & Press</a> -->
-        <a href="/volunteer" class="">Volunteer</a>
       </div>
 
-      <div class="pl-6 lg:pl-0 lg:w-1/5">
+      <div class="pl-6 lg:pl-0 lg:w-1/5 lg:flex justify-center lg:pt-8 z-10">
         <Logo />
       </div>
       <div class="lg:hidden" :class="{ 'is-drawerActive': isActive }">
@@ -20,8 +22,8 @@
         </button>
       </div>
 
-      <div class="hidden lg:inline-block w-2/4">
-        <a href="/donate" class="text-purple-500 hover:text-white hover:bg-purple-500 border border-purple-500 text-xs font-semibold rounded-full px-4 py-1 leading-normal">Donate</a>
+      <div class="hidden lg:w-2/4 lg:inline-flex justify-center items-center">
+        <a href="/donate" class="font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-2xl">Donate</a>
       </div>
       
       
@@ -37,9 +39,43 @@
       <slot/>
     </main>
 
-    <footer class="footer mt-56">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
-      <span class="footer__links">Powered by <a href="//www.suits.at"> SUITS </a></span>
+    <footer class="footer bg-gray-200 mt-40 flex flex-col">
+      <div id="subscribe" class="shadow-2xl">
+        <div class="flex justify-center w-full px-6 text-center">
+          <h1 class="font-source text-2xl text-purple-800 font-semibold">Keep up with the latest happenings at Ezras Nashim</h1>
+        </div>
+        <div class="flex justify-center w-full mt-4">
+          <input type="text" placeholder="Your Email..." class="font-roboto text-base text-center font-light border-2 rounded-full w-4/5 py-1 leading-normal shadow-2xl">
+        </div>
+        <div class="flex justify-center w-full mt-4">
+          <button href="#" class="font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 rounded-full w-4/5 py-2 leading-normal shadow-2xl">Subscribe</button>
+        </div>
+      </div>
+      <div id="footer-end" class="mt-4">
+        <div class="flex flex-col text-center">
+          <div class="flex justify-center">
+            <img src="../assets/images/logo-footer.png" alt="Logo" class="w-16">
+          </div>
+          <p>Email: leah@ezrasnashim.org</p>
+          <p>Address: 1716 56th St. Brokklyn, NY 11204</p>
+        </div>
+        <div class="w-full flex mt-4">
+          <div class="w-1/2 flex flex-col text-center">
+            <p class="w-full font-roboto text-base font-medium">Service</p>
+            <a href="/about" class="w-full font-source text-md font-medium">Our Team</a>
+            <a href="/volunteer" class="w-full font-source text-md font-medium">Our Services</a>
+            <a href="/endorsements" class="w-full font-source text-md font-medium">Endorsments</a>
+            <a href="/endorsements" class="w-full font-source text-md font-medium">About Us</a>
+          </div>
+          <div class="w-1/2 flex flex-col text-center">
+            <p class="w-full font-roboto text-base font-medium">Popular</p>
+            <a href="/about" class="w-full font-source text-md font-medium">News & Press</a>
+            <a href="/volunteer" class="w-full font-source text-md font-medium">Volunterr</a>
+            <a href="/endorsements" class="w-full font-source text-md font-medium">Donate</a>
+            <a href="/endorsements" class="w-full font-source text-md font-medium">Contact Us</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
   </div>
