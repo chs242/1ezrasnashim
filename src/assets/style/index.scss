@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:500,700|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900&display=swap');
 
 @import 'reset';
 @import 'content-box';
@@ -11,7 +12,7 @@
 }
 
 body {
-  background-color: #F3F7F9;
+  // background-color: #F3F7F9;
   transition: color .6s, background-color .6s;
   margin:0;
   padding:0;
