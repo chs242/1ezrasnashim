@@ -2,7 +2,7 @@
     <Layout>
        <div id="banner-section" class="w-full mt-12 lg:mt-0">
            <div class="relative w-full">
-            <h1 class="banner-h1 text-white text-5xl lg:text-6xl font-source font-bold absolute leading-none px-12 md:px-32 lg:px-56">Bridging the gap for woman in emergency care.</h1>
+            <h1 class="banner-h1 text-white text-5xl md:text-6xl font-source font-bold lg:font-light absolute leading-none px-12 md:px-32 lg:mx-32 xl:mx-64"><span class="md:text-4xl font-light">Bridging the gap for woman in</span><br>Emergency Medical<br>Care</h1>
             <a href="/donate" class="banner-a absolute font-roboto text-xl font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 lg:px-20 py-2 lg:py-3 leading-normal shadow-md">Donate</a>
             <img src="../assets/images/banner-bg.jpg" class="banner-img h-screen lg:h-auto object-cover">
            </div>

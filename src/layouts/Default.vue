@@ -77,7 +77,7 @@ export default {
   width: 100%;
   position: fixed;
   z-index: 100;
-  top: 60px;
+  top: 64px;
   right: 0;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -98,6 +98,9 @@ export default {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .sidenav{
+    top: 5rem;
+  }
   .open {
   height: 30% !important;
   background: #cbd5e0;
