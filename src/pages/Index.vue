@@ -5,6 +5,7 @@
       </div>
       <div id="index-section-1" class="flex flex-col bg-gray-200 md:bg-white relative xl:flex-row-reverse">
           <div>
+            <img id="" src="../assets/images/squiggle.png" class="random-img hidden xl:inline xl:absolute xl:right-0">
             <IndexPhone />
           </div>
           <div class="">
@@ -46,4 +47,10 @@ export default {
 
 }
 </script>
+
+<style scoped>
+    .random-img{
+        filter: opacity(5%);
+    }
+</style>
 
