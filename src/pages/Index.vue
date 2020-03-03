@@ -1,27 +1,49 @@
 <template>
-    <Layout>
-       <div id="banner-section" class="w-full mt-12 lg:mt-0">
-           <div class="relative w-full">
-            <h1 class="banner-h1 text-white text-5xl md:text-6xl font-source font-bold lg:font-light absolute leading-none px-12 md:px-32 lg:mx-32 xl:mx-64"><span class="md:text-4xl font-light">Bridging the gap for woman in</span><br>Emergency Medical<br>Care</h1>
-            <a href="/donate" class="banner-a absolute font-roboto text-xl font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 lg:px-20 py-2 lg:py-3 leading-normal shadow-md">Donate</a>
-            <img src="../assets/images/banner-bg.jpg" class="banner-img h-screen lg:h-auto object-cover">
-           </div>
-       </div>
-        
-    </Layout>
+  <Layout>
+    <div id="index-section-banner" class="w-full mt-12 lg:mt-0">
+      <IndexBanner />
+      </div>
+      <div id="index-section-1" class="flex flex-col bg-gray-200 md:bg-white relative xl:flex-row-reverse">
+          <div>
+            <IndexPhone />
+          </div>
+          <div class="">
+            <IndexParagraph preTitle="Over the last fifty years, volunteer-based" title1="Emergency Medical" title2="Services" :description="descriptions[0]" path="/about" />
+          </div>
+          <div class="md:flex justify-center xl:pl-40">
+            <div class="xl:my-64">
+                <IndexCard icons="../assets/images/medical-kit-icon.png" title="Emergency Care" description="The motivation behind Ezras Nashim was to respond to Emergency labor and OB/GYN..." />
+            </div>
+            <div class="md:flex md:flex-row xl:flex xl:flex-col xl:pt-20">
+              <IndexCard icons="../assets/images/cpr-icon.png" title="CPR & AED Classes" description="Knowing how to save a life is a mitzvah we value and promote. Our EMTs and dispatchers..." />
+              <IndexCard icons="../assets/images/battery-icon.png" title="EMT Training" description="We are here to serve and educate the community. For women interested in..." />
+            </div>
+        </div>
+      </div>
+  </Layout>
 </template>
 
-<style scoped>
-  .banner-h1{
-      top:18%;
-  }
-  .banner-a{
-    top:60%;
-    left: 50%;
-  }
- @media (min-width: 768px) and (max-width: 1024px) {
-  .banner-img{
-      height: 50vh !important;
-  }
+<script>
+import IndexBanner from "~/components/IndexBanner"
+import IndexPhone from "~/components/IndexPhone"
+import IndexParagraph from "~/components/IndexParagraph"
+import IndexCard from "~/components/IndexCard"
+export default {
+    data(){
+        return{
+            descriptions:[
+                "(EMS) groups have grown to become renowned international organizations servicing Jewish communities world-wide; the care they provide is invaluable and unparalleled. We are deeply grateful to the men who volunteer their time and rely on their services for ourselves, family and friends. However, there is a significant void in first response medical services in the observant Jewish Community that we are prepared to fill: Dignified emergency care",
+            ],
+        }
+    },
+    components:{
+        IndexBanner,
+        IndexPhone,
+        IndexParagraph,
+        IndexCard
+    },
+    
+
 }
-</style>
+</script>
+
