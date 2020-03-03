@@ -92,7 +92,7 @@ export default {
 
 @media (min-width: 320px) and (max-width: 1024px) {
   .open {
-  height: 45% !important;
+  height: 20rem !important;
   background: #cbd5e0;
   }
 }
