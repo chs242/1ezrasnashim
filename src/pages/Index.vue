@@ -13,11 +13,11 @@
           </div>
           <div class="md:flex justify-center xl:pl-40">
             <div class="xl:my-64">
-                <IndexCard icons="../assets/images/medical-kit-icon.png" title="Emergency Care" description="The motivation behind Ezras Nashim was to respond to Emergency labor and OB/GYN..." />
+                <IndexCard :icon="require('../assets/images/medical-kit-icon.png')" title="Emergency Care" description="The motivation behind Ezras Nashim was to respond to Emergency labor and OB/GYN..." />
             </div>
             <div class="md:flex md:flex-row xl:flex xl:flex-col xl:pt-20">
-              <IndexCard icons="../assets/images/cpr-icon.png" title="CPR & AED Classes" description="Knowing how to save a life is a mitzvah we value and promote. Our EMTs and dispatchers..." />
-              <IndexCard icons="../assets/images/battery-icon.png" title="EMT Training" description="We are here to serve and educate the community. For women interested in..." />
+              <IndexCard :icon="require('../assets/images/cpr-icon.png')" title="CPR & AED Classes" description="Knowing how to save a life is a mitzvah we value and promote. Our EMTs and dispatchers..." />
+              <IndexCard :icon="require('../assets/images/battery-icon.png')" title="EMT Training" description="We are here to serve and educate the community. For women interested in..." />
             </div>
         </div>
       </div>
