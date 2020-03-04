@@ -5,14 +5,14 @@
             <img src="../assets/images/hands.jpg" class="img" />
         </figure>
     </div>
-    <div class="absolute mt-4 px-12 text-white text-center">
+    <div class="absolute mt-4 px-12 text-white text-right">
         <div class="flex flex-col items-center">
             <img src="../assets/images/join-2-icon.png" class="w-20 my-2" />
             <img src="../assets/images/join-icon.png" class="w-20 my-2" />
         </div>
         <h4 class="font-source text-sm font-light">Become a member of our amazing corps of volunteers</h4>
         <h1 class="mb-20 font-roboto text-4xl font-semibold">Join Ezras Nashim</h1>
-        <a href="/volunteer" class="font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-6 py-4 leading-normal shadow-md">Found Out More</a>
+        <a href="/volunteer" class="px-6 py-4 font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md">Found Out More</a>
 
     </div>
     </div>
