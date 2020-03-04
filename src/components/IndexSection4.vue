@@ -5,10 +5,10 @@
             <img src="../assets/images/hands.jpg" class="img" />
         </figure>
     </div>
-    <div class="absolute mt-4 px-12 text-white text-right">
-        <div class="flex flex-col items-center">
-            <img src="../assets/images/join-2-icon.png" class="w-20 my-2" />
-            <img src="../assets/images/join-icon.png" class="w-20 my-2" />
+    <div class="absolute mt-20 px-12 text-white text-right">
+        <div class="flex mb-6 justify-center">
+            <img src="../assets/images/join-2-icon.png" class="w-20 m-2" />
+            <img src="../assets/images/join-icon.png" class="w-20 m-2" />
         </div>
         <h4 class="font-source text-sm font-light">Become a member of our amazing corps of volunteers</h4>
         <h1 class="mb-20 font-roboto text-4xl font-semibold">Join Ezras Nashim</h1>
