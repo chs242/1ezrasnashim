@@ -1,13 +1,13 @@
 <template>
-    <div class="relative">
+    <div class="relative lg:flex lg:flex-col lg:items-center">
         <div class="w-full relative overflow-hidden">
-            <img src="../assets/images/ambulance.jpg" class="hidden ambulance-img object-cover">
+            <img src="../assets/images/ambulance.jpg" class="height-custom hidden lg:block ambulance-img object-cover">
         </div>
-        <div class="links-cont w-full flex flex-col items-center">
-            <a href="#"><img src="../assets/images/index-tab/movie-link.jpg" class="w-full px-2 my-4 rounded-xl"></a>
-            <a href="#"><img src="../assets/images/index-tab/news-link.jpg" class="w-full my-4 px-2 rounded-xl"></a>
-            <a href="#"><img src="../assets/images/index-tab/events-link.jpg" class="w-full my-4 px-2 rounded-xl"></a>
-            <a href="#"><img src="../assets/images/index-tab/courses-link.jpg" class="w-full my-4 px-2 rounded-xl"></a>
+        <div class="links-cont w-full flex flex-col items-center px-6 py-6 md:flex-row lg:justify-center lg:absolute top-0 bottom-0">
+            <a href="#"><img src="../assets/images/index-tab/movie-link.jpg" class="w-64 px-2 my-2 rounded-xl"></a>
+            <a href="#"><img src="../assets/images/index-tab/news-link.jpg" class="w-64 my-4 px-2 rounded-xl"></a>
+            <a href="#"><img src="../assets/images/index-tab/events-link.jpg" class="w-64 my-4 px-2 rounded-xl"></a>
+            <a href="#"><img src="../assets/images/index-tab/courses-link.jpg" class="w-64 my-4 px-2 rounded-xl"></a>
         </div>
     </div>
 </template>
@@ -17,4 +17,6 @@
     .ambulance-img{
         filter: opacity(20%);
     }
+
+    
 </style>

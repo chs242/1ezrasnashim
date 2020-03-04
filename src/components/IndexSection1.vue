@@ -13,7 +13,7 @@
             </div>
             <div class="md:flex md:flex-row xl:flex xl:flex-col xl:pt-20">
               <IndexCard :icon="require('../assets/images/cpr-icon.png')" title="CPR & AED Classes" description="Knowing how to save a life is a mitzvah we value and promote. Our EMTs and dispatchers..." />
-              <IndexCard :icon="require('../assets/images/battery-icon.png')" title="EMT Training" description="We are here to serve and educate the community. For women interested in volunteering..." />
+              <IndexCard :icon="require('../assets/images/battery-icon.png')" title="EMT Training" description="We are here to serve and educate the community. For women who are interested in..." />
             </div>
           </div>
       </div>

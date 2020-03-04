@@ -12,7 +12,7 @@
         </div>
         <h4 class="font-source text-sm font-light">Become a member of our amazing corps of volunteers</h4>
         <h1 class="mb-20 font-roboto text-4xl font-semibold">Join Ezras Nashim</h1>
-        <a href="/volunteer" class="px-6 py-4 font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md">Found Out More</a>
+        <a href="/volunteer" class="px-6 py-4 font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md">Find Out More</a>
 
     </div>
     </div>
