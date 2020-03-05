@@ -88,4 +88,9 @@ export default {
         }
         
     }
+    @media (min-width: 1280px) {
+        .links-cont{
+            padding: 4rem 12rem !important;
+        }
+    }
 </style>
