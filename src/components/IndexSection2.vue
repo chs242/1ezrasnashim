@@ -1,7 +1,7 @@
 <template>
     <div class="relative lg:flex lg:flex-col lg:items-center">
         <div class="w-full relative overflow-hidden">
-            <img src="../assets/images/ambulance.jpg" class="height-custom hidden lg:block ambulance-img object-cover">
+            <img src="../assets/images/ambulance.jpg" class="hidden lg:block lg:w-full ambulance-img object-cover">
         </div>
         <div class="links-cont w-full flex flex-col items-center px-6 py-6 md:flex-row lg:justify-center lg:absolute top-0 bottom-0">
             <a href="#"><img src="../assets/images/index-tab/movie-link.jpg" class="w-64 px-2 my-2 rounded-xl"></a>
@@ -16,7 +16,16 @@
     
     .ambulance-img{
         filter: opacity(20%);
+        max-height: 400px;
+    }
+    a{
+        transition: 200ms linear;
+
+    }
+    a:hover{
+        transition: 200ms linear;
+        transform: scale(1.05);
     }
 
-    
+
 </style>
