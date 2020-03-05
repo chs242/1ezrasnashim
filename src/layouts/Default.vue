@@ -6,6 +6,7 @@
         <a href="/volunteer" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">Volunteer</a>
         <a href="/contact" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">Contact</a>
         <a href="/contact" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">News & Press</a>
+        <a href="/services" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">Services</a>
         <a href="/about" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">About</a>
         <!-- <a href="/news" class="">News & Press</a> -->
       </div>
@@ -31,8 +32,9 @@
         <a href="/volunteer" class="mobile">Volunteer</a>
         <a href="/contact" class="mobile">Contact</a>
         <a href="/contact" class="mobile">News & Press</a>
+        <a href="/services" class="mobile">Services</a>
         <a href="/about" class="mobile">About</a>
-        <a href="/donate" class="mobile">Donate</a>
+        <a href="/donate" class="mobile donate">Donate</a>
     </div>
     </header>
     <main class="main min-h-screen">
@@ -89,7 +91,6 @@ export default {
   align-items: center;
 }
 
-
 @media (min-width: 320px) and (max-width: 1024px) {
   .open {
   height: 20rem !important;
@@ -102,7 +103,7 @@ export default {
     top: 5rem;
   }
   .open {
-  height: 30% !important;
+  height: 20rem !important;
   background: #cbd5e0;
   }
 }
@@ -126,6 +127,8 @@ export default {
 .sidenav a:active {
   color: #2c3e50;
 }
+
+
   
 /* hamburgur */
 .c-button {
