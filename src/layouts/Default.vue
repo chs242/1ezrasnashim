@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <header class="bg-gray-200 flex fixed top-0 left-0 right-0 md:h-20 lg:static lg:h-20 z-10">
+    <header class="bg-gray-200 flex fixed top-0 left-0 right-0 md:h-20 lg:static lg:h-24 z-10">
       <div class="hidden lg:inline-flex justify-center items-center lg:w-2/4">
-        <a href="/" class="px-3 font-roboto text-sm font-semibold hover:text-purple-800 transition duration-100 ease-linear">Home</a>
-        <a href="/volunteer" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">Volunteer</a>
-        <a href="/contact" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">Contact</a>
-        <a href="/contact" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">News & Press</a>
-        <a href="/services" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">Services</a>
-        <a href="/about" class="px-3 font-roboto text-sm font-semibold hover:text-pink-900 transition duration-100 ease-linear">About</a>
+        <a href="/" class="px-3 font-roboto text-sm lg:text-lg font-semibold hover:text-purple-800 transition duration-100 ease-linear">Home</a>
+        <a href="/volunteer" class="px-3 font-roboto text-sm lg:text-lg font-semibold hover:text-pink-900 transition duration-100 ease-linear">Volunteer</a>
+        <a href="/contact" class="px-3 font-roboto text-sm lg:text-lg font-semibold hover:text-pink-900 transition duration-100 ease-linear">Contact</a>
+        <a href="/contact" class="px-3 font-roboto text-sm lg:text-lg font-semibold hover:text-pink-900 transition duration-100 ease-linear">News & Press</a>
+        <a href="/services" class="px-3 font-roboto text-sm lg:text-lg font-semibold hover:text-pink-900 transition duration-100 ease-linear">Services</a>
+        <a href="/about" class="px-3 font-roboto text-sm lg:text-lg font-semibold hover:text-pink-900 transition duration-100 ease-linear">About</a>
         <!-- <a href="/news" class="">News & Press</a> -->
       </div>
 
@@ -23,7 +23,7 @@
       </div>
 
       <div class="hidden lg:w-2/4 lg:inline-flex justify-center items-center">
-        <a href="/donate" class="font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md">Donate</a>
+        <a href="/donate" class="font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md lg:text-base">Donate</a>
       </div>
       
       <!-- Bear in mind there is additional CSS below in the styles tag -->

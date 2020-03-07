@@ -27,16 +27,16 @@
 
         <div class="w-full pb-4 mt-4 flex flex-row shadow-sm md:mt-24"> 
 
-          <div class="w-1/2 flex flex-col text-center hover:text-purple-800">
-            <p class="w-full font-roboto text-sm font-medium md:mb-6">Service</p>
-            <a href="/about" class="w-full font-source text-gray-700 text-xs font-medium">Our Team</a>
-            <a href="/volunteer" class="w-full font-source text-gray-700 text-xs font-medium">Our Services</a>
-            <a href="/endorsements" class="w-full font-source text-gray-700 text-xs font-medium">Endorsments</a>
-            <a href="/endorsements" class="w-full font-source text-gray-700 text-xs font-medium">About Us</a>
+          <div class="w-1/2 flex flex-col text-center">
+            <p class="w-full font-roboto text-sm lg:text-lg font-medium md:mb-6">Service</p>
+            <a href="/about" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">Our Team</a>
+            <a href="/volunteer" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">Our Services</a>
+            <a href="/endorsements" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">Endorsments</a>
+            <a href="/endorsements" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">About Us</a>
           </div>
 
 
-          <div class="hidden md:block text-center">
+          <div class="hidden md:block text-xs lg:text-sm text-center">
             <div class="flex justify-center">
               <img src="../assets/images/logo-footer.png" alt="Logo" class="w-16">
             </div>
@@ -45,12 +45,12 @@
           </div>
 
 
-          <div class="w-1/2 flex flex-col text-center hover:text-purple-800">
-            <p class="w-full font-roboto text-sm font-medium md:mb-6">Popular</p>
-            <a href="/about" class="w-full font-source text-gray-700 text-xs font-medium">News & Press</a>
-            <a href="/volunteer" class="w-full font-source text-gray-700 text-xs font-medium">Volunterr</a>
-            <a href="/endorsements" class="w-full font-source text-gray-700 text-xs font-medium">Donate</a>
-            <a href="/endorsements" class="w-full font-source text-gray-700 text-xs font-medium">Contact Us</a>
+          <div class="w-1/2 flex flex-col text-center">
+            <p class="w-full font-roboto text-sm lg:text-lg font-medium md:mb-6">Popular</p>
+            <a href="/about" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">News & Press</a>
+            <a href="/volunteer" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">Volunterr</a>
+            <a href="/endorsements" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">Donate</a>
+            <a href="/endorsements" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">Contact Us</a>
           </div>
         </div>
         <div id="softwarebuild" class="my-4 px-4 text-sm flex justify-center md:justify-end">
