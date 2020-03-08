@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header class="bg-gray-200 flex fixed top-0 left-0 right-0 md:h-20 lg:static lg:h-24 z-10">
+    <header class="bg-gray-200 flex fixed top-0 left-0 right-0 h-16 md:h-20 lg:static lg:h-24 z-10">
       <div class="hidden lg:inline-flex justify-center items-center lg:w-2/4">
         <a href="/" class="px-3 font-roboto text-sm lg:text-lg font-semibold hover:text-purple-800 transition duration-100 ease-linear">Home</a>
         <a href="/volunteer" class="px-3 font-roboto text-sm lg:text-lg font-semibold hover:text-pink-900 transition duration-100 ease-linear">Volunteer</a>
@@ -78,7 +78,7 @@ export default {
   height: 0%;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top: 64px;
   right: 0;
   overflow-x: hidden;
@@ -119,6 +119,7 @@ export default {
   color: purple;
   display: block;
   transition: 0.3s;
+   z-index: 1000;
 }
 
 .sidenav a:hover {
