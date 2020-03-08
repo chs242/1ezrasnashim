@@ -40,7 +40,8 @@
         background-color: #e5e5e5;
     }
     .banner-img{
-        height: 450px !important;
+        margin-top: 80px;
+        height: 370px !important;
     }
 }
 </style>
