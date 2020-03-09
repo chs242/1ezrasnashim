@@ -2,15 +2,16 @@
     <div class="custom-bg pb-12">
         <h1 class="font-roboto text-3xl text-white font-bold text-center py-4">Register Online</h1>
         <form form="volunteer-form">
-            <div class="lg:flex lg:px-20"> 
+            <div class="lg:flex lg:px-20 xl:justify-center"> 
 
-            <div id="checkbox-form" class="text-white w-full p-4 md:flex md:mb-8 lg:px-8 lg:w-1/2 lg:flex lg:flex-col">
-                <div class="md:w-1/2 lg:w-full lg:mb-16">
+            <div id="checkbox-form" class="text-white w-full p-4 md:w-4/5 md:flex md:mx-auto md:mb-8 lg:mx-0 lg:mb-2 lg:px-8 lg:w-1/2 lg:flex-col lg:items-start xl:w-1/3 xl:px-0">
+            <h1 class="hidden lg:block font-roboto text-3xl text-white font-bold text-center py-4">FAQS</h1>
+                <div class="md:w-1/2 lg:w-full lg:mb-8">
                     <div>
-                        <h3 class="font-source font-semibold  text-lg mb-4 mt-4 lg:mt-0 lg:mb-8 lg:text-center">How Would you like to volunteer?</h3>
+                        <h3 class="font-source font-semibold  text-lg mb-4 mt-4 lg:mt-0 lg:mb-2">How Would you like to volunteer?</h3>
                     </div>
                     <div class="lg:flex">
-                        <div class="lg:w-full">
+                        <div class="lg:w-3/4">
                             <div class="">
                                 <input type="checkbox" id="volunteer1" name="volunteer1" value="emt">
                                 <label for="volunteer1"> Become an EMT</label>
@@ -32,12 +33,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="md:w-1/2 lg:w-full lg:mb-16">
+                <div class="md:w-1/2 lg:w-3/4 lg:mb-8">
                     <div>
-                        <h3 class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-8 lg:text-center">Your EMT Certification</h3>
+                        <h3 class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-2">Your EMT Certification</h3>
                     </div>
                     <div class="lg:flex">
-                        <div class="lg:w-full">
+                        <div class="lg:w-3/4">
                             <div class="">
                                 <input type="checkbox" id="certification2" name="certification2" value="expired">
                                 <label for="volunteer2"> Expired</label>
@@ -56,12 +57,12 @@
                     </div>
                 </div>
 
-                <div class="md:w-1/2 lg:w-full lg:mb-16">
+                <div class="md:w-1/2 lg:w-3/4 lg:mb-8">
                     <div>
-                        <h3 class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-8 lg:text-center">Do You Drive</h3>
+                        <h3 class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-2">Do You Drive</h3>
                     </div>
                     <div class="lg:flex">
-                        <div class="lg:w-full">
+                        <div class="lg:w-3/4">
                             <div class="">
                                 <input type="checkbox" id="drive1" name="drive1" value="no">
                                 <label for="drive1"> No</label>
@@ -81,29 +82,29 @@
                 </div>
             </div>
 
-            <div id="text-form" class="bg-gray-200 py-8 px-3 mx-1 shadow-md text-center rounded-xl md:w-2/3 md:mx-auto lg:w-1/2 lg:flex lg:flex-wrap lg:items-center lg:content-center">
+            <div id="text-form" class="bg-gray-200 py-8 px-3 mx-1 shadow-md text-center rounded-xl md:w-2/3 md:mx-auto lg:w-1/2 lg:flex lg:flex-wrap lg:items-center lg:content-center xl:w-2/5 xl:mx-0">
                 
-                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
-                    <input type="text" id="name" name="name" placeholder="Name" class="w-full py-1 text-center custom-border">
+                <div class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="name" name="name" placeholder="Name" class="w-full custom-width py-1 text-center custom-border">
                 </div>
-                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
-                    <input type="text" id="address" name="address" placeholder="Address" class="w-full py-1 text-center custom-border">
-                </div>
-
-                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
-                    <input type="text" id="email" name="email" placeholder="Email" class="w-full py-1 text-center custom-border">
+                <div class="star-address relative w-full my-4 mx-auto lg:text-right font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="address" name="address" placeholder="Address" class="w-full custom-width py-1 text-center custom-border">
                 </div>
 
-                <div class="relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
-                    <input type="text" id="phone" name="phone" placeholder="Phone" class="w-full py-1 text-center custom-border">
+                <div class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="email" name="email" placeholder="Email" class="w-full custom-width py-1 text-center custom-border">
                 </div>
 
-                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
-                    <input type="text" id="cellphone" name="cellphone" placeholder="Cellphone" class="w-full py-1 text-center custom-border">
+                <div class="relative w-full my-4 mx-auto lg:text-right font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="phone" name="phone" placeholder="Phone" class="w-full custom-width py-1 text-center custom-border">
                 </div>
 
-                <div class="relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
-                    <input type="text" id="certification" name="certification" placeholder="Certification" class="w-full py-1 text-center custom-border">
+                <div class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="cellphone" name="cellphone" placeholder="Cellphone" class="w-full custom-width py-1 text-center custom-border">
+                </div>
+
+                <div class="relative w-full my-4 mx-auto lg:text-right font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="certification" name="certification" placeholder="Certification" class="w-full custom-width py-1 text-center custom-border">
                 </div>
 
                 <div class="relative w-full mx-auto my-4 font-source text-lg shadow-md lg:shadow-none">
@@ -134,4 +135,16 @@
         top: 0px;
         left: 2px;
     }
+    .star-address:before{
+        content: "*";
+        color: red;
+        position: absolute;
+        top: 0px;
+        left: 6px;
+    }
+@media (min-width: 1024px)  {
+    .custom-width{
+        width: 98%;
+    }
+}
 </style>
