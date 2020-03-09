@@ -2,11 +2,12 @@
     <div class="custom-bg pb-12">
         <h1 class="font-roboto text-3xl text-white font-bold text-center py-4">Register Online</h1>
         <form form="volunteer-form">
-            <div class="lg:flex"> 
+            <div class="lg:flex lg:px-20"> 
+
             <div id="checkbox-form" class="text-white w-full p-4 md:flex md:mb-8 lg:px-8 lg:w-1/2 lg:flex lg:flex-col">
                 <div class="md:w-1/2 lg:w-full lg:mb-16">
                     <div>
-                        <h3 class="font-source font-semibold text-lg mb-4 lg:mb-8">How Would you like to volunteer?</h3>
+                        <h3 class="font-source font-semibold  text-lg mb-4 mt-4 lg:mt-0 lg:mb-8 lg:text-center">How Would you like to volunteer?</h3>
                     </div>
                     <div class="lg:flex">
                         <div class="lg:w-full">
@@ -31,60 +32,81 @@
                         </div>
                     </div>
                 </div>
-                <div class="md:w-1/2 md:px-4">
+                <div class="md:w-1/2 lg:w-full lg:mb-16">
                     <div>
-                        <h3 class="font-source font-semibold text-lg mt-8 mb-4 md:mt-0">Your EMT Certification</h3>
+                        <h3 class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-8 lg:text-center">Your EMT Certification</h3>
                     </div>
                     <div class="lg:flex">
-                        <input type="checkbox" id="certification1" name="certification1" value="current">
-                        <label for="volunteer1"> Current</label><br>
-                        <input type="checkbox" id="certification2" name="certification2" value="expired">
-                        <label for="volunteer2"> Expired</label><br>
-                        <input type="checkbox" id="certification3" name="certification3" value="course">
-                        <label for="volunteer3"> Interested in Course</label><br>
+                        <div class="lg:w-full">
+                            <div class="">
+                                <input type="checkbox" id="certification2" name="certification2" value="expired">
+                                <label for="volunteer2"> Expired</label>
+                            </div>
+                            <div class="">
+                                <input type="checkbox" id="certification1" name="certification1" value="current">
+                                <label for="volunteer1"> Current</label>
+                            </div>
+                        </div>
+                        <div class="lg:w-full">
+                            <div class="">
+                                <input type="checkbox" id="certification3" name="certification3" value="course">
+                                <label for="volunteer3"> Interested in Course</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="md:w-1/3 md:px-4">
+
+                <div class="md:w-1/2 lg:w-full lg:mb-16">
                     <div>
-                        <h3 class="font-source font-semibold text-lg mt-8 mb-4 md:mt-0">Do You Drive</h3>
+                        <h3 class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-8 lg:text-center">Do You Drive</h3>
                     </div>
                     <div class="lg:flex">
-                        <input type="checkbox" id="drive1" name="drive1" value="no">
-                        <label for="drive1"> No</label><br>
-                        <input type="checkbox" id="drive2" name="drive2" value="car">
-                        <label for="drive2"> Yes, with Car</label><br>
-                        <input type="checkbox" id="drive3" name="drive3" value="nocar">
-                        <label for="drive3"> Yes, Without Car</label><br>
+                        <div class="lg:w-full">
+                            <div class="">
+                                <input type="checkbox" id="drive1" name="drive1" value="no">
+                                <label for="drive1"> No</label>
+                            </div>
+                            <div class="">
+                                <input type="checkbox" id="drive2" name="drive2" value="car">
+                                <label for="drive2"> Yes, with Car</label>
+                            </div>
+                        </div>
+                        <div class="lg:w-full">
+                            <div class="">
+                                <input type="checkbox" id="drive3" name="drive3" value="nocar">
+                                <label for="drive3"> Yes, Without Car</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="text-form" class="bg-gray-200 py-8 px-3 mx-1 shadow-md text-center rounded-xl md:w-2/3 md:mx-auto">
 
-                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md">
-                    <input type="text" id="name" name="name" placeholder="Name" class="w-full py-1 text-center custom-border"><br>
+            <div id="text-form" class="bg-gray-200 py-8 px-3 mx-1 shadow-md text-center rounded-xl md:w-2/3 md:mx-auto lg:w-1/2 lg:flex lg:flex-wrap lg:items-center lg:content-center">
+                
+                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="name" name="name" placeholder="Name" class="w-full py-1 text-center custom-border">
+                </div>
+                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="address" name="address" placeholder="Address" class="w-full py-1 text-center custom-border">
                 </div>
 
-                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md">
-                    <input type="text" id="address" name="address" placeholder="Address" class="w-full py-1 text-center custom-border"><br>
+                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="email" name="email" placeholder="Email" class="w-full py-1 text-center custom-border">
                 </div>
 
-                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md">
-                    <input type="text" id="email" name="email" placeholder="Email" class="w-full py-1 text-center custom-border"><br>
+                <div class="relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="phone" name="phone" placeholder="Phone" class="w-full py-1 text-center custom-border">
                 </div>
 
-                <div class="relative w-full mx-auto font-source text-lg shadow-md">
-                    <input type="text" id="phone" name="phone" placeholder="Phone" class="w-full py-1 text-center custom-border"><br>
+                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="cellphone" name="cellphone" placeholder="Cellphone" class="w-full py-1 text-center custom-border">
                 </div>
 
-                <div class="star relative w-full my-4 mx-auto font-source text-lg shadow-md">
-                    <input type="text" id="cellphone" name="cellphone" placeholder="Cellphone" class="w-full py-1 text-center custom-border"><br>
+                <div class="relative w-full my-4 mx-auto font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
+                    <input type="text" id="certification" name="certification" placeholder="Certification" class="w-full py-1 text-center custom-border">
                 </div>
 
-                <div class="relative w-full mx-auto font-source text-lg shadow-md">
-                    <input type="text" id="certification" name="certification" placeholder="Certification" class="w-full py-1 text-center custom-border"><br>
-                </div>
-
-                <div class="relative w-full mx-auto my-4 font-source text-lg shadow-md">
+                <div class="relative w-full mx-auto my-4 font-source text-lg shadow-md lg:shadow-none">
                     <textarea  rows="4" cols="30" name="comment" form="volunteer-form" placeholder="Comment..." class="w-full py-1 text-left custom-border"></textarea>
                 </div>
 
