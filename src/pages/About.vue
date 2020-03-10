@@ -1,6 +1,18 @@
 <template>
     <Layout>
-       this is an about page
         
+       <AboutTeam />
     </Layout>
 </template>
+
+<script>
+import AboutTeam from "~/components/AboutTeam"
+
+
+export default {
+    components:{
+        AboutTeam,
+        
+    }    
+}
+</script>
