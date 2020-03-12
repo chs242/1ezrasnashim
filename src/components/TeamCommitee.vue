@@ -3,7 +3,7 @@
     <div class="bg-white w-full py-4 px-1 mt-2 rounded-xl">
         <div class="custom-purple flex items-center justify-between rounded-xl">
             <div><h2 class="text-white text-2xl font-roboto font-bold pl-6">Commitees</h2></div>
-            <div><img src="../assets/images/volunteer-tab/dispatcher-icon.png" class="w-12 mx-4 md:mx-4 md:py-3"></div>
+            <div><img src="../assets/images/team-tab/commitee-icon.png" class="w-12 mx-4 md:mx-4 md:py-3"></div>
         </div>
         <div class="mt-8">
             <h3 class="custom-text-purple text-xl font-source font-semibold">Steering Commitee</h3>
@@ -19,7 +19,7 @@
         </div>
         <div class="custom-purple mt-8 flex items-center justify-between rounded-xl">
             <div><h2 class="text-white text-2xl font-roboto font-bold pl-6">Advisory Panels</h2></div>
-            <div><img src="../assets/images/volunteer-tab/dispatcher-icon.png" class="w-12 mx-4 md:mx-4 md:py-3"></div>
+            <div><img src="../assets/images/team-tab/commitee-icon.png" class="w-12 mx-4 md:mx-4 md:py-3"></div>
         </div>
         <div class="mt-8">
             <h3 class="custom-text-purple text-xl font-source font-semibold">Advisory Panel</h3>

@@ -1,5 +1,5 @@
 <template>
-    <div class="md:w-3/4 md:mx-auto lg:w-1/2 lg:mx-0 lg:px-1">
+    <div class="md:w-4/5 md:mx-auto lg:w-1/2 lg:mx-0 lg:px-1">
     <div class="bg-white w-full pt-8 px-1 my-2 flex flex-col items-center justify-start rounded-xl ">    
         <div class="overflow-hidden h-32 rounded-xl">
             <figure class="tint relative shadow-md overflow-hidden">

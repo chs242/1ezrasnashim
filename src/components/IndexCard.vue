@@ -5,7 +5,7 @@
         <img id="icon" :src="icon" class="w-20">
         <h2 id="title" class="text-xl font-bold font-roboto text-gray-800 mt-2 line">{{ title }}</h2>
         <p id="description" class="font-source text-sm text-gray-700 font-normal mt-4">{{ description }}</p>
-        <a href="" id="read-more" class="block text-4xl text-pink-600 text-right font-roboto">&#8594;</a>
+        <a href="/services" id="read-more" class="block text-4xl text-pink-600 text-right font-roboto">&#8594;</a>
         </div>
         </a>
    </div>

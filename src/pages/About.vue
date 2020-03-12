@@ -1,7 +1,7 @@
 <template>
     <Layout>
         
-       <AboutTeam />
+       <AboutTeam id="about-team"></AboutTeam>
     </Layout>
 </template>
 

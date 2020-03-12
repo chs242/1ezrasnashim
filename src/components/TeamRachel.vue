@@ -2,8 +2,8 @@
     <div class="w-full px-1 md:w-4/5 md:mx-auto lg:w-1/2">
         <div class="bg-white py-6 mt-2 flex flex-col rounded-xl">
             <div class="flex items-center">
-                <div><img src="../assets/images/volunteer-tab/dispatcher-icon.png" class="w-20 ml-4 md:mx-4 md:py-3"></div>
-                <div><h2 class="text-xl font-roboto font-bold text-gray-800 pl-6">Hon. Rachel E. Freier,<br>AEMT-Paramedic</h2></div>
+                <div><img src="../assets/images/team-tab/freier-1.jpg" class="w-24 ml-4 md:mx-4 md:py-3"></div>
+                <div><h2 class="text-xl font-roboto font-bold custom-text-color pl-6">Hon. Rachel E. Freier,<br>AEMT-Paramedic</h2></div>
             </div>
             <div>
                 <h6 class="m-3 ml-6 text-base md:text-lg font-roboto font-semibold"><i>Director</i></h6>
@@ -20,3 +20,9 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+    .custom-text-color{
+        color: #72298f;
+    }
+</style>

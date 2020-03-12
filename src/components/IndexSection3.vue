@@ -3,7 +3,7 @@
         <img src="../assets/images/neo-natal-emts.jpg" class="short-img">
         <IndexParagraph2 class="para1" preTitle="Our EMT's are highly trained and state certified:" title1="Our Team" :description="descriptions[0]" path="/about" />
         <img src="../assets/images/first-response-vehicle.jpg" class="tall-img">
-        <IndexParagraph2 class="para2" preTitle="We service the full spectrum of emergency calls" title1="Our Services"  :description="descriptions[1]" path="/about" />
+        <IndexParagraph2 class="para2" preTitle="We service the full spectrum of emergency calls" title1="Our Services"  :description="descriptions[1]" path="/services" />
     </div>
 </template>
 
