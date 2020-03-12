@@ -1,5 +1,5 @@
 <template>
-    <div class="text-white pt-20 md:pt-20 px-2 lg:flex lg:flex-wrap">
+    <div class="text-white pt-8 md:pt-12 px-2 lg:flex lg:flex-wrap">
         <div class="custom-bg my-3 rounded-xl shadow-md lg:w-1/4">
             <div class="lg:hidden bg-gray-200 pb-4 pt-6 text-gray-800 rounded-t-xl lg:float-right lg:text-white lg-custom-bg xl:text-gray-800 xl:pb-16">
                 <div class="">

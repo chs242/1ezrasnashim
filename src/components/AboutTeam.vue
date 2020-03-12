@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full px-1 pt-2 mt-16 relative flex flex-col md:mt-20 md:flex-row md:flex-wrap md:justify-start lg:mt-0">
+    <div class="w-full px-1 pt-2 mt-16 relative flex flex-col md:mt-20 md:flex-row md:flex-wrap md:justify-start lg:mt-20">
         <TeamBranches class="lg:hidden"></TeamBranches>
        <TeamMeet />
        <TeamBranches class="hidden lg:block"></TeamBranches>
