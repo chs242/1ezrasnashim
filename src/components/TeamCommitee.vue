@@ -1,6 +1,6 @@
 <template>
 <div class="md:mx-auto md:w-4/5 lg:w-1/2 lg:mx-0 lg-custom-margin lg:px-1">
-    <div class="bg-white w-full py-4 px-1 mt-2 rounded-xl">
+    <div class="bg-white w-full py-4 px-1 mt-2 rounded-xl xl:px-8">
         <div class="custom-purple flex items-center justify-between rounded-xl">
             <div><h2 class="text-white text-2xl font-roboto font-bold pl-6">Commitees</h2></div>
             <div><img src="../assets/images/team-tab/commitee-icon.png" class="w-12 mx-4 md:mx-4 md:py-3"></div>

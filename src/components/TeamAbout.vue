@@ -11,7 +11,7 @@
                 <h1 class="font-roboto text-2xl font-semibold">About Our EMT's</h1>
             </div>
         </div>
-        <div class="mt-8">
+        <div class="mt-8 xl:px-8">
             <div class="flex"><span class="mr-1" style='color:red;'> &#x2713;</span> <p>Our EMTs are highly trained and Licensed by New York State</p></div><br><br>
             <div class="flex"><span class="mr-1" style='color:red;'> &#x2713;</span> <p>Many of our members are also trained in complementing fields, such as Paramedics, Registered Nurses, doulas, labor coaches, camp and school nurses</p></div><br><br>
             <div class="flex"><span class="mr-1" style='color:red;'> &#x2713;</span> <p>To acquire hands-on experience in assisting women in labor, we have privileges for shadowing at Northshore University Medical Center Labor & Delivery Room. This means we shadow the doctors and nurses during delivery and observe all scenarios ranging from natural labor to C-sections.</p></div><br><br>
