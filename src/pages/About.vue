@@ -2,7 +2,7 @@
     <Layout>
         <div class="tint relative overflow-hidden mt-16 md:mt-20 lg:mt-0">
             <img src="../assets/images/other-imgs/picture-1.jpg" alt="" class="banner-img w-full object-cover">
-
+            <h1 class="banner-h1 text-white absolute text-6xl font-source leading-none pl-4 md:text-6xl md:px-12 lg:px-20 lg:text-6xl">About Us</h1>
         </div>
         <div class="bg-gray-100 lg:bg-gray-100">
             <div id="about-mission">
@@ -30,6 +30,9 @@ export default {
 </script>
 
 <style scoped>
+.banner-h1{
+      top:75%;
+  }
   .tint:before {
         content: "";
         display: block;

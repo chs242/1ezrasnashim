@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <div id="text-form" class="bg-gray-200 py-8 px-3 mx-1 shadow-md text-center rounded-xl md:w-2/3 md:mx-auto lg:w-1/2 lg:flex lg:flex-wrap lg:items-center lg:content-center xl:w-2/5 xl:mx-0">
+            <div id="text-form" class="bg-gray-200 py-8 px-3 mx-1 shadow-md text-center rounded-xl md:w-2/3 md:px-16 md:mx-auto lg:w-1/2 lg:flex lg:flex-wrap lg:items-center lg:content-center xl:w-2/5 xl:mx-0">
                 
                 <div class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
                     <input type="text" id="name" name="name" placeholder="Name" class="w-full custom-width py-1 text-center custom-border">
@@ -124,7 +124,6 @@
         background-color: #72298f;    
     }
     .custom-border{
-        border: 1px solid #72298f;
         border-radius: 5px
     }
 
