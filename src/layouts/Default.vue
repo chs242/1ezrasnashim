@@ -135,6 +135,12 @@ export default {
   color: #2c3e50;
 }
 
+@media (min-width: 1024px) {
+  .sidenav{
+    display: none;
+  }
+}
+
 
   
 /* hamburgur */

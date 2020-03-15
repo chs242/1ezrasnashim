@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <div id="text-form" class="bg-gray-200 py-8 px-3 mx-1 shadow-md text-center rounded-xl md:w-2/3 md:px-16 md:mx-auto lg:w-1/2 lg:flex lg:flex-wrap lg:items-center lg:content-center xl:w-2/5 xl:mx-0">
+            <div id="text-form" class="bg-gray-200 py-8 px-3 mx-1 shadow-md text-center rounded-xl md:w-2/3 md:px-16 md:mx-auto lg:w-1/2 lg:px-8 lg:flex lg:flex-wrap lg:content-center xl:w-2/5 xl:mx-0">
                 
                 <div class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-1">
                     <input type="text" id="name" name="name" placeholder="Name" class="w-full custom-width py-1 text-center custom-border">
@@ -111,8 +111,9 @@
                     <textarea  rows="4" cols="30" name="comment" form="volunteer-form" placeholder="Comment..." class="w-full py-1 text-left custom-border"></textarea>
                 </div>
 
-                <input type="submit" value="Submit" class="px-16 py-2 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md">
-            
+                <div class="w-full lg:text-right">
+                    <input type="submit" value="Submit" class="px-16 py-2 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md">
+                </div>
             </div>
             </div>
         </form>
