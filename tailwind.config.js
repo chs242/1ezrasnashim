@@ -7,10 +7,14 @@ module.exports = {
     },
     extend: {
       colors: {
-        brand: '#72298f'
+        brand: '#72298f',
+        'brand-50': '#72298f96'
       },
       borderRadius: {
         'xl': '1rem',
+      },
+      flex: {
+        '2': '2 2 0%',
       }
     }
   },

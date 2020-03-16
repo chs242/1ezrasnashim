@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-center">
     <div class="flex justify-center mb-8">
       <button
         v-for="(time, i) in frequencies"
@@ -13,15 +13,14 @@
         @click="$emit('update:selected-frequency', i)"
       >{{time}}</button>
     </div>
-    <div class="flex justify-center">
+    <div class="inline-flex justify-center rounded-lg overflow-hidden shadow-xl">
       <button
         v-for="(method, i) in paymentMethods"
         :key="method"
-        class="font-bold py-2 px-4"
+        class="text-sm py-2 px-4 uppercase tracking-wider"
         :class="{
-        'bg-pink-600 text-white' : selectedMethod === i,
-        'bg-gray-300 hover:bg-gray-400 text-gray-800': selectedMethod !== i,
-        'rounded-l': i === 0, 'rounded-r': i === paymentMethods.length -1
+        'bg-white hover:bg-gray-200 text-gray-800': selectedMethod !== i,
+        'bg-gray-300 text-pink-800 font-bold' : selectedMethod === i,
       }"
         @click="$emit('update:selected-method', i)"
       >{{method}}</button>
