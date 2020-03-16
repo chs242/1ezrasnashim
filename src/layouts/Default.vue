@@ -66,7 +66,7 @@
         <a href="/donate" class="mobile donate">Donate</a>
       </div>
     </header>
-    <main class="main flex-1">
+    <main class="main flex-1" :class="[bgColor]">
       <slot />
     </main>
     <Footer />
@@ -78,7 +78,8 @@ import Logo from "~/components/Logo.vue";
 import Footer from "~/components/Footer.vue";
 export default {
   props: {
-    showLogo: { default: true }
+    showLogo: { default: true },
+    bgColor: String
   },
   components: {
     Logo,

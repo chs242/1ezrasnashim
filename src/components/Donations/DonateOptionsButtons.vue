@@ -13,14 +13,16 @@
         @click="$emit('update:selected-frequency', i)"
       >{{time}}</button>
     </div>
-    <div class="inline-flex justify-center rounded-lg overflow-hidden shadow-xl">
+    <div
+      class="bg-pink-100 text-pink-700 inline-flex justify-center rounded-lg overflow-hidden shadow-lg"
+    >
       <button
         v-for="(method, i) in paymentMethods"
         :key="method"
         class="text-sm py-2 px-4 uppercase tracking-wider"
         :class="{
-        'bg-white hover:bg-gray-200 text-gray-800': selectedMethod !== i,
-        'bg-gray-300 text-pink-800 font-bold' : selectedMethod === i,
+        'hover:text-pink-800': selectedMethod !== i,
+        'bg-pink-300 text-pink-900 font-bold' : selectedMethod === i,
       }"
         @click="$emit('update:selected-method', i)"
       >{{method}}</button>

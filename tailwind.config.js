@@ -19,5 +19,8 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/ui'),
+    require('@tailwindcss/custom-forms')
+  ],
 }

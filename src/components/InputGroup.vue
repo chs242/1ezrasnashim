@@ -1,0 +1,74 @@
+<template>
+  <div class="input-group text-start px-2 mb-2">
+    <label
+      :for="name"
+      class="block font-bold uppercase tracking-wide text-xs font-medium leading-5 text-gray-700"
+    >{{name}}</label>
+    <div class="mt-1 relative rounded-md shadow-sm">
+      <slot name="addon-before" />
+      <textarea
+        v-if="type === 'textarea'"
+        :value="value"
+        :id="name"
+        v-bind="$attrs"
+        v-on="inputListeners"
+        :placeholder="placeholder"
+        :class="[validation]"
+        class="form-input block w-full sm:text-sm sm:leading-5"
+      ></textarea>
+      <input
+        v-else
+        :id="name"
+        :value="value"
+        :type="type"
+        v-bind="$attrs"
+        v-on="inputListeners"
+        class="form-input block w-full sm:text-sm sm:leading-5"
+        :class="{'pr-24': !!$slots['addon-before']}"
+        :placeholder="placeholder"
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "BaseInput",
+  props: {
+    type: {
+      type: String,
+      default: "text"
+    },
+    name: String,
+    placeholder: String,
+    value: String,
+    validation: {
+      type: String,
+      default: "",
+      validator: function(value) {
+        return ["", "error", "info", "warning"].indexOf(value) !== -1;
+      }
+    }
+  },
+  inheritAttrs: false,
+  computed: {
+    inputListeners: function() {
+      var vm = this;
+      return Object.assign({}, this.$listeners, {
+        input: function(event) {
+          vm.$emit("input", event.target.value);
+        }
+      });
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+input {
+  min-width: 120px;
+  &::placeholder {
+    @apply text-gray-300;
+  }
+}
+</style>
