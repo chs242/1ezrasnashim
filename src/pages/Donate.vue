@@ -1,31 +1,28 @@
 <template>
-    <Layout :show-logo="true">
-        <DonateOptionsButtons />
-        <DonateBillingForm />
-        <DonateCC />
-       
-        
-    </Layout>
+  <Layout :show-logo="true">
+    <DonateOptionsButtons />
+    <DonateBillingForm />
+    <DonateCC />
+  </Layout>
 </template>
- 
+
 <script>
+import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons.vue";
+import DonateBillingForm from "~/components/Donations/DonateBillingForm.vue";
+import DonateCC from "~/components/Donations/DonateCC.vue";
 
-  import DonateOptionsButtons from '~/components/Donations/DonateOptionsButtons.vue'
-  import DonateBillingForm from '~/components/Donations/DonateBillingForm.vue'
-  import DonateCC from '~/components/Donations/DonateCC.vue'
-
-  export default{
-    name: "Donate",
-    components:{  
-      DonateOptionsButtons,
-      DonateBillingForm,
-      DonateCC
+export default {
+  name: "Donate",
+  components: {
+    DonateOptionsButtons,
+    DonateBillingForm,
+    DonateCC
   }
-}
-</script> 
+};
+</script>
 
 <style scoped>
-    .root-form{
-        max-width: 800px;   
-    }
+.root-form {
+  max-width: 800px;
+}
 </style>
