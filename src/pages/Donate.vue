@@ -1,9 +1,10 @@
 <template>
-    <Layout :show-logo="true">
-        <DonateOptionsButtons />
-        <DonateBillingForm />
-        <DonateCC />
-       
+    <Layout>
+        <div>
+            <DonateOptionsButtons />
+            <DonateBillingForm />
+            <DonateCC />
+        </div>
         
     </Layout>
 </template>
