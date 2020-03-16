@@ -1,8 +1,7 @@
 <template>
-    <div class="w-full px-1 pt-2 mt-16 relative flex flex-col md:mt-20 md:flex-row md:flex-wrap md:justify-start lg:mt-20">
-        <TeamBranches class="lg:hidden"></TeamBranches>
+    <div class="w-full px-1 pt-2 mt-16 relative flex flex-col md:mt-20 md:flex-row md:flex-wrap md:justify-center lg:mt-20">
+        <TeamBranches class=""></TeamBranches>
        <TeamMeet />
-       <TeamBranches class="hidden lg:block"></TeamBranches>
        <div class="w-full flex flex-col flex-wrap justify-center lg:justify-center lg:flex-row lg:w-3/4">
             <TeamRachel />
             <TeamAllen />

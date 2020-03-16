@@ -1,7 +1,7 @@
 <template>
     <Layout>
-        <div class="px-2 md:px-0">
-            <div class="w-full py-6 mt-20 mb-8 text-4xl text-center bg-gray-200 rounded-xl md:p-12 md:mt-24 md:rounded-none lg:mx-auto lg:w-4/5 xl:w-3/4 lg:p-20 lg:mt-20 lg:rounded-xl">
+        <div class="px-2 md:px-0 xl:px-6">
+            <div class="w-full py-6 mt-20 mb-8 text-4xl text-center bg-gray-200 rounded-xl md:p-12 md:mt-24 md:rounded-none lg:mx-auto lg:w-4/5 xl:w-4/5 lg:p-20 lg:mt-20 lg:rounded-xl">
                 <h1 class="font-roboto font-bold custom-text-purple">Ezras Nashim operates under the auspices of rabbonim and is endorsed by gedolei hador.</h1>
             </div>
             <div class="md:flex md:flex-wrap">
