@@ -1,5 +1,5 @@
 <template>
-  <Layout :show-logo="true">
+  <Layout>
     <img src="../assets/images/contact-tab/world-map.png" alt="" class="hidden lg:block mx-auto">
 
     <div id="donate-page" class="max-w-6xl mx-auto sm:px-6 lg:absolute md:mx-0 lg:px-8 py-24">
@@ -14,7 +14,7 @@
         </div>
         <div class="flex-1 px-4 text-gray-800">
           <h2
-            class="text-brand-50 text-4xl font-semibold leading-tight mb-5"
+            class="text-brand-100 text-4xl font-semibold leading-tight mb-5"
           >Lights. Sirens. Passion!</h2>
           <p
             class="mb-3"
