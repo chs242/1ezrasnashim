@@ -1,5 +1,6 @@
 [build]
   command = "gridsome build"
+  functions = "api"
   publish = "dist"
 [build.environment]
   NODE_VERSION = "10"

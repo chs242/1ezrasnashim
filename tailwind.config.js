@@ -15,9 +15,15 @@ module.exports = {
       },
       flex: {
         '2': '2 2 0%',
+      },
+      boxShadow: {
+        'outline-brand': '0 0 0 3px #d61f69;'
       }
     }
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/ui'),
+    require('@tailwindcss/custom-forms')
+  ],
 }
