@@ -1,6 +1,9 @@
 <template>
   <Layout :show-logo="true" bg-color="bg-gray-100">
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 py-24">
+
+    <img src="../assets/images/contact-tab/world-map.png" alt="" class="bg-img hidden lg:block mx-auto">
+
+    <div id="donate-page" class="max-w-6xl mx-auto sm:px-6 lg:absolute md:mx-0 lg:px-8 py-24">
       <div class="flex flex-wrap items-center">
         <div class="steps flex-2 px-4 relative">
           <div class="step" key="1" v-show="step == 1">
@@ -113,7 +116,7 @@
         </div>
         <div class="flex-1 px-4 text-gray-800 my-12 px-6" style="min-width: 360px">
           <h2
-            class="text-brand-50 text-4xl font-semibold leading-tight mb-5"
+            class="text-brand-100 text-4xl font-semibold leading-tight mb-5"
           >Lights. Sirens. Passion!</h2>
           <p
             class="mb-3"
@@ -201,7 +204,28 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@media (min-width: 1024px) {
+img.bg-img{
+      filter: hue-rotate(65deg) opacity(40%); 
+      transform: scale(1.1);
+      margin-top: 5%
+    }
+    #donate-page{
+        top: 5%;
+        left: 10%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    img.bg-img{
+      margin-top: 45%;
+      transform: scale(0.9);
+    }
+    #donate-page{
+        top: 5%;
+    }
+} 
+
 .root-form {
   max-width: 800px;
 }
