@@ -6,9 +6,24 @@ export const PAYMENT_METHODS = {
 
 export const PLANS = {
   ONCE: 0,
-  MONTHLY: 1,
-  DAILY: 2,
-  WEEKLY: 3,
+  DAILY: 1,
+  WEEKLY: 2,
+  MONTHLY: 3,
   QUARTELY: 4,
   YEARLY: 5,
+}
+
+export const PLAN_NAMES = {
+  "1": "Daily",
+  "2": "Weekly",
+  "3": "Monthly",
+  "4": "Quarterly",
+  "5": "Yearly"
+}
+
+export const STATES = {
+  IDLE: 0,
+  PROCESSING: 1,
+  SUCCESS: 2,
+  ERROR: 3
 }

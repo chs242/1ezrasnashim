@@ -3,12 +3,12 @@
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 py-24">
       <div class="flex flex-wrap items-center">
         <div class="steps flex-2 px-4 relative">
-          <div class="step" key="1" v-if="step == 1">
-            <DonateOptionsButtons :selected-plan.sync="selectedPlan" />
-            <donate-options :amount.sync="amount" />
+          <div class="step" key="1" v-show="step == 1">
+            <DonateOptionsButtons :recurring.sync="recurring" />
+            <donate-options :amount.sync="amount" :recurring="recurring" />
 
             <input-group
-              class="amount w-40"
+              class="amount"
               name="or enter amount"
               v-model.number.lazy="amount"
               type="number"
@@ -21,16 +21,29 @@
               >
                 <span class="text-gray-500 sm:text-sm sm:leading-5">$</span>
               </div>
+
               <div
+                v-if="recurring"
                 slot="addon-after"
-                class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                class="absolute inset-y-0 right-0 flex items-center border-l border-gray-300"
               >
-                <span class="text-gray-500 sm:text-sm sm:leading-5">USD</span>
+                <select
+                  v-model.number="selectedPlan"
+                  class="text-gray-800 font-semibold form-select h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm sm:leading-5"
+                >
+                  <option
+                    v-for="(plan, i) in plans"
+                    :key="plan"
+                    :value="i"
+                    class="font-normal"
+                  >{{plan}}</option>
+                </select>
               </div>
             </input-group>
+
             <base-button cta @click="step = 2" class="mt-6">Continue</base-button>
           </div>
-          <div class="step" key="2" v-else-if="step == 2">
+          <div class="step" key="2" v-show="step == 2">
             <!-- FORM -->
             <div class="max-w-lg mx-auto mt-8 bg-white shadow rounded-xl p-8 my-2">
               <h2 class="text-xl font-bold text-pink-900 mb-2">Personal Info</h2>
@@ -84,11 +97,16 @@
               </div>
 
               <DonateCC
+                :recurring="recurring"
                 :selected-method.sync="selectedMethod"
                 :form-data="form"
                 :plan="selectedPlan"
+                :amount="amount"
+                :stripe-loaded="stripeLoaded"
+                :paypal-loaded="paypalLoaded"
+                @go-back="step = 1"
               />
-              <base-button @click="step = 1">Back</base-button>
+              <base-button class="small" @click="step = 1">&larr; Back</base-button>
             </div>
             <!-- /FORM -->
           </div>
@@ -113,7 +131,8 @@ import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons";
 import DonateOptions from "~/components/Donations/DonateOptions";
 import DonateCC from "~/components/Donations/DonateCC";
 import InputGroup from "~/components/InputGroup";
-import { PAYMENT_METHODS, PLANS } from "~/utils/constants";
+import loadScript from "~/utils/loadScript";
+import { PAYMENT_METHODS, PLANS, PLAN_NAMES } from "~/utils/constants";
 
 export default {
   name: "Donate",
@@ -130,6 +149,8 @@ export default {
       selectedMethod: PAYMENT_METHODS.CC,
       selectedPlan: PLANS.MONTHLY,
       amount: 36,
+      recurring: false,
+      plans: PLAN_NAMES,
       form: {
         firstName: undefined,
         lastName: undefined,
@@ -140,10 +161,43 @@ export default {
         zip: undefined,
         phone: undefined,
         comment: undefined
-      }
+      },
+      stripeLoaded: false,
+      paypalLoaded: false
     };
   },
-  computed: {}
+  methods: {
+    async loadStripe() {
+      if (window.Stripe) {
+        this.stripeLoaded = true;
+        return; // don't load Stripe twice
+      }
+      try {
+        const result = await loadScript("https://js.stripe.com/v3/");
+        this.stripeLoaded = result.successful;
+      } catch (e) {
+        console.log("stripe error", e);
+      }
+    },
+    async loadPaypal() {
+      if (window.paypal) {
+        this.paypalLoaded = true;
+        return; // don't load Stripe twice
+      }
+      try {
+        const result = await loadScript(
+          `https://www.paypal.com/sdk/js?client-id=${process.env.GRIDSOME_PAYPAL_CLIENT_ID}&vault=true`
+        );
+        this.paypalLoaded = result.successful;
+      } catch (e) {
+        console.log("PayPal error", e);
+      }
+    }
+  },
+  mounted() {
+    this.loadStripe();
+    this.loadPaypal();
+  }
 };
 </script>
 

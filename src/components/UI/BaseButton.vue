@@ -29,5 +29,8 @@ button {
   &[disabled] {
     @apply opacity-50 cursor-not-allowed;
   }
+  &.small {
+    @apply px-2 py-0;
+  }
 }
 </style>

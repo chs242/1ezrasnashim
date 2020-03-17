@@ -55,7 +55,7 @@ async function createCharge(customer, data) {
 async function createSubscription(customer, data) {
   try {
 
-    let plan = getPlanId(data.recurring);
+    let plan = getPlanId(data.plan);
 
     let subscription = await stripe.subscriptions.create(
       {
@@ -81,11 +81,11 @@ async function createSubscription(customer, data) {
 function getPlanId(id) {
   switch (id) {
     case 1:
-      return 'monthly';
-    case 2:
       return 'daily';
-    case 3:
+    case 2:
       return 'weekly';
+    case 3:
+      return 'monthly';
     case 4:
       return 'quarterly';
     case 5:
@@ -130,13 +130,13 @@ exports.handler = async (event, context) => {
   let customer = await getStripeCustomer(data);
   let charge;
 
-  if (data.recurring == 0) { // one time donation
-
-    charge = await createCharge(customer, data);
-
-  } else { // recurring donation
+  if (data.recurring) { // recurring donation
 
     charge = await createSubscription(customer, data);
+
+  } else { // one time donation
+
+    charge = await createCharge(customer, data);
 
   }
 

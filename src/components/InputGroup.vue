@@ -1,9 +1,6 @@
 <template>
   <div class="input-group text-start px-2 mb-2">
-    <label
-      :for="name"
-      class="block font-bold uppercase tracking-wide text-xs font-medium leading-5 text-gray-700"
-    >{{name}}</label>
+    <label :for="name" class="label">{{name}}</label>
     <div class="mt-1 relative rounded-md shadow-sm">
       <slot name="addon-before" />
       <textarea
@@ -24,7 +21,7 @@
         v-bind="$attrs"
         v-on="inputListeners"
         class="form-input block w-full sm:text-sm sm:leading-5"
-        :class="{'pl-8': !!$slots['addon-before'], 'pr-12': !!$slots['addon-after']}"
+        :class="{'pl-8': !!$slots['addon-before'], 'pr-28': !!$slots['addon-after']}"
         :placeholder="placeholder"
       />
       <slot name="addon-after" />
