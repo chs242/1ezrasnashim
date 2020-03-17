@@ -24,9 +24,10 @@
         v-bind="$attrs"
         v-on="inputListeners"
         class="form-input block w-full sm:text-sm sm:leading-5"
-        :class="{'pr-24': !!$slots['addon-before']}"
+        :class="{'pl-8': !!$slots['addon-before'], 'pr-12': !!$slots['addon-after']}"
         :placeholder="placeholder"
       />
+      <slot name="addon-after" />
     </div>
   </div>
 </template>
@@ -41,7 +42,7 @@ export default {
     },
     name: String,
     placeholder: String,
-    value: String,
+    value: [String, Number],
     validation: {
       type: String,
       default: "",

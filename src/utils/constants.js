@@ -4,7 +4,7 @@ export const PAYMENT_METHODS = {
   CHEQUE: 2
 }
 
-export const RECURRING_FREQUENCIES = {
+export const PLANS = {
   ONCE: 0,
   MONTHLY: 1,
   DAILY: 2,

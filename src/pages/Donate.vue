@@ -3,76 +3,97 @@
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 py-24">
       <div class="flex flex-wrap items-center">
         <div class="steps flex-2 px-4 relative">
-          <transition-group name="fade" mode="out-in">
-            <div class="step" key="1" v-if="step == 1">
-              <DonateOptionsButtons
-                :selected-frequency.sync="selectedFrequency"
-                :selected-method.sync="selectedMethod"
-              />
-              <button class="cta" @click="step = 2">Continue</button>
-            </div>
-            <div class="step" key="2" v-else-if="step == 2">
-              <!-- FORM -->
-              <div class="max-w-lg mx-auto mt-8 bg-white shadow rounded-xl p-8 my-2">
-                <h2 class="text-xl font-bold text-pink-900 mb-2">Personal Info</h2>
-                <div class="-mx-2 flex flex-wrap justify-between mb-4">
-                  <input-group
-                    v-model="form.firstName"
-                    name="first name"
-                    placeholder="John"
-                    class="flex-1"
-                  />
-                  <input-group
-                    v-model="form.lastName"
-                    name="last name"
-                    placeholder="Doe"
-                    class="flex-1"
-                  />
-                </div>
-                <div class="-mx-2 flex flex-wrap justify-between mb-4">
-                  <input-group
-                    v-model="form.email"
-                    name="email"
-                    type="email"
-                    placeholder="John"
-                    class="flex-1"
-                  />
-                </div>
-                <div class="-mx-2 flex flex-wrap mb-4">
-                  <input-group
-                    v-model="form.address"
-                    name="billing address"
-                    placeholder="1234 Washington Avenue"
-                    class="flex-1"
-                  />
-                </div>
-                <div class="-mx-2 flex flex-wrap">
-                  <input-group v-model="form.city" name="city" class="flex-1" />
-                  <input-group v-model="form.state" name="state" class="flex-1" />
-                  <input-group v-model="form.zip" name="Zip/Postal Code" class="flex-1" />
-                </div>
-                <div class="-mx-2 flex flex-wrap">
-                  <input-group v-model="form.phone" name="phone number" type="tel" class="flex-1" />
-                </div>
-                <div class="-mx-2 flex flex-wrap">
-                  <input-group
-                    v-model="form.comment"
-                    name="comments"
-                    placeholder="In honor of..."
-                    type="textarea"
-                    class="flex-1"
-                  />
-                </div>
+          <div class="step" key="1" v-if="step == 1">
+            <DonateOptionsButtons :selected-plan.sync="selectedPlan" />
+            <donate-options :amount.sync="amount" />
 
-                <h2 class="text-xl font-bold text-pink-900 mt-6 mb-2">Payment Details</h2>
-                <DonateCC :form-data="form" :recurring-frequency="selectedFrequency" />
-                <button class="cta" @click="step = 1">Back</button>
+            <input-group
+              class="amount w-40"
+              name="or enter amount"
+              v-model.number.lazy="amount"
+              type="number"
+              placeholder="0.00"
+              min="0"
+            >
+              <div
+                slot="addon-before"
+                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+              >
+                <span class="text-gray-500 sm:text-sm sm:leading-5">$</span>
               </div>
-              <!-- /FORM -->
+              <div
+                slot="addon-after"
+                class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+              >
+                <span class="text-gray-500 sm:text-sm sm:leading-5">USD</span>
+              </div>
+            </input-group>
+            <base-button cta @click="step = 2" class="mt-6">Continue</base-button>
+          </div>
+          <div class="step" key="2" v-else-if="step == 2">
+            <!-- FORM -->
+            <div class="max-w-lg mx-auto mt-8 bg-white shadow rounded-xl p-8 my-2">
+              <h2 class="text-xl font-bold text-pink-900 mb-2">Personal Info</h2>
+              <div class="-mx-2 flex flex-wrap justify-between mb-4">
+                <input-group
+                  v-model="form.firstName"
+                  name="first name"
+                  placeholder="John"
+                  class="flex-1"
+                />
+                <input-group
+                  v-model="form.lastName"
+                  name="last name"
+                  placeholder="Doe"
+                  class="flex-1"
+                />
+              </div>
+              <div class="-mx-2 flex flex-wrap justify-between mb-4">
+                <input-group
+                  v-model="form.email"
+                  name="email"
+                  type="email"
+                  placeholder="John"
+                  class="flex-1"
+                />
+              </div>
+              <div class="-mx-2 flex flex-wrap mb-4">
+                <input-group
+                  v-model="form.address"
+                  name="billing address"
+                  placeholder="1234 Washington Avenue"
+                  class="flex-1"
+                />
+              </div>
+              <div class="-mx-2 flex flex-wrap">
+                <input-group v-model="form.city" name="city" class="flex-1" />
+                <input-group v-model="form.state" name="state" class="flex-1" />
+                <input-group v-model="form.zip" name="Zip/Postal Code" class="flex-1" />
+              </div>
+              <div class="-mx-2 flex flex-wrap">
+                <input-group v-model="form.phone" name="phone number" type="tel" class="flex-1" />
+              </div>
+              <div class="-mx-2 flex flex-wrap">
+                <input-group
+                  v-model="form.comment"
+                  name="comments"
+                  placeholder="In honor of..."
+                  type="textarea"
+                  class="flex-1"
+                />
+              </div>
+
+              <DonateCC
+                :selected-method.sync="selectedMethod"
+                :form-data="form"
+                :plan="selectedPlan"
+              />
+              <base-button @click="step = 1">Back</base-button>
             </div>
-          </transition-group>
+            <!-- /FORM -->
+          </div>
         </div>
-        <div class="flex-1 px-4 text-gray-800 order-1">
+        <div class="flex-1 px-4 text-gray-800 my-12 px-6" style="min-width: 360px">
           <h2
             class="text-brand-50 text-4xl font-semibold leading-tight mb-5"
           >Lights. Sirens. Passion!</h2>
@@ -87,15 +108,19 @@
 </template>
 
 <script>
-import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons.vue";
-import DonateCC from "~/components/Donations/DonateCC.vue";
+import BaseButton from "~/components/UI/BaseButton";
+import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons";
+import DonateOptions from "~/components/Donations/DonateOptions";
+import DonateCC from "~/components/Donations/DonateCC";
 import InputGroup from "~/components/InputGroup";
-import { PAYMENT_METHODS, RECURRING_FREQUENCIES } from "~/utils/constants";
+import { PAYMENT_METHODS, PLANS } from "~/utils/constants";
 
 export default {
   name: "Donate",
   components: {
+    BaseButton,
     DonateOptionsButtons,
+    DonateOptions,
     InputGroup,
     DonateCC
   },
@@ -103,7 +128,8 @@ export default {
     return {
       step: 1,
       selectedMethod: PAYMENT_METHODS.CC,
-      selectedFrequency: RECURRING_FREQUENCIES.MONTHLY,
+      selectedPlan: PLANS.MONTHLY,
+      amount: 36,
       form: {
         firstName: undefined,
         lastName: undefined,
@@ -127,31 +153,22 @@ export default {
 }
 
 .step {
-  overflow-y: auto;
-  overflow-x: hidden;
-  min-height: 580px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-button.cta {
-  @apply bg-pink-600 text-white text-base py-4 px-8 rounded-xl;
-  &[disabled] {
-    @apply opacity-50 cursor-not-allowed;
+.amount {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
-}
 
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-80px);
-}
-
-.fade-leave-active {
-  @apply w-full h-full absolute;
-  transition: all 1s;
-  transform: translateY(0px);
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
 </style>

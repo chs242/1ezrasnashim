@@ -38,7 +38,10 @@ async function createCharge(customer, data) {
       amount: data.amount,
       receipt_email: data.email,
       customer: customer.id,
-      description: data.description
+      description: data.description,
+      metadata: {
+        'comment': data.user.comment
+      }
     }, {
       idempotencyKey: data.idempotencyKey
     })
@@ -59,15 +62,19 @@ async function createSubscription(customer, data) {
         customer: customer.id,
         items: [{
           plan: plan,
-          quantity: data.amount / 100 // amount to charge per period
+          quantity: data.amount / 100, // amount to charge per period
+          metadata: {
+            'comment': data.user.comment
+          }
         }],
       }, {
       idempotencyKey: data.idempotencyKey
     })
     console.log('successfully created subscription', subscription);
+    return subscription;
   } catch (err) {
     console.log('error creating subscription', err);
-
+    return false;
   }
 }
 
@@ -133,7 +140,7 @@ exports.handler = async (event, context) => {
 
   }
 
-  const status = (!charge || charge.status !== 'succeeded') ? 'failed' : charge.status
+  const status = (!charge || (charge.status !== 'succeeded' && charge.status !== 'active')) ? 'failed' : charge.status
 
   return {
     statusCode: 200,
@@ -142,7 +149,10 @@ exports.handler = async (event, context) => {
       'Access-Control-Allow-Headers': 'Content-Type'
     },
     body: JSON.stringify({
-      status: status
+      status: status,
+      customer: {
+        email: customer.email
+      }
     })
   }
 
