@@ -1,9 +1,11 @@
 <template>
   <Layout :show-logo="true" bg-color="bg-gray-100">
+    <img
+      src="../assets/images/contact-tab/world-map.png"
+      class="bg-img hidden lg:block absolute m-auto left-0 right-0"
+    />
 
-    <img src="../assets/images/contact-tab/world-map.png" alt="" class="bg-img hidden lg:block mx-auto">
-
-    <div id="donate-page" class="max-w-6xl mx-auto sm:px-6 lg:absolute md:mx-0 lg:px-8 py-24">
+    <div id="donate-page" class="max-w-6xl mx-auto sm:px-6 lg:px-8 py-24">
       <div class="flex flex-wrap items-center">
         <div class="steps flex-2 px-4 relative">
           <div class="step" key="1" v-show="step == 1">
@@ -99,7 +101,7 @@
                 />
               </div>
 
-              <DonateCC
+              <payment-methods
                 :recurring="recurring"
                 :selected-method.sync="selectedMethod"
                 :form-data="form"
@@ -132,7 +134,7 @@
 import BaseButton from "~/components/UI/BaseButton";
 import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons";
 import DonateOptions from "~/components/Donations/DonateOptions";
-import DonateCC from "~/components/Donations/DonateCC";
+import PaymentMethods from "~/components/Donations/PaymentMethods";
 import InputGroup from "~/components/InputGroup";
 import loadScript from "~/utils/loadScript";
 import { PAYMENT_METHODS, PLANS, PLAN_NAMES } from "~/utils/constants";
@@ -144,7 +146,7 @@ export default {
     DonateOptionsButtons,
     DonateOptions,
     InputGroup,
-    DonateCC
+    PaymentMethods
   },
   data() {
     return {
@@ -206,25 +208,17 @@ export default {
 
 <style lang="scss" scoped>
 @media (min-width: 1024px) {
-img.bg-img{
-      filter: hue-rotate(65deg) opacity(40%); 
-      transform: scale(1.1);
-      margin-top: 5%
-    }
-    #donate-page{
-        top: 5%;
-        left: 10%;
-    }
+  img.bg-img {
+    filter: hue-rotate(65deg) opacity(5%);
+    margin-top: 5%;
+  }
 }
-@media (min-width: 768px) and (max-width: 1024px){
-    img.bg-img{
-      margin-top: 45%;
-      transform: scale(0.9);
-    }
-    #donate-page{
-        top: 5%;
-    }
-} 
+@media (min-width: 768px) and (max-width: 1024px) {
+  img.bg-img {
+    margin-top: 45%;
+    transform: scale(0.9);
+  }
+}
 
 .root-form {
   max-width: 800px;

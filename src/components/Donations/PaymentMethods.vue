@@ -59,50 +59,48 @@
           </button>
         </span>
       </div>
-      <div v-show="selectedMethod == 0" class="method stripe">
-        <label
-          class="block uppercase tracking-wide text-grey-darker text-xs font-bold"
-          for="grid-password"
-        >Credit Card Details</label>
-        <component
-          :is="cc"
-          :options="stripeOptions"
-          :stripe="stripePublicKey"
-          @change="stripeComplete = $event.complete"
-          :class="{ stripeComplete }"
-          class="my-2"
-          id="card"
-        />
-        <div class="total mt-6">
-          <label class="label">Donation Total:</label>
-          <span class="font-bold text-2xl text-pink-900 mr-1">${{ amount }}</span>
-          <span
-            v-if="recurring"
-            class="inline-flex items-center mx-2 px-3 py-0.5 rounded text-sm font-medium bg-green-100 text-green-800"
-          >
-            <svg class="-ml-1 mr-1.5 h-2 w-2 text-green-400" fill="currentColor" viewBox="0 0 8 8">
-              <circle cx="4" cy="4" r="3" />
-            </svg>
-            {{ plans[plan] }}
-          </span>
-          <span
-            @click="$emit('go-back')"
-            class="underline text-xs text-gray-400 hover:text-gray-600 cursor-pointer"
-          >change</span>
-        </div>
-        <div class="text-center">
-          <base-button
-            :cta="complete"
-            @click="payWithStripe"
-            :disabled="!complete"
-            class="my-8"
-          >Donate Now</base-button>
-        </div>
+      <div class="total my-6">
+        <label class="label">Donation Total:</label>
+        <span class="font-bold text-2xl text-pink-900 mr-1">${{ amount }}</span>
+        <span
+          v-if="recurring"
+          class="inline-flex items-center mx-2 px-3 py-0.5 rounded text-sm font-medium bg-green-100 text-green-800"
+        >
+          <svg class="-ml-1 mr-1.5 h-2 w-2 text-green-400" fill="currentColor" viewBox="0 0 8 8">
+            <circle cx="4" cy="4" r="3" />
+          </svg>
+          {{ plans[plan] }}
+        </span>
+        <span
+          @click="$emit('go-back')"
+          class="underline text-xs text-gray-400 hover:text-gray-600 cursor-pointer"
+        >change</span>
       </div>
+      <!-- STRIPE -->
+      <stripe
+        v-show="selectedMethod == 0"
+        :state.sync="state"
+        :stripeLoaded="stripeLoaded"
+        :stripeComplete.sync="stripeComplete"
+        :recurring="recurring"
+        :plan="plan"
+        :amount="amount"
+        :formData="formData"
+      />
 
-      <div v-show="selectedMethod == 1" class="method paypal">
-        <div id="paypal-button-container"></div>
-      </div>
+      <!-- PAYPAL -->
+      <paypal
+        v-show="selectedMethod == 1"
+        :state.sync="state"
+        :paypalLoaded="paypalLoaded"
+        :recurring="recurring"
+        :plan="plan"
+        :amount="amount"
+        :formData="formData"
+      />
+
+      <!-- CHEQUE -->
+      <cheque v-if="selectedMethod == 2" />
     </div>
     <div v-show="state == STATES.PROCESSING" class="my-14 my-16">
       <loader />
@@ -113,20 +111,20 @@
     </div>
     <div v-show="state == STATES.ERROR" class="my-16 text-center">
       <h1 class="text-3xl font-roboto font-bold uppercase tracking-wider text-pink-600">Sorry.</h1>
-      <p class="text-gray-700">There has been a problem with your payment.</p>
+      <p class="text-gray-700">There has been a problem processing your payment.</p>
     </div>
   </div>
 </template>
 
 <script>
-import BaseButton from "~/components/UI/BaseButton";
 import Loader from "~/components/UI/Loader";
-import submitPaymentStripe from "~/utils/paymentWithStripe";
-import { Card, createToken } from "vue-stripe-elements-plus";
-import { PAYMENT_METHODS, PLANS, PLAN_NAMES, STATES } from "~/utils/constants";
+import Stripe from "~/components/Donations/PaymentGateways/Stripe";
+import Paypal from "~/components/Donations/PaymentGateways/Paypal";
+import Cheque from "~/components/Donations/PaymentGateways/Cheque";
+import { PLAN_NAMES, STATES } from "~/utils/constants";
 
 export default {
-  name: "DonateCC",
+  name: "PaymentMethods",
   props: [
     "formData",
     "amount",
@@ -136,97 +134,24 @@ export default {
     "paypalLoaded",
     "recurring"
   ],
-  components: { BaseButton, Loader },
+  components: { Loader, Stripe, Paypal, Cheque },
   data() {
     return {
       STATES: STATES,
       state: STATES.IDLE,
-      stripePublicKey: process.env.GRIDSOME_STRIPE_PUBLISHABLE_KEY,
-      stripeComplete: false,
-      stripeOptions: {
-        hidePostalCode: true,
-        style: {
-          base: {
-            fontSize: "1rem",
-            fontFamily: "Roboto, sans serif",
-            color: "#192734",
-            lineHeight: "25px",
-            "::placeholder": {
-              color: "#889aab"
-            }
-          }
-        }
-      },
-      plans: PLAN_NAMES
+      plans: PLAN_NAMES,
+      stripeComplete: false
     };
   },
+
   computed: {
-    cc() {
-      return this.stripeLoaded && Card;
-    },
     paymentMethods() {
-      return this.plan === PLANS.ONCE
-        ? ["Credit Card", "Paypal", "Cheque"]
-        : ["Credit Card", "Paypal"];
-    },
-    complete() {
-      return this.stripeComplete && this.validateEmail(this.formData.email);
+      return this.recurring
+        ? ["Credit Card", "Paypal"]
+        : ["Credit Card", "Paypal", "Cheque"];
     }
   },
-  methods: {
-    async payWithStripe() {
-      this.state = STATES.PROCESSING;
-      const token = await createToken();
-      const result = await submitPaymentStripe({
-        ...token,
-        user: { ...this.formData },
-        recurring: this.recurring,
-        plan: this.plan,
-        amount: this.amount
-      });
-
-      if (result.data.status == "failed") {
-        this.state = STATES.ERROR;
-      } else {
-        this.state = STATES.SUCCESS;
-      }
-
-      console.log({ result });
-    },
-    validateEmail(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(email).toLowerCase());
-    },
-    renderPaypalButton() {
-      console.log("Rendering Paypal Button", paypal);
-      let amount = this.amount;
-      paypal
-        .Buttons({
-          createSubscription: function(data, actions) {
-            return actions.subscription.create({
-              plan_id: "P-6M918566SU160641XLZYPNEA",
-              quantity: amount
-            });
-          },
-          onApprove: function(data, actions) {
-            console.log("You have successfully created subscription", data);
-          }
-        })
-        .render("#paypal-button-container");
-    }
-  },
-  watch: {
-    paypalLoaded(newVal, oldVal) {
-      if (newVal) {
-        this.renderPaypalButton();
-      }
-    }
-  },
-  mounted() {
-    if (this.paypalLoaded) {
-      this.renderPaypalButton();
-    }
-  }
+  methods: {}
 };
 </script>
 
@@ -248,6 +173,17 @@ export default {
     line-height: 1.5;
     &.StripeElement--focus {
       @apply shadow-outline-blue border-blue-300 outline-none;
+    }
+  }
+}
+
+.cheque {
+  ol {
+    li {
+      @apply pl-2 mt-2;
+      &::-moz-list-number {
+        @apply font-bold text-pink-600;
+      }
     }
   }
 }
