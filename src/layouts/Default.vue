@@ -17,7 +17,7 @@
           class="px-3 font-roboto text-sm lg:text-base font-semibold hover:text-pink-900 transition duration-100 ease-linear xl:text-lg"
         >Contact</a>
         <a
-          href="/contact"
+          href="/news"
           class="px-3 font-roboto text-sm lg:text-base font-semibold hover:text-pink-900 transition duration-100 ease-linear xl:text-lg"
         >News & Press</a>
         <a
@@ -60,7 +60,7 @@
         <a href="/" class="mobile">Home</a>
         <a href="/volunteer" class="mobile">Volunteer</a>
         <a href="/contact" class="mobile">Contact</a>
-        <a href="/contact" class="mobile">News & Press</a>
+        <a href="/news" class="mobile">News & Press</a>
         <a href="/services" class="mobile">Services</a>
         <a href="/about" class="mobile">About</a>
         <a href="/donate" class="mobile donate">Donate</a>
