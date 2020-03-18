@@ -101,7 +101,7 @@
                 />
               </div>
 
-              <DonateCC
+              <payment-methods
                 :recurring="recurring"
                 :selected-method.sync="selectedMethod"
                 :form-data="form"
@@ -134,7 +134,7 @@
 import BaseButton from "~/components/UI/BaseButton";
 import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons";
 import DonateOptions from "~/components/Donations/DonateOptions";
-import DonateCC from "~/components/Donations/DonateCC";
+import PaymentMethods from "~/components/Donations/PaymentMethods";
 import InputGroup from "~/components/InputGroup";
 import loadScript from "~/utils/loadScript";
 import { PAYMENT_METHODS, PLANS, PLAN_NAMES } from "~/utils/constants";
@@ -146,7 +146,7 @@ export default {
     DonateOptionsButtons,
     DonateOptions,
     InputGroup,
-    DonateCC
+    PaymentMethods
   },
   data() {
     return {
