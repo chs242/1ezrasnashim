@@ -4,7 +4,7 @@
       v-for="(desc, i) in descriptions"
       :key="amounts[i]"
       :class="{active: amounts[i] == amount}"
-      @click="$emit('update:amount', amounts[i])"
+      @click.stop="$emit('update:amount', amounts[i])"
       class="item relative w-1/3 rounded-xl bg-pink-100 p-4 m-2 cursor-pointer"
       style="min-width: 120px;"
     >

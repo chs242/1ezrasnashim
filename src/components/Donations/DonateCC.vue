@@ -59,6 +59,24 @@
           </button>
         </span>
       </div>
+      <div class="total my-6">
+        <label class="label">Donation Total:</label>
+        <span class="font-bold text-2xl text-pink-900 mr-1">${{ amount }}</span>
+        <span
+          v-if="recurring"
+          class="inline-flex items-center mx-2 px-3 py-0.5 rounded text-sm font-medium bg-green-100 text-green-800"
+        >
+          <svg class="-ml-1 mr-1.5 h-2 w-2 text-green-400" fill="currentColor" viewBox="0 0 8 8">
+            <circle cx="4" cy="4" r="3" />
+          </svg>
+          {{ plans[plan] }}
+        </span>
+        <span
+          @click="$emit('go-back')"
+          class="underline text-xs text-gray-400 hover:text-gray-600 cursor-pointer"
+        >change</span>
+      </div>
+      <!-- STRIPE -->
       <div v-show="selectedMethod == 0" class="method stripe">
         <label
           class="block uppercase tracking-wide text-grey-darker text-xs font-bold"
@@ -73,23 +91,6 @@
           class="my-2"
           id="card"
         />
-        <div class="total mt-6">
-          <label class="label">Donation Total:</label>
-          <span class="font-bold text-2xl text-pink-900 mr-1">${{ amount }}</span>
-          <span
-            v-if="recurring"
-            class="inline-flex items-center mx-2 px-3 py-0.5 rounded text-sm font-medium bg-green-100 text-green-800"
-          >
-            <svg class="-ml-1 mr-1.5 h-2 w-2 text-green-400" fill="currentColor" viewBox="0 0 8 8">
-              <circle cx="4" cy="4" r="3" />
-            </svg>
-            {{ plans[plan] }}
-          </span>
-          <span
-            @click="$emit('go-back')"
-            class="underline text-xs text-gray-400 hover:text-gray-600 cursor-pointer"
-          >change</span>
-        </div>
         <div class="text-center">
           <base-button
             :cta="complete"
@@ -99,9 +100,9 @@
           >Donate Now</base-button>
         </div>
       </div>
-
+      <!-- PAYPAL -->
       <div v-show="selectedMethod == 1" class="method paypal">
-        <div id="paypal-button-container"></div>
+        <div ref="paypalBtns" id="paypal-button-container"></div>
       </div>
     </div>
     <div v-show="state == STATES.PROCESSING" class="my-14 my-16">
@@ -123,7 +124,13 @@ import BaseButton from "~/components/UI/BaseButton";
 import Loader from "~/components/UI/Loader";
 import submitPaymentStripe from "~/utils/paymentWithStripe";
 import { Card, createToken } from "vue-stripe-elements-plus";
-import { PAYMENT_METHODS, PLANS, PLAN_NAMES, STATES } from "~/utils/constants";
+import {
+  PAYMENT_METHODS,
+  PLANS,
+  PLAN_NAMES,
+  PAYPAL_PLANS_IDS,
+  STATES
+} from "~/utils/constants";
 
 export default {
   name: "DonateCC",
@@ -160,6 +167,7 @@ export default {
       plans: PLAN_NAMES
     };
   },
+
   computed: {
     cc() {
       return this.stripeLoaded && Card;
@@ -171,6 +179,49 @@ export default {
     },
     complete() {
       return this.stripeComplete && this.validateEmail(this.formData.email);
+    },
+    paypalConfig() {
+      console.log(
+        `paypal action: ${this.recurring ? "subscription" : "charge"}`
+      );
+
+      return this.recurring
+        ? {
+            createSubscription: (data, actions) => {
+              const amount = this.amount;
+              const planId = PAYPAL_PLANS_IDS[this.plan];
+              console.log({ amount }, { planId });
+              return actions.subscription.create({
+                plan_id: planId,
+                quantity: amount
+              });
+            },
+            onApprove: (data, actions) => {
+              console.log("You have successfully created subscription", data);
+              this.state = STATES.SUCCESS;
+            }
+          }
+        : {
+            createOrder: (data, actions) => {
+              return actions.order.create({
+                purchase_units: [
+                  {
+                    amount: {
+                      currency_code: "USD",
+                      value: this.amount
+                    }
+                  }
+                ]
+              });
+            },
+            onApprove: (data, actions) => {
+              this.state = STATES.PROCESSING;
+              return actions.order.capture().then(details => {
+                console.log("Transaction details:", details);
+                this.state = STATES.SUCCESS;
+              });
+            }
+          };
     }
   },
   methods: {
@@ -197,19 +248,19 @@ export default {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(String(email).toLowerCase());
     },
-    renderPaypalButton() {
-      console.log("Rendering Paypal Button", paypal);
-      let amount = this.amount;
+    setupPayPalButton() {
+      this.$refs.paypalBtns.innerHTML = "";
       paypal
         .Buttons({
-          createSubscription: function(data, actions) {
-            return actions.subscription.create({
-              plan_id: "P-6M918566SU160641XLZYPNEA",
-              quantity: amount
-            });
+          style: {
+            color: "blue",
+            shape: "rect",
+            label: "paypal"
           },
-          onApprove: function(data, actions) {
-            console.log("You have successfully created subscription", data);
+          ...this.paypalConfig,
+          onError: err => {
+            this.state = STATES.ERROR;
+            console.log("Paypal error", err);
           }
         })
         .render("#paypal-button-container");
@@ -218,13 +269,18 @@ export default {
   watch: {
     paypalLoaded(newVal, oldVal) {
       if (newVal) {
-        this.renderPaypalButton();
+        this.setupPayPalButton();
       }
+    },
+    recurring() {
+      console.log("rerender paypal btns");
+
+      this.setupPayPalButton();
     }
   },
   mounted() {
     if (this.paypalLoaded) {
-      this.renderPaypalButton();
+      this.setupPayPalButton();
     }
   }
 };
