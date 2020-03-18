@@ -5,7 +5,7 @@ export default async function (data) {
   console.log({ data });
 
   try {
-    const res = await axios.post("http://localhost:8888/.netlify/functions/stripe", {
+    const res = await axios.post("/.netlify/functions/stripe", {
       user: data.user,
       amount: data.amount * 100, //it expects the price in cents, as an integer
       recurring: data.recurring,
