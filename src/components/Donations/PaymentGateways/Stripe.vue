@@ -89,6 +89,7 @@ export default {
       console.log(result);
     },
     validateEmail(email) {
+      // StripeElement StripeElement--focus [hack against purge-css 🤪]
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(String(email).toLowerCase());
     }
@@ -96,5 +97,25 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+#card {
+  .StripeElement {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    border-color: #d2d6dc;
+    border-width: 1px;
+    border-radius: 0.375rem;
+    padding-top: 0.5rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    &.StripeElement--focus {
+      @apply shadow-outline-blue border-blue-300 outline-none;
+    }
+  }
+}
 </style>
