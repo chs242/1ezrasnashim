@@ -1,13 +1,13 @@
 <template>
-  <Layout :show-logo="true" bg-color="bg-gray-100">
+  <Layout bg-color="bg-gray-100">
     <img
       src="../assets/images/contact-tab/world-map.png"
       class="bg-img hidden lg:block absolute m-auto left-0 right-0"
     />
 
-    <div id="donate-page" class="max-w-6xl mx-auto sm:px-6 lg:px-8 py-24">
+    <div id="donate-page" class="max-w-6xl mx-auto sm:px-0 lg:px-8 py-24">
       <div class="flex flex-wrap items-center">
-        <div class="steps flex-2 px-4 relative">
+        <div class="steps flex-2 px-1 py-4 relative md:px-4">
           <div class="step" key="1" v-show="step == 1">
             <DonateOptionsButtons :recurring.sync="recurring" />
             <donate-options :amount.sync="amount" :recurring="recurring" />
@@ -50,7 +50,7 @@
           </div>
           <div class="step" key="2" v-show="step == 2">
             <!-- FORM -->
-            <div class="max-w-lg mx-auto mt-8 bg-white shadow rounded-xl p-8 my-2">
+            <div class="max-w-lg px-2 py-8 mt-8 bg-white shadow rounded-xl md:p-8 my-2">
               <h2 class="text-xl font-bold text-pink-900 mb-2">Personal Info</h2>
               <div class="-mx-2 flex flex-wrap justify-between mb-4">
                 <input-group
