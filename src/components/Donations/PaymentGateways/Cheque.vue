@@ -35,5 +35,15 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.cheque {
+  ol {
+    li {
+      @apply pl-2 mt-2;
+      &::-moz-list-number {
+        @apply font-bold text-pink-600;
+      }
+    }
+  }
+}
 </style>

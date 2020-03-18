@@ -154,37 +154,3 @@ export default {
   methods: {}
 };
 </script>
-
-<style lang="scss">
-#card {
-  .StripeElement {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #ffffff;
-    border-color: #d2d6dc;
-    border-width: 1px;
-    border-radius: 0.375rem;
-    padding-top: 0.5rem;
-    padding-right: 0.75rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    &.StripeElement--focus {
-      @apply shadow-outline-blue border-blue-300 outline-none;
-    }
-  }
-}
-
-.cheque {
-  ol {
-    li {
-      @apply pl-2 mt-2;
-      &::-moz-list-number {
-        @apply font-bold text-pink-600;
-      }
-    }
-  }
-}
-</style>
