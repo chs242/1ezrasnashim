@@ -1,18 +1,17 @@
 <template>
-  <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
-    <div class="post-card__header">
-      <g-image alt="Cover image" v-if="post.cover_image" class="post-card__image" :src="post.cover_image" />
-    </div>
-    <div class="post-card__content">
-      <h2 class="post-card__title" v-html="post.title" />
-      <p class="post-card__description" v-html="post.description" />
-
-      <PostMeta class="post-card__meta" :post="post" />
-      <PostTags class="post-card__tags" :post="post" />
-
-      <g-link class="post-card__link" :to="post.path">Link</g-link>
-    </div>
-  </div>
+    <g-link class="w-full my-8 font-source shadow-lg custom-radius-bottom" :to="post.path"> 
+        <div >
+            <g-image alt="Cover image" v-if="post.cover_image" :src="post.cover_image" class="custom-radius-top" />
+        </div>
+        <div class="bg-white px-3 text-center custom-radius-bottom">
+            <h2 class="pt-4 pr-12 text-3xl text-left font-bold font-roboto" v-html="post.title" />
+            <p class="pt-4 text-lg font-source" v-html="post.description" />
+            <div class="py-4">
+              <PostMeta class="" :post="post" />
+              <PostTags class="" :post="post" />
+            </div>
+        </div>
+    </g-link>
 </template>
 
 <script>
@@ -28,52 +27,15 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.post-card {
-  margin-bottom: var(--space);
-  position: relative;
+<style scoped>
 
-  &__header {
-    margin-left: calc(var(--space) * -1);
-    margin-right: calc(var(--space) * -1);
-    margin-bottom: calc(var(--space) / 2);
-    margin-top: calc(var(--space) * -1);
-    overflow: hidden;
-    border-radius: var(--radius) var(--radius) 0 0;
-
-    &:empty {
-      display: none;
-    }
+  .custom-radius-top{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
   }
 
-  &__image {
-    min-width: 100%;
+  .custom-radius-bottom{
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
   }
-
-  &__title {
-    margin-top: 0;
-  }
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
-  }
-
-  &__tags {
-    z-index: 1;
-    position: relative;
-  }
-
-  &__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.0;
-    overflow: hidden;
-    text-indent: -9999px;
-    z-index: 0;
-  }
-}
 </style>

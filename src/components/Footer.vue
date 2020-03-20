@@ -47,7 +47,7 @@
 
           <div class="w-1/2 flex flex-col text-center">
             <p class="w-full font-roboto text-sm lg:text-lg font-medium md:mb-6">Popular</p>
-            <a href="/about" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">News & Press</a>
+            <a href="/news" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">News & Press</a>
             <a href="/volunteer" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">Volunterr</a>
             <a href="/endorsements" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">Donate</a>
             <a href="/endorsements" class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800">Contact Us</a>

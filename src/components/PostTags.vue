@@ -1,6 +1,6 @@
 <template>
-   <div class="post-tags">
-   		<g-link class="post-tags__link" v-for="tag in post.tags" :key="tag.id" :to="tag.path">
+   <div class="">
+   		<g-link class="bg-gray-200 py-1 px-2 mx-1 rounded-xl" v-for="tag in post.tags" :key="tag.id" :to="tag.path">
    			<span>#</span> {{ tag.title }}
    		</g-link>
     </div>
@@ -12,19 +12,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.post-tags {
-  margin: 1em 0 0;
+<style scoped>
 
-  &__link {
-  	margin-right: .7em;
-  	font-size: .8em;
-  	color: currentColor;
-  	text-decoration: none;
-  	background-color: var(--bg-color);
-  	color: currentColor!important; //Todo: remove important;
-  	padding: .5em;
-  	border-radius: var(--radius);
-  }
-}
 </style>

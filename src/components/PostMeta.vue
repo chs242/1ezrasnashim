@@ -1,5 +1,5 @@
 <template>
-   <div class="post-meta">
+   <div class="">
       Posted {{ post.date }}.
       <template v-if="post.timeToRead">
         <strong>{{ post.timeToRead }} min read.</strong>
@@ -13,9 +13,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.post-meta {
-  font-size: .8em;
-  opacity: .8;
-}
+<style scoped>
+
 </style>

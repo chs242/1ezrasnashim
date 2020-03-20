@@ -1,19 +1,16 @@
 <template>
   <Layout>
-    <!-- Author intro -->
-    <Author :show-title="true" />
-
-    <!-- List posts -->
-    <div class="posts">
-      <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+    <div class="bg-gray-100">
+      <div class="px-3 py-20">
+        <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+      </div>
     </div>
-
   </Layout>
 </template>
 
 <page-query>
 query {
-  posts: alPost(filter: { published: { eq: true }}) {
+  posts: allPost(filter: { published: { eq: true }}) {
     edges {
       node {
         id
