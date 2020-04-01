@@ -1,45 +1,30 @@
 <template>
   <div id="app" class="min-h-screen flex flex-col">
     <header
-      class="bg-gray-200 flex fixed top-0 left-0 right-0 h-16 md:h-20 lg:static lg:h-24 z-10 custom-border"
+      class="fixed w-full lg:relative py-2 lg:py-4 px-6 bg-gray-200 flex justify-between items-center custom-border"
     >
-      <div class="hidden lg:inline-flex justify-center items-center lg:w-2/4">
-        <a
-          href="/"
-          class="px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg"
-        >Home</a>
-        <a
-          href="/volunteer"
-          class="px-3 font-roboto text-sm lg:text-base font-semibold hover:text-pink-900 transition duration-100 ease-linear xl:text-lg"
-        >Volunteer</a>
-        <a
-          href="/contact"
-          class="px-3 font-roboto text-sm lg:text-base font-semibold hover:text-pink-900 transition duration-100 ease-linear xl:text-lg"
-        >Contact</a>
-        <a
-          href="/news"
-          class="px-3 font-roboto text-sm lg:text-base font-semibold hover:text-pink-900 transition duration-100 ease-linear xl:text-lg"
-        >News & Press</a>
-        <a
-          href="/services"
-          class="px-3 font-roboto text-sm lg:text-base font-semibold hover:text-pink-900 transition duration-100 ease-linear xl:text-lg"
-        >Services</a>
-        <a
-          href="/about"
-          class="px-3 font-roboto text-sm lg:text-base font-semibold hover:text-pink-900 transition duration-100 ease-linear xl:text-lg"
-        >About</a>
-        <!-- <a href="/news" class="">News & Press</a> -->
+      <div class="hidden lg:flex -ml-4 justify-center items-center">
+        <g-link
+          v-for="link in links"
+          :key="link.url"
+          :to="link.url"
+          class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
+        >{{link.name}}</g-link>
       </div>
 
-      <div class="pl-6 lg:pl-0 md:pt-2 lg:pt-8 lg:w-1/5 lg:flex justify-center z-10">
-        <Logo />
-      </div>
+      <g-link
+        to="/donate"
+        class="hidden lg:flex ml-4 font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md lg:text-base"
+      >Donate</g-link>
+
+      <Logo class="lg:absolute bottom-0 right-0 left-0 lg:mx-auto lg:transform lg:translate-y-2/3" />
+
       <!-- Bear in mind there is additional CSS below in the styles tag -->
       <div class="lg:hidden" :class="{ 'is-drawerActive': isActive }">
         <button
           type="button"
           class="c-button p-hamburger self-end lg:hidden absolute"
-          @click="drawer"
+          @click="isActive = !isActive"
           aria-controls="global-nav"
           :aria-expanded="isActive ? 'true' : 'false'"
         >
@@ -48,27 +33,17 @@
         </button>
       </div>
 
-      <div class="hidden lg:w-2/4 lg:inline-flex justify-center items-center">
-        <a
-          href="/donate"
-          class="font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md lg:text-base"
-        >Donate</a>
-      </div>
-
       <!-- Bear in mind there is additional CSS below in the styles tag -->
       <div id="mySidenav" :class="{open: isActive}" class="sidenav" @click="isActive = !isActive">
-        <a href="/" class="mobile">Home</a>
-        <a href="/volunteer" class="mobile">Volunteer</a>
-        <a href="/contact" class="mobile">Contact</a>
-        <a href="/news" class="mobile">News & Press</a>
-        <a href="/services" class="mobile">Services</a>
-        <a href="/about" class="mobile">About</a>
-        <a href="/donate" class="mobile donate">Donate</a>
+        <g-link v-for="link in links" :key="link.url" :to="link.url" class="mobile">{{link.name}}</g-link>
+        <g-link to="/donate" class="mobile donate">Donate</g-link>
       </div>
     </header>
-    <main class="main flex-1" :class="[bgColor]">
-      <slot />
-    </main>
+    <transition name="slideUp" appear>
+      <main class="main flex-1" :class="[bgColor]">
+        <slot />
+      </main>
+    </transition>
     <Footer />
   </div>
 </template>
@@ -87,13 +62,34 @@ export default {
   },
   data() {
     return {
+      links: [
+        {
+          name: "Home",
+          url: "/"
+        },
+        {
+          name: "Volunteer",
+          url: "/volunteer"
+        },
+        {
+          name: "Contact",
+          url: "/contact"
+        },
+        {
+          name: "News & Press",
+          url: "/news"
+        },
+        {
+          name: "Services",
+          url: "/services"
+        },
+        {
+          name: "About",
+          url: "/about"
+        }
+      ],
       isActive: false
     };
-  },
-  methods: {
-    drawer: function() {
-      this.isActive = !this.isActive;
-    }
   }
 };
 </script>
@@ -264,5 +260,17 @@ export default {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+.slideUp-enter-active {
+  transition: all 0.3s ease-in;
+}
+.slideUp-leave-active {
+  transition: none;
+}
+.slideUp-enter,
+.slideUp-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
 }
 </style>
