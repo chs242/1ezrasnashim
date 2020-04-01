@@ -9,7 +9,7 @@
         <br />Care
       </h1>
       <g-link
-        to="/donate"
+        to="/donate/"
         class="banner-a absolute font-roboto text-xl font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 lg:px-20 py-2 lg:py-3 leading-normal shadow-md"
       >Donate</g-link>
       <img

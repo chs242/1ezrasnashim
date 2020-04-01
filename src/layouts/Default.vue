@@ -13,7 +13,7 @@
       </div>
 
       <g-link
-        to="/donate"
+        to="/donate/"
         class="hidden lg:flex ml-4 font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md lg:text-base"
       >Donate</g-link>
 
@@ -36,7 +36,7 @@
       <!-- Bear in mind there is additional CSS below in the styles tag -->
       <div id="mySidenav" :class="{open: isActive}" class="sidenav" @click="isActive = !isActive">
         <g-link v-for="link in links" :key="link.url" :to="link.url" class="mobile">{{link.name}}</g-link>
-        <g-link to="/donate" class="mobile donate">Donate</g-link>
+        <g-link to="/donate/" class="mobile donate">Donate</g-link>
       </div>
     </header>
     <transition name="slideUp" appear>
@@ -69,23 +69,23 @@ export default {
         },
         {
           name: "Volunteer",
-          url: "/volunteer"
+          url: "/volunteer/"
         },
         {
           name: "Contact",
-          url: "/contact"
+          url: "/contact/"
         },
         {
           name: "News & Press",
-          url: "/news"
+          url: "/news/"
         },
         {
           name: "Services",
-          url: "/services"
+          url: "/services/"
         },
         {
           name: "About",
-          url: "/about"
+          url: "/about/"
         }
       ],
       isActive: false

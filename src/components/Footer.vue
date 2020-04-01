@@ -40,19 +40,19 @@
         <div class="w-1/2 flex flex-col text-center">
           <p class="w-full font-roboto text-sm lg:text-lg font-medium md:mb-6">Service</p>
           <g-link
-            to="/about"
+            to="/about/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >Our Team</g-link>
           <g-link
-            to="/volunteer"
+            to="/volunteer/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >Our Services</g-link>
           <g-link
-            to="/endorsements"
+            to="/endorsements/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >Endorsments</g-link>
           <g-link
-            to="/about"
+            to="/about/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >About Us</g-link>
         </div>
@@ -68,11 +68,11 @@
         <div class="w-1/2 flex flex-col text-center">
           <p class="w-full font-roboto text-sm lg:text-lg font-medium md:mb-6">Popular</p>
           <g-link
-            to="/news"
+            to="/news/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >News & Press</g-link>
           <g-link
-            to="/volunteer"
+            to="/volunteer/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >Volunteer</g-link>
           <g-link
@@ -80,7 +80,7 @@
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >Donate</g-link>
           <g-link
-            to="/contact"
+            to="/contact/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >Contact Us</g-link>
         </div>
