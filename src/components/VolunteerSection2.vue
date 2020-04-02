@@ -172,7 +172,6 @@
               rows="4"
               cols="30"
               name="comment"
-              form="volunteer-form"
               placeholder="Comment..."
               class="w-full py-1 text-left custom-border"
             ></textarea>
