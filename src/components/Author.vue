@@ -1,5 +1,5 @@
 <template>
-	<div class="author">
+	<div class="my-12 text-white">
 
 		<h1 v-if="showTitle" class="author__site-title">
 			{{ $static.metadata.siteName }}

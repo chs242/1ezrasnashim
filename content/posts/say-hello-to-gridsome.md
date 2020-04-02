@@ -16,33 +16,6 @@ With **Gridsome** you get a **universal GraphQL layer** for all your connected d
 
 Here is an example on how to query posts from the GraphQL layer in a page:
 
-
-```html
-<template>
-  <Layout>
-    <h2>Latest blog posts</h2>
-    <ul>
-      <li v-for="edge in $page.allWordPressPost.edges" :key="edge.node.id">
-        {{ edge.node.title }}
-      </li>
-    </ul>
-  </Layout>
-</template>
-
-<page-query>
-query Blog {
-  allWordPressPost (limit: 5) {
-    edges {
-      node {
-        _id
-        title
-      }
-    }
-  }
-}
-</page-query>
-```
-
 You don't need to know GraphQL or Vue to get started with Gridsome - It's a great way to get introduced to both.
 
 
