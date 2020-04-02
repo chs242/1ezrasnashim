@@ -5,11 +5,11 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Netlify CMS Gridsome starter template',
-  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Netlify CMS for content.',
+  siteName: 'Ezras Nashim',
+  siteDescription: 'Bridging the gap for women in Emergency Medical Care',
 
   templates: {
-    Post: '/:title',
+    Post: '/posts/:title',
     Tag: '/tag/:id'
   },
 
@@ -46,4 +46,3 @@ module.exports = {
     }
   }
 }
-
