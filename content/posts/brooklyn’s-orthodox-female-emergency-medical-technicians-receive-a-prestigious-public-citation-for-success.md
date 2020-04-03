@@ -37,3 +37,9 @@ Founded in June 2014 and filling the void of emergency care for Orthodox females
 *Ezras Nashim*‘s members have demonstrated Cardiopulmonary Resuscitation (CPR) techniques, among other emergency skills, to the public. Informative posters were shared with participants. Those achievements, and the others cited above, recently garnered a prestigious award for the organization. You can learn more about *Ezras Nashim*, including how to receive EMT training from the organization, at
 
 <!--EndFragment-->
+
+
+
+![](/images/uploads/boro-hall-award-1.jpg)
+
+![](/images/uploads/img_20190414_165044921.jpg)
