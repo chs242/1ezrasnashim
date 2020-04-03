@@ -6,7 +6,7 @@ date: 2020-04-03T14:30:01.284Z
 published: true
 tags:
   - tag
-cover_image: /images/uploads/sun-3713835_1920.jpg
+cover_image: /images/uploads/boro-hall-award-with-group.jpg
 description: >-
   <!--StartFragment-->
 
