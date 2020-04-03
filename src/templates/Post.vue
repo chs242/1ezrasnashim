@@ -1,14 +1,15 @@
 <template>
   <Layout class="bg-gray-100">
-      <div class="mt-20 py-12 px-3">
+      <div class="mt-20 py-12 px-3 md:px-8">
           <h1 class="font-source font-bold text-3xl text-center md:text-5xl">
               {{ $page.post.title }}
           </h1>
-          <PostMeta class="mt-4 py-4 text-xs" :post="$page.post" />
+          <PostMeta class="mt-4 py-4 text-xs lg:text-center" :post="$page.post" />
           <div class="">
               <g-image class="mx-auto custom-height object-cover" alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
           </div>
-          <div class="bg-white px-3 custom-rounded shadow-xl">
+          <div class="bg-white px-3 custom-rounded shadow-xl lg-custom-width">
+              <div class="py-12 md:text-lg px-4" v-html="$page.post.description" />
               <div class="py-12 md:text-lg px-4" v-html="$page.post.content" />
               <div class="pb-4">
                   <PostTags :post="$page.post" />
@@ -74,6 +75,26 @@ query Post ($id: ID!) {
   .custom-height{
     height: auto;
     width: 100%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .custom-height{
+    height: auto;
+    width: 700px;
+  }
+  .lg-custom-width{
+    margin: 0 auto;
+    width: 700px;
+  }
+}
+@media (min-width: 1280px) {
+  .custom-height{
+    height: auto;
+    width: 850px;
+  }
+  .lg-custom-width{
+    margin: 0 auto;
+    width: 850px;
   }
 }
 </style>
