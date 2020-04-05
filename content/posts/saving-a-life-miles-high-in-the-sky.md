@@ -27,11 +27,19 @@ Below is the letter that was received from Luftansa thanking Judge Freir.
 
 <!--StartFragment-->
 
+
+
+
+
 ![Lufthansa letter](/images/uploads/luftansa-flight.jpg)
 
+
+
+
+
+
+
 <!--EndFragment-->
-
-
 
 <!--StartFragment-->
 
