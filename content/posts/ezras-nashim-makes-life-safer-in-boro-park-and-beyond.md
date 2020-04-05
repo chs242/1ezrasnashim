@@ -44,10 +44,12 @@ description: >-
 
 There’s more safety education involved with the yearly event, and it includes the free distribution of informative magnets and fliers regarding ticks/Lyme Disease safety, pool safety, and reminders about CPR techniques to be used on adults and children.
 
-Here are the flyers that were handed out
+Here are the flyers that were handed out:
 
-1.
-2.
-3.
+**[CPR Technique](https://www.ezrasnashim.org/wp-content/uploads/2019/07/CPR-sheet-EN.gif)s**
+
+**[Tick Tips](https://www.ezrasnashim.org/wp-content/uploads/2019/07/Ticks-EN-min.jpg)**
+
+**[Pool Safety](https://www.ezrasnashim.org/wp-content/uploads/2019/07/Pool-Safety-Ezras-Nashim-min.jpg)**
 
 Onlookers practiced with CPR on dummies provided for the event, as always. Many questions about a variety of summertime health issues were asked and answered in a fun, empowering atmosphere. To learn more about how to interact with this one-of-a-kind community asset, contact Hadassah Ellis, Ezras Nashim Director of Development, **[haddasah.ezrasnashim@gmail.com](mailto:haddasah.ezrasnashim@gmail.com)**
