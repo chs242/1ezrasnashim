@@ -10,6 +10,18 @@
           :to="link.url"
           class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
         >{{link.name}}</g-link>
+        
+         <ul class="menu">
+        <li class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear">
+          <g-link to="/about/">About &#x25BC;</g-link>
+          <ul class="sub-menu">
+            <li><g-link to="/services/" class="">Services</g-link></li>
+            <li><g-link to="/about/#about-team" class="">Branches</g-link></li>
+            <li><g-link to="/news/" class="">News & Press</g-link></li>
+            <li><g-link to="/endorsements/" class="">Endorsements</g-link></li>
+          </ul>
+        </li>
+      </ul>
       </div>
 
       <g-link
@@ -74,18 +86,6 @@ export default {
         {
           name: "Contact",
           url: "/contact/"
-        },
-        {
-          name: "News & Press",
-          url: "/news/"
-        },
-        {
-          name: "Services",
-          url: "/services/"
-        },
-        {
-          name: "About",
-          url: "/about/"
         }
       ],
       isActive: false
@@ -99,6 +99,48 @@ export default {
   border-bottom: 2px solid #72298f;
   z-index: 100000;
 }
+
+/* about: dropdown menu */
+.menu{
+      display: inline-block;
+      }
+      .menu > li{
+      float: left;
+      
+      width: 140px;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+      }
+      .sub-menu{
+      transform: scale(0);
+      transform-origin: top center;
+      transition: all 300ms ease-in-out;
+      }
+      .sub-menu li{
+      font-size: 16px;
+      text-align: center;
+      background: #e5e7eb;
+      padding: 8px 0;
+      color: black;
+      border-bottom: 1px solid rgba(255,255,255, 0.2);
+      transform: scale(0);
+      transform-origin: top center;
+      transition: all 300ms ease-in-out;
+      }
+      .sub-menu li:last-child{
+      border-bottom: 0;
+      }
+      .sub-menu li:hover{
+      background: #f7fafc;
+      color: #5521b5;
+      }
+      .menu > li:hover .sub-menu li{
+      transform: scale(1);
+      }
+      .menu > li:hover .sub-menu{
+      transform: scale(1);
+      }
 
 /* sidenav  */
 .sidenav {

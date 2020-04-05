@@ -1,9 +1,7 @@
 <template>
   <Layout>
-    <div class="bg-gray-100">
-      <div class="px-3 py-20">
-        <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
-      </div>
+    <div class="w-full bg-gray-100 px-3 pb-12 mt-20 md:pt-12 md:flex md:flex-row md:flex-wrap md:justify-start lg:mt-0">
+      <PostCard class="md:w-1/2 lg:w-1/3 xl:w-1/4" v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
     </div>
   </Layout>
 </template>

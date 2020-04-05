@@ -1,5 +1,5 @@
 <template>
-   <div class="">
+   <div class="text-sm text-left">
       Posted {{ post.date }}.
       <template v-if="post.timeToRead">
         <strong>{{ post.timeToRead }} min read.</strong>
