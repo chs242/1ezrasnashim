@@ -1,11 +1,12 @@
 <template>
-  <Layout>
-    <h1 class="tag-title text-center space-bottom">
-      # {{ $page.tag.title }}
-    </h1>
-
-    <div class="posts">
-      <PostCard v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node"/>
+  <Layout class="bg-gray-100">
+    <div class="mt-20 pt-20 pb-12 px-3 md:px-8 lg-custom-width">
+      <h1 class="font-source font-bold text-3xl text-center md:text-5xl">
+        # {{ $page.tag.title }}
+      </h1>
+    </div>
+    <div class="lg-custom-width bg-white rounded-xl">
+      <PostCard class="custom-border" v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node"/>
     </div>
   </Layout>
 </template>
@@ -47,7 +48,19 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped>
 
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .lg-custom-width{
+    margin: 0 auto;
+    width: 700px;
+  }
+}
+@media (min-width: 1280px) {
+  .lg-custom-width{
+    margin: 0 auto;
+    width: 850px;
+  }
+}
 </style>
 
