@@ -46,10 +46,8 @@ There’s more safety education involved with the yearly event, and it includes 
 
 Here are the flyers that were handed out
 
-1)
+1.
+2.
+3.
 
-2)
-
-3)
-
-Onlookers practiced with CPR on dummies provided for the event, as always. Many questions about a variety of summertime health issues were asked and answered in a fun, empowering atmosphere. To learn more about how to interact with this one-of-a-kind community asset, contact Hadassah Ellis, Ezras Nashim Director of Development, haddasah.ezrasnashim@gmail.com
+Onlookers practiced with CPR on dummies provided for the event, as always. Many questions about a variety of summertime health issues were asked and answered in a fun, empowering atmosphere. To learn more about how to interact with this one-of-a-kind community asset, contact Hadassah Ellis, Ezras Nashim Director of Development, [here.](mailto:haddasah.ezrasnashim@gmail.com)
