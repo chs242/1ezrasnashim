@@ -21,12 +21,14 @@ export const PLAN_NAMES = {
   "5": "Yearly"
 }
 
+// product ID: `PROD-2H0168269N151792A`
+// live Donation Plan IDs
 export const PAYPAL_PLANS_IDS = {
-  "1": 'P-5DJ44986HR623584NLZZBBJA', // Daily
-  "2": 'P-10B37731DE340853VLZZBDLQ', // Weekly
-  "3": 'P-6M918566SU160641XLZYPNEA', // Monthly
-  "4": 'P-2RW97415DN003550GLZZBDZI', // Quarterly
-  "5": 'P-8FR893511U324742ULZZBEBY', // Yearly
+  "1": 'P-36H45967138134333L2EYDWI', // Daily -
+  "2": 'P-52T23091AV280332KL2EYDNA', // Weekly -
+  "3": 'P-53V65927J7453921AL2EYDCA', // Monthly -
+  "4": 'P-4RP35237P2872091XL2EYD7A', // Quarterly -
+  "5": 'P-706593662R139444HL2EYEII', // Yearly -
 }
 
 export const STATES = {

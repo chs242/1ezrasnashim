@@ -27,7 +27,6 @@ curl -v -X POST https://api.sandbox.paypal.com/v1/catalogs/products \
   }'
 ```
 
-
 ## 3: create a plan
 
 ```bash
