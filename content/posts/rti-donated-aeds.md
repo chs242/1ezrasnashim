@@ -3,7 +3,8 @@ title: RTI donated AED's
 date: 2020-04-05T11:00:20.569Z
 published: true
 tags:
-  - tag
+  - Donation
+  - AED
 cover_image: /images/uploads/rti-opt.jpg
 description: |-
   <!--StartFragment-->
