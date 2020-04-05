@@ -1,6 +1,6 @@
 ---
 title: Kikar Shabbos Interview
-date: 2020-04-05T16:44:03.473Z
+date: 2019-07-09T16:44:03.473Z
 published: true
 tags:
   - News
