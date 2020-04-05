@@ -2,7 +2,7 @@
 title: >-
   Brooklyn’s Orthodox Female Emergency Medical Technicians Receive a Prestigious
   Public Citation for Success!
-date: 2020-04-03T14:30:01.284Z
+date: 2019-03-28T15:30:01.284Z
 published: true
 tags:
   - Award
