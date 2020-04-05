@@ -3,8 +3,8 @@ title: '93Queen, Coming to a Theatre Near You'
 date: 2018-07-16T16:00:00.000Z
 published: true
 tags:
+  - Blog
   - 93Queen
-  - Movie
 cover_image: /images/uploads/93queen_ruchie_corner.jpg
 description: >-
   <!--StartFragment-->
