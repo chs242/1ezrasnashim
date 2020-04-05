@@ -7,4 +7,4 @@ tags:
 cover_image: /images/uploads/news-background-2.jpg
 description: Kikar.com
 ---
-[Click here to read the article](https://www.kikar.co.il/abroad/321663.html)
+**[Click here to read the article](https://www.kikar.co.il/abroad/321663.html)**
