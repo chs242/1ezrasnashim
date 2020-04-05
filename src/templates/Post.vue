@@ -1,6 +1,11 @@
 <template>
   <Layout class="bg-gray-100">
       <div class="mt-20 py-12 px-3 md:px-8">
+      <g-link 
+        to="/news/"
+        class="text-4xl text-purple-800 lg:hidden"
+        >&#8592;
+        </g-link>
           <h1 class="font-source font-bold text-3xl text-center md:text-5xl">
               {{ $page.post.title }}
           </h1>
