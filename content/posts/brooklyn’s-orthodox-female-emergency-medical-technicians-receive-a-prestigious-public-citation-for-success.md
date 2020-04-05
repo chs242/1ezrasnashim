@@ -5,6 +5,7 @@ title: >-
 date: 2019-03-28T15:30:01.284Z
 published: true
 tags:
+  - Blog
   - Award
 cover_image: /images/uploads/boro-hall-award-with-group.jpg
 description: >-
