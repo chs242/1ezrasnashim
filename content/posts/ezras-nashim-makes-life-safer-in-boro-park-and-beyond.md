@@ -3,6 +3,7 @@ title: Ezras Nashim Makes Life Safer in Boro Park and Beyond!
 date: 2019-07-11T12:43:51.468Z
 published: true
 tags:
+  - Blog
   - Community
 cover_image: /images/uploads/1-min.png
 description: >-
