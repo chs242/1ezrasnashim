@@ -4,6 +4,7 @@ date: 2019-06-06T16:27:38.753Z
 published: true
 tags:
   - News
+  - Community
 cover_image: /images/uploads/6-min.png
 description: Yeshiva World News
 ---
