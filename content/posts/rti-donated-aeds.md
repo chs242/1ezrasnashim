@@ -1,6 +1,6 @@
 ---
 title: RTI donated AED's
-date: 2020-04-05T11:00:20.569Z
+date: 2018-12-27T00:00:00.000Z
 published: true
 tags:
   - Donation
