@@ -1,29 +1,31 @@
 ---
-title: this is a test post
-date: 2020-03-19T17:00:45.124Z
+title: '93Queen, Coming to a Theatre Near You'
+date: 2018-07-16T16:00:00.000Z
 published: true
 tags:
   - test
-cover_image: /images/uploads/sun-3713835_1920.jpg
-description: this is a test, A paragraph is simply one or more consecutive lines of text, separatedby one or more blank lines. (A 
+cover_image: /images/uploads/93queen_ruchie_corner.jpg
+description: >-
+  <!--StartFragment-->
+
+
+  93QUEEN is set in the Hasidic enclave of Borough Park, where women are
+  upholding their strict levels of modesty by creating the first EMS agency by
+  women for women. Directed by Paula Eiselt.
+
+
+  <!--EndFragment-->
 ---
-lorem isum
+<!--StartFragment-->
+
+“The story is told on two simultaneous tracks, featuring the proud, traditional*chassidic*wife and mother that Ruchie Freier is, as well as highlighting her fiercely independent spirit that leads her to found Ezras Nashim and run for a Brooklyn judgeship—and win.” – 5TJT
+
+<!--EndFragment-->
+
+
 
 <!--StartFragment-->
 
-## [\#](https://gridsome.org/docs/querying-data/#querying-collections)Querying collections
-
-You will notice that some of the root fields in your schema are prefixed with`all`. Use them to get lists of nodes in a collection.
-
-| Argument    | Default  | Description                                                               |
-| ----------- | -------- | ------------------------------------------------------------------------- |
-| **sortBy**  | `"date"` | Sort by a node field.                                                     |
-| **order**   | `DESC`   | Sort order (`DESC`or`ASC`).                                               |
-| **sort**    |          | Sort by multiple node fields.                                             |
-| **skip**    | `0`      | How many nodes to skip.                                                   |
-| **limit**   |          | How many nodes to get.                                                    |
-| **page**    |          | Which page to get.                                                        |
-| **perPage** |          | How many nodes to show per page. Omitted if no`page`argument is provided. |
-| **filter**  | `{}`     | [Read more](https://gridsome.org/docs/filtering-data/).                   |
+Visit the film website here: www.93queen.com
 
 <!--EndFragment-->
