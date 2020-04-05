@@ -5,7 +5,7 @@ title: >-
 date: 2020-04-03T14:30:01.284Z
 published: true
 tags:
-  - tag
+  - Award
 cover_image: /images/uploads/boro-hall-award-with-group.jpg
 description: >-
   <!--StartFragment-->
