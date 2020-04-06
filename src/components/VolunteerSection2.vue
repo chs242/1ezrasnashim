@@ -25,11 +25,11 @@
           <h1
             class="hidden lg:block font-roboto text-3xl text-white font-bold text-center py-4"
           >FAQS</h1>
-          <div class="md:w-2/3 lg:w-full lg:mb-8">
+          <fieldset class="md:w-2/3 lg:w-full lg:mb-8">
             <div>
-              <h3
+              <legend
                 class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-2"
-              >How Would you like to volunteer?</h3>
+              >How Would you like to volunteer?</legend>
             </div>
             <div class="lg:flex">
               <div class="lg:w-3/4">
@@ -57,39 +57,41 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="md:w-1/2 lg:w-3/4 lg:mb-8">
+          </fieldset>
+          <fieldset class="md:w-1/2 lg:w-3/4 lg:mb-8">
             <div>
-              <h3
+              <legend
                 class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-2"
-              >Your EMT Certification</h3>
+              >Your EMT Certification</legend>
             </div>
             <div class="lg:flex">
               <div class="lg:w-3/4">
                 <div>
                   <label>Expired<br>
-                    <input type="checkbox" id="certification2" name="certification1" value="expired" v-model="formData.certificationExpired" />
+                    <input type="checkbox" name="certification1" value="expired" v-model="formData.certificationExpired" />
                   </label>
                 </div>
                 <div>
                   <label>Current<br>
-                    <input type="checkbox" id="certification1" name="certification2" value="current" v-model="formData.certificationCurrent" />
+                    <input type="checkbox" name="certification2" value="current" v-model="formData.certificationCurrent" />
                   </label>
                 </div>
               </div>
               <div class="lg:w-full">
                 <div>
                   <label>Interested in Course<br>
-                    <input type="checkbox" id="certification3" name="certification3" value="course" v-model="formData.certificationNone" />
+                    <input type="checkbox" name="certification3" value="course" v-model="formData.certificationNone" />
                   </label>
                 </div>
               </div>
             </div>
-          </div>
+          </fieldset>
 
-          <div class="md:w-1/2 lg:w-3/4 lg:mb-8">
+          <fieldset class="md:w-1/2 lg:w-3/4 lg:mb-8">
             <div>
-              <h3 class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-2">Do You Drive</h3>
+              <legend 
+                class="font-source font-semibold text-lg mb-4 mt-4 lg:mt-0 lg:mb-2"
+              >Do You Drive</legend>
             </div>
             <div class="lg:flex">
               <div class="lg:w-3/4">
@@ -112,7 +114,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </fieldset>
         </div>
 
         <div

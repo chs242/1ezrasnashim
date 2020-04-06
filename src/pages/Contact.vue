@@ -1,6 +1,6 @@
 <template>
     <Layout>
-       <img src="../assets/images/contact-tab/world-map.png" alt="" class="hidden md:block mx-auto">
+       <img src="../assets/images/contact-tab/world-map.png" alt="" class="hidden md:block mx-auto md-custom-margin">
        <div id="contact-page" class="w-full py-2 lg:flex md:absolute">
            <ContactPhone></ContactPhone>
            <ContactForm></ContactForm>
@@ -35,6 +35,9 @@ export default {
     }
     #contact-page{
         top: 5%;
+    }
+    .md-custom-margin{
+        margin-bottom: 25rem;
     }
 } 
 </style>
