@@ -6,6 +6,7 @@
     />
 
     <div id="donate-page" class="max-w-6xl mx-auto sm:px-0 lg:px-8 py-24">
+      <h1 class="w-full py-2 bg-black text-white text-center font-roboto font-bold text-3xl custom-opacity">This Site is still under construction!</h1>
       <div class="flex flex-wrap items-center">
         <div class="steps flex-2 px-1 py-4 relative md:px-4">
           <div class="step" key="1" v-show="step == 1">
@@ -242,5 +243,9 @@ export default {
   input[type="number"] {
     -moz-appearance: textfield;
   }
+}
+
+.custom-opacity{
+  opacity: 0.6;
 }
 </style>
