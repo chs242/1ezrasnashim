@@ -1,12 +1,13 @@
 <template>
   <div class="px-2 my-4 lg:my-0 lg:w-3/5">
- <form
+ <!-- <form
         name="contact"
         method="post"
         v-on:submit.prevent="handleSubmit"
         action="/Success/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        class="bg-white py-8 px-8 mx-auto shadow-md text-center rounded-xl md:mx-auto lg:py-12 lg:flex lg:flex-wrap lg:justify-center lg:mx-0 custom-m-width custom-opacity"
       >
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
@@ -15,33 +16,48 @@
             <input name="bot-field" />
           </label>
         </p>
+
         <div class="sender-info">
-          <div>
-            <!-- <label for="name" class="label" >Your name</label> -->
-            <input type="text" name="name" v-model="formData.name" placeholder="Name" />
+          <div class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-3">
+            <input 
+              type="text" 
+              name="name" 
+              v-model="formData.name" 
+              placeholder="Name" 
+              class="w-full custom-width py-1 text-center custom-border"
+            />
           </div>
+
           <div>
-            <!-- <label for="email">Your email</label> -->
-            <input type="email" name="email" v-model="formData.email" placeholder="E-Mail" />
+            <input 
+              type="email" 
+              name="email" v-model="formData.email" placeholder="E-Mail" />
           </div>
         </div>
 
         <div class="message-wrapper">
-          <!-- <label for="message">Message</label> -->
           <textarea name="message" v-model="formData.message" placeholder="Message"></textarea>
           <button type="submit">
             <span class="mdc-button__label">Send!</span>
           </button>
         </div>
-      </form>
-    <!-- <form
-      name="contact-form"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      class="bg-white py-8 px-8 mx-auto shadow-md text-center rounded-xl md:mx-auto lg:py-12 lg:flex lg:flex-wrap lg:justify-center lg:mx-0 custom-m-width custom-opacity"
-    >
-      <input type="hidden" name="form-name" value="contact-form" />
+      </form> -->
+      <form
+        name="contact"
+        method="post"
+        v-on:submit.prevent="handleSubmit"
+        action="/Success/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        class="bg-white py-8 px-8 mx-auto shadow-md text-center rounded-xl md:mx-auto lg:py-12 lg:flex lg:flex-wrap lg:justify-center lg:mx-0 custom-m-width custom-opacity"
+      >
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden>
+        <label>
+          Don’t fill this out:
+          <input name="bot-field" />
+        </label>
+      </p>
       <div
         class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-3"
       >
@@ -49,6 +65,7 @@
           type="text"
           id="name"
           name="name"
+          v-model="formData.name"
           placeholder="Name"
           class="w-full custom-width py-1 text-center custom-border"
         />
@@ -67,6 +84,7 @@
           type="text"
           id="subject"
           name="subject"
+          v-model="formData.subject"
           placeholder="Subject"
           class="w-full custom-width py-1 text-center custom-border"
         />
@@ -87,6 +105,7 @@
           type="email"
           id="email"
           name="email"
+          v-model="formData.email"
           placeholder="Email"
           class="w-full custom-width py-1 text-center custom-border"
         />
@@ -104,6 +123,7 @@
           rows="4"
           cols="30"
           name="message"
+          v-model="formData.message"
           form="contact-form"
           placeholder="Message..."
           class="w-full py-1 text-left lg:custom-border"
@@ -111,13 +131,14 @@
       </div>
 
       <div class="w-full lg:text-right">
-        <input
+        <button 
           type="submit"
-          value="Submit"
           class="px-16 py-2 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md"
-        />
+        >
+          <span class="mdc-button__label">Send!</span>
+        </button>
       </div>
-    </form> -->
+    </form>
   </div>
 </template>
 
