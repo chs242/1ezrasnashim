@@ -5,7 +5,7 @@
       <h2 class="my-4 px-2 text-medium text-center font-bold font-roboto text-gray-800 mt-2 md:px-4">Contact our office for EMT training or to volunteer:</h2>
       <img src="../assets/images/call-icon.png" class="w-20 my-4">
       <h2 class="text-medium font-bold font-roboto text-gray-800 mt-2">BORO PARK AREA</h2>
-      <a href="tel:718-232-1300" class="text-4xl font-semibold font-source text-gray-500">718-232-1300</a>
+      <span class="text-4xl font-semibold font-source text-gray-500">718-232-1300</span>
     </a>
   </div>
 </template>

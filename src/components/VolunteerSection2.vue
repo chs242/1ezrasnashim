@@ -35,24 +35,48 @@
               <div class="lg:w-3/4">
                 <div>
                   <label>Become an EMT<br>
-                    <input type="checkbox" id="volunteer1" name="volunteer1" value="emt" v-model="formData.volunteerEmt" />
+                    <input 
+                      type="checkbox" 
+                      id="volunteer1" 
+                      name="volunteer1" 
+                      value="emt" 
+                      v-model="formData.volunteerEmt" 
+                    />
                   </label>
                 </div>
                 <div>
                   <label>Become a Dispatcher<br>
-                    <input type="checkbox" id="volunteer2" name="volunteer2" value="dispatcher" v-model="formData.volunteerDispatcher" />
+                    <input 
+                      type="checkbox" 
+                      id="volunteer2" 
+                      name="volunteer2" 
+                      value="dispatcher" 
+                      v-model="formData.volunteerDispatcher" 
+                    />
                   </label>
                 </div>
               </div>
               <div class="lg:w-full">
                 <div>
                   <label>Volunteer Driver<br>
-                    <input type="checkbox" id="volunteer3" name="volunteer3" value="driver" v-model="formData.volunteerDriver" />
+                    <input 
+                      type="checkbox" 
+                      id="volunteer3" 
+                      name="volunteer3" 
+                      value="driver" 
+                      v-model="formData.volunteerDriver" 
+                    />
                   </label>
                 </div>
                 <div>
                   <label>Fundraising/Administrative<br>
-                    <input type="checkbox" id="volunteer4" name="volunteer4" value="administrative" v-model="formData.volunteerAdmin" />
+                    <input 
+                      type="checkbox" 
+                      id="volunteer4" 
+                      name="volunteer4" 
+                      value="administrative" 
+                      v-model="formData.volunteerAdmin" 
+                    />
                   </label>
                 </div>
               </div>
@@ -68,19 +92,34 @@
               <div class="lg:w-3/4">
                 <div>
                   <label>Expired<br>
-                    <input type="checkbox" name="certification1" value="expired" v-model="formData.certificationExpired" />
+                    <input 
+                      type="checkbox" 
+                      name="certificationExpired" 
+                      value="expired" 
+                      v-model="formData.certificationExpired" 
+                    />
                   </label>
                 </div>
                 <div>
                   <label>Current<br>
-                    <input type="checkbox" name="certification2" value="current" v-model="formData.certificationCurrent" />
+                    <input 
+                      type="checkbox" 
+                      name="certificationCurrent" 
+                      value="current" 
+                      v-model="formData.certificationCurrent" 
+                    />
                   </label>
                 </div>
               </div>
               <div class="lg:w-full">
                 <div>
                   <label>Interested in Course<br>
-                    <input type="checkbox" name="certification3" value="course" v-model="formData.certificationNone" />
+                    <input 
+                      type="checkbox" 
+                      name="certificationNone" 
+                      value="course" 
+                      v-model="formData.certificationNone" 
+                    />
                   </label>
                 </div>
               </div>
@@ -97,19 +136,37 @@
               <div class="lg:w-3/4">
                 <div>
                   <label>No<br>
-                    <input type="checkbox" id="drive1" name="drive1" value="no" v-model="formData.driveNo" />
+                    <input 
+                      type="checkbox" 
+                      id="drive1" 
+                      name="driveNo" 
+                      value="no" 
+                      v-model="formData.driveNo" 
+                    />
                   </label>
                 </div>
                 <div>
                   <label>Yes, with Car<br>
-                    <input type="checkbox" id="drive2" name="drive2" value="car" v-model="formData.drive" />
+                    <input 
+                      type="checkbox" 
+                      id="drive2" 
+                      name="drive" 
+                      value="car" 
+                      v-model="formData.drive" 
+                    />
                   </label>
                 </div>
               </div>
               <div class="lg:w-full">
                 <div>
                   <label>Yes, Without Car<br>
-                    <input type="checkbox" id="drive3" name="drive3" value="nocar" v-model="formData.driveNoCar" />
+                    <input 
+                      type="checkbox" 
+                      id="drive3" 
+                      name="driveNoCar"
+                      value="nocar" 
+                      v-model="formData.driveNoCar" 
+                    />
                   </label>
                 </div>
               </div>
@@ -214,7 +271,7 @@
               type="submit"
               class="px-16 py-2 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md"
             >
-              <span class="mdc-button__label">Submit</span>
+              <span class="">Submit</span>
             </button>
           </div>
         </div>
