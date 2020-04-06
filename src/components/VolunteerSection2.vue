@@ -22,9 +22,9 @@
           id="checkbox-form"
           class="text-white w-full p-4 md:w-4/5 md:flex md:mx-auto md:mb-8 lg:mx-0 lg:mb-2 lg:px-8 lg:w-1/2 lg:flex-col lg:items-start xl:w-1/3 xl:px-0"
         >
-          <h1
+          <!-- <h1
             class="hidden lg:block font-roboto text-3xl text-white font-bold text-center py-4"
-          >FAQS</h1>
+          >FAQS</h1> -->
           <fieldset class="md:w-2/3 lg:w-full lg:mb-8">
             <div>
               <legend
