@@ -191,11 +191,12 @@
           </div>
 
           <div class="w-full lg:text-right">
-            <input
+            <button 
               type="submit"
-              value="Submit"
-              class="px-16 py-2 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md"
-            />
+                  class="px-16 py-2 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md"
+            >
+              <span class="mdc-button__label">Send!</span>
+            </button>
           </div>
         </div>
       </div>
