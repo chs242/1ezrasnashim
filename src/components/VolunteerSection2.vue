@@ -181,6 +181,7 @@
               v-model="formData.name"
               placeholder="Name"
               class="w-full custom-width py-1 text-center custom-border"
+              required
             />
           </div>
           <div
@@ -193,6 +194,7 @@
               v-model="formData.address"
               placeholder="Address"
               class="w-full custom-width py-1 text-center custom-border"
+              required
             />
           </div>
 
@@ -206,6 +208,7 @@
               v-model="formData.email"
               placeholder="Email"
               class="w-full custom-width py-1 text-center custom-border"
+              required
             />
           </div>
 
@@ -232,6 +235,7 @@
               v-model="formData.cellphone"
               placeholder="Cellphone"
               class="w-full custom-width py-1 text-center custom-border"
+              required
             />
           </div>
 
