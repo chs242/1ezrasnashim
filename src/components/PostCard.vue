@@ -9,7 +9,7 @@
             <div class="custom-height"><p class="pt-4 text-lg font-source" v-html="post.description" /></div>
         </div>
     </g-link>
-    <div class="bg-white pb-4">
+    <div class="bg-white pb-4 custom-radius-bottom">
       <PostMeta :post="post" />
       <PostTags :post="post" />
     </div>
