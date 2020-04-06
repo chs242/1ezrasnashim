@@ -5,11 +5,20 @@
     >
       <div class="hidden lg:flex -ml-4 justify-center items-center">
         <g-link
-          v-for="link in links"
-          :key="link.url"
-          :to="link.url"
+          to="/"
           class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
-        >{{link.name}}</g-link>
+        >Home
+        </g-link>
+        <g-link
+          to="/volunteer/"
+          class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
+        >Volunteer
+        </g-link>
+        <g-link
+          to="/contact/"
+          class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
+        >Contact
+        </g-link>
         
          <ul class="menu">
         <li class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear">
@@ -47,7 +56,12 @@
 
       <!-- Bear in mind there is additional CSS below in the styles tag -->
       <div id="mySidenav" :class="{open: isActive}" class="sidenav" @click="isActive = !isActive">
-        <g-link v-for="link in links" :key="link.url" :to="link.url" class="mobile">{{link.name}}</g-link>
+        <g-link to="/" class="mobile donate">Home</g-link>
+        <g-link to="/volunteer/" class="mobile donate">Volunteer</g-link>
+        <g-link to="/contact/" class="mobile donate">Contact</g-link>
+        <g-link to="/about/" class="mobile donate">About</g-link>
+        <g-link to="/services/" class="mobile donate">Services</g-link>
+        <g-link to="/news/" class="mobile donate">News & Press</g-link>
         <g-link to="/donate/" class="mobile donate">Donate</g-link>
       </div>
     </header>

@@ -1,47 +1,5 @@
 <template>
   <div class="px-2 my-4 lg:my-0 lg:w-3/5">
- <!-- <form
-        name="contact"
-        method="post"
-        v-on:submit.prevent="handleSubmit"
-        action="/Success/"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        class="bg-white py-8 px-8 mx-auto shadow-md text-center rounded-xl md:mx-auto lg:py-12 lg:flex lg:flex-wrap lg:justify-center lg:mx-0 custom-m-width custom-opacity"
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>
-            Don’t fill this out:
-            <input name="bot-field" />
-          </label>
-        </p>
-
-        <div class="sender-info">
-          <div class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:w-1/2 lg:shadow-none lg:my-3">
-            <input 
-              type="text" 
-              name="name" 
-              v-model="formData.name" 
-              placeholder="Name" 
-              class="w-full custom-width py-1 text-center custom-border"
-            />
-          </div>
-
-          <div>
-            <input 
-              type="email" 
-              name="email" v-model="formData.email" placeholder="E-Mail" />
-          </div>
-        </div>
-
-        <div class="message-wrapper">
-          <textarea name="message" v-model="formData.message" placeholder="Message"></textarea>
-          <button type="submit">
-            <span class="mdc-button__label">Send!</span>
-          </button>
-        </div>
-      </form> -->
       <form
         name="contact"
         method="post"
