@@ -63,18 +63,18 @@
             <div class="lg:flex">
               <div class="lg:w-3/4">
                 <div class>
-                  <input type="checkbox" id="certification2" name="certification2" value="expired" v-model="formData.certificationExpired" />
-                  <label for="volunteer2">Expired</label>
+                  <input type="checkbox" id="certification2" name="certification1" value="expired" v-model="formData.certificationExpired" />
+                  <label for="certification1">Expired</label>
                 </div>
                 <div class>
-                  <input type="checkbox" id="certification1" name="certification1" value="current" v-model="formData.certificationCurrent" />
-                  <label for="volunteer1">Current</label>
+                  <input type="checkbox" id="certification1" name="certification2" value="current" v-model="formData.certificationCurrent" />
+                  <label for="certification2">Current</label>
                 </div>
               </div>
               <div class="lg:w-full">
                 <div class>
                   <input type="checkbox" id="certification3" name="certification3" value="course" v-model="formData.certificationNone" />
-                  <label for="volunteer3">Interested in Course</label>
+                  <label for="certification3">Interested in Course</label>
                 </div>
               </div>
             </div>
@@ -116,6 +116,7 @@
               type="text"
               id="name"
               name="name"
+              v-model="formData.name"
               placeholder="Name"
               class="w-full custom-width py-1 text-center custom-border"
             />
@@ -127,6 +128,7 @@
               type="text"
               id="address"
               name="address"
+              v-model="formData.address"
               placeholder="Address"
               class="w-full custom-width py-1 text-center custom-border"
             />
@@ -139,6 +141,7 @@
               type="text"
               id="email"
               name="email"
+              v-model="formData.email"
               placeholder="Email"
               class="w-full custom-width py-1 text-center custom-border"
             />
@@ -151,6 +154,7 @@
               type="text"
               id="phone"
               name="phone"
+              v-model="formData.phone"
               placeholder="Phone"
               class="w-full custom-width py-1 text-center custom-border"
             />
@@ -163,6 +167,7 @@
               type="text"
               id="cellphone"
               name="cellphone"
+              v-model="formData.cellphone"
               placeholder="Cellphone"
               class="w-full custom-width py-1 text-center custom-border"
             />
@@ -175,6 +180,7 @@
               type="text"
               id="certification"
               name="certification"
+              v-model="formData.certification"
               placeholder="Certification"
               class="w-full custom-width py-1 text-center custom-border"
             />
@@ -185,6 +191,7 @@
               rows="4"
               cols="30"
               name="comment"
+              v-model="formData.comment"
               placeholder="Comment..."
               class="w-full py-1 text-left custom-border"
             ></textarea>
@@ -193,9 +200,9 @@
           <div class="w-full lg:text-right">
             <button 
               type="submit"
-                  class="px-16 py-2 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md"
+              class="px-16 py-2 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full leading-normal shadow-md"
             >
-              <span class="mdc-button__label">Send!</span>
+              <span class="mdc-button__label">Submit</span>
             </button>
           </div>
         </div>
