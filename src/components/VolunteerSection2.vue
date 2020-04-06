@@ -37,8 +37,7 @@
                   <label>Become an EMT<br>
                     <input 
                       type="checkbox" 
-                      id="volunteer1" 
-                      name="volunteer1" 
+                      name="volunteerToBeAnEMT" 
                       value="emt" 
                       v-model="formData.volunteerEmt" 
                     />
@@ -48,8 +47,7 @@
                   <label>Become a Dispatcher<br>
                     <input 
                       type="checkbox" 
-                      id="volunteer2" 
-                      name="volunteer2" 
+                      name="volunteerToBeADispatcher" 
                       value="dispatcher" 
                       v-model="formData.volunteerDispatcher" 
                     />
@@ -61,8 +59,7 @@
                   <label>Volunteer Driver<br>
                     <input 
                       type="checkbox" 
-                      id="volunteer3" 
-                      name="volunteer3" 
+                      name="volunteerDriver" 
                       value="driver" 
                       v-model="formData.volunteerDriver" 
                     />
@@ -72,8 +69,7 @@
                   <label>Fundraising/Administrative<br>
                     <input 
                       type="checkbox" 
-                      id="volunteer4" 
-                      name="volunteer4" 
+                      name="volunteerAdmin" 
                       value="administrative" 
                       v-model="formData.volunteerAdmin" 
                     />
@@ -94,7 +90,7 @@
                   <label>Expired<br>
                     <input 
                       type="checkbox" 
-                      name="certificationExpired" 
+                      name="certificationIsExpired" 
                       value="expired" 
                       v-model="formData.certificationExpired" 
                     />
@@ -104,7 +100,7 @@
                   <label>Current<br>
                     <input 
                       type="checkbox" 
-                      name="certificationCurrent" 
+                      name="certificationIsCurrent" 
                       value="current" 
                       v-model="formData.certificationCurrent" 
                     />
@@ -116,7 +112,7 @@
                   <label>Interested in Course<br>
                     <input 
                       type="checkbox" 
-                      name="certificationNone" 
+                      name="interestedInCourse" 
                       value="course" 
                       v-model="formData.certificationNone" 
                     />
@@ -138,8 +134,7 @@
                   <label>No<br>
                     <input 
                       type="checkbox" 
-                      id="drive1" 
-                      name="driveNo" 
+                      name="dontDrive" 
                       value="no" 
                       v-model="formData.driveNo" 
                     />
@@ -149,8 +144,7 @@
                   <label>Yes, with Car<br>
                     <input 
                       type="checkbox" 
-                      id="drive2" 
-                      name="drive" 
+                      name="doDrive" 
                       value="car" 
                       v-model="formData.drive" 
                     />
@@ -162,7 +156,6 @@
                   <label>Yes, Without Car<br>
                     <input 
                       type="checkbox" 
-                      id="drive3" 
                       name="driveNoCar"
                       value="nocar" 
                       v-model="formData.driveNoCar" 
