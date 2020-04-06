@@ -1,8 +1,21 @@
 <template>
   <div class="custom-bg pb-12">
     <h1 class="font-roboto text-3xl text-white font-bold text-center py-4">Register Online</h1>
-    <form name="volunteer-form">
-      <input type="hidden" name="form-name" value="volunteer-form" />
+    <form 
+      name="volunteer"
+      method="post"
+      v-on:submit.prevent="handleSubmit"
+      action="/Success/"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden>
+        <label>
+          Don’t fill this out:
+          <input name="bot-field" />
+        </label>
+      </p>
 
       <div class="lg:flex lg:px-20 xl:justify-center">
         <div
@@ -21,21 +34,21 @@
             <div class="lg:flex">
               <div class="lg:w-3/4">
                 <div class>
-                  <input type="checkbox" id="volunteer1" name="volunteer1" value="emt" />
+                  <input type="checkbox" id="volunteer1" name="volunteer1" value="emt" v-model="formData.volunteer" />
                   <label for="volunteer1">Become an EMT</label>
                 </div>
                 <div class>
-                  <input type="checkbox" id="volunteer2" name="volunteer2" value="dispatcher" />
+                  <input type="checkbox" id="volunteer2" name="volunteer2" value="dispatcher" v-model="formData.volunteer" />
                   <label for="volunteer2">Become a Dispatcher</label>
                 </div>
               </div>
               <div class="lg:w-full">
                 <div class>
-                  <input type="checkbox" id="volunteer3" name="volunteer3" value="driver" />
+                  <input type="checkbox" id="volunteer3" name="volunteer3" value="driver" v-model="formData.volunteer" />
                   <label for="volunteer3">Volunteer Driver</label>
                 </div>
                 <div class>
-                  <input type="checkbox" id="volunteer4" name="volunteer4" value="administrative" />
+                  <input type="checkbox" id="volunteer4" name="volunteer4" value="administrative" v-model="formData.volunteer" />
                   <label for="volunteer4">Fundraising/Administrative</label>
                 </div>
               </div>
@@ -50,17 +63,17 @@
             <div class="lg:flex">
               <div class="lg:w-3/4">
                 <div class>
-                  <input type="checkbox" id="certification2" name="certification2" value="expired" />
+                  <input type="checkbox" id="certification2" name="certification2" value="expired" v-model="formData.certification" />
                   <label for="volunteer2">Expired</label>
                 </div>
                 <div class>
-                  <input type="checkbox" id="certification1" name="certification1" value="current" />
+                  <input type="checkbox" id="certification1" name="certification1" value="current" v-model="formData.certification" />
                   <label for="volunteer1">Current</label>
                 </div>
               </div>
               <div class="lg:w-full">
                 <div class>
-                  <input type="checkbox" id="certification3" name="certification3" value="course" />
+                  <input type="checkbox" id="certification3" name="certification3" value="course" v-model="formData.certification" />
                   <label for="volunteer3">Interested in Course</label>
                 </div>
               </div>
@@ -74,17 +87,17 @@
             <div class="lg:flex">
               <div class="lg:w-3/4">
                 <div class>
-                  <input type="checkbox" id="drive1" name="drive1" value="no" />
+                  <input type="checkbox" id="drive1" name="drive1" value="no" v-model="formData.drive" />
                   <label for="drive1">No</label>
                 </div>
                 <div class>
-                  <input type="checkbox" id="drive2" name="drive2" value="car" />
+                  <input type="checkbox" id="drive2" name="drive2" value="car" v-model="formData.drive" />
                   <label for="drive2">Yes, with Car</label>
                 </div>
               </div>
               <div class="lg:w-full">
                 <div class>
-                  <input type="checkbox" id="drive3" name="drive3" value="nocar" />
+                  <input type="checkbox" id="drive3" name="drive3" value="nocar" v-model="formData.drive" />
                   <label for="drive3">Yes, Without Car</label>
                 </div>
               </div>
@@ -189,6 +202,40 @@
     </form>
   </div>
 </template>
+
+<script>
+export default {
+  metaInfo: {
+    title: "Volunteer"
+  },
+  data() {
+    return {
+      formData: {}
+    };
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
+    },
+    handleSubmit(e) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": e.target.getAttribute("name"),
+          ...this.formData
+        })
+      })
+        .then(() => this.$router.push("/Success/"))
+        .catch(error => alert(error));
+    }
+  }
+};
+</script>
 
 <style scoped>
 .custom-bg {
