@@ -7,12 +7,12 @@
         <div class="bg-white px-3 text-left custom-radius-bottom">
             <div class="custom-height"><h2 class="pt-4 pr-12 text-xl text-left font-bold font-roboto" v-html="post.title" /></div>
             <div class="custom-height"><p class="pt-4 text-lg font-source" v-html="post.description" /></div>
-            <div class="py-4">
-            </div>
         </div>
     </g-link>
-      <PostMeta class="" :post="post" />
-      <PostTags class="" :post="post" />
+    <div class="bg-white pb-4">
+      <PostMeta :post="post" />
+      <PostTags :post="post" />
+    </div>
   </div>    
 </template>
 
