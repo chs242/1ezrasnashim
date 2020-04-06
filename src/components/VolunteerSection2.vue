@@ -134,7 +134,7 @@
                   <label>No<br>
                     <input 
                       type="checkbox" 
-                      name="dontNo" 
+                      name="driveNo" 
                       value="no" 
                       v-model="formData.driveNo" 
                     />
