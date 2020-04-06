@@ -37,9 +37,9 @@
                   <label>Become an EMT<br>
                     <input 
                       type="checkbox" 
-                      name="volunteerToBeAnEMT" 
+                      name="volunteerEMT" 
                       value="emt" 
-                      v-model="formData.volunteerEmt" 
+                      v-model="formData.volunteerEMT" 
                     />
                   </label>
                 </div>
@@ -47,7 +47,7 @@
                   <label>Become a Dispatcher<br>
                     <input 
                       type="checkbox" 
-                      name="volunteerToBeADispatcher" 
+                      name="volunteerDispatcher" 
                       value="dispatcher" 
                       v-model="formData.volunteerDispatcher" 
                     />
@@ -90,7 +90,7 @@
                   <label>Expired<br>
                     <input 
                       type="checkbox" 
-                      name="certificationIsExpired" 
+                      name="certificationExpired" 
                       value="expired" 
                       v-model="formData.certificationExpired" 
                     />
@@ -100,7 +100,7 @@
                   <label>Current<br>
                     <input 
                       type="checkbox" 
-                      name="certificationIsCurrent" 
+                      name="certificationCurrent" 
                       value="current" 
                       v-model="formData.certificationCurrent" 
                     />
@@ -112,7 +112,7 @@
                   <label>Interested in Course<br>
                     <input 
                       type="checkbox" 
-                      name="interestedInCourse" 
+                      name="interestedNone" 
                       value="course" 
                       v-model="formData.certificationNone" 
                     />
@@ -134,7 +134,7 @@
                   <label>No<br>
                     <input 
                       type="checkbox" 
-                      name="dontDrive" 
+                      name="dontNo" 
                       value="no" 
                       v-model="formData.driveNo" 
                     />
@@ -144,7 +144,7 @@
                   <label>Yes, with Car<br>
                     <input 
                       type="checkbox" 
-                      name="doDrive" 
+                      name="drive" 
                       value="car" 
                       v-model="formData.drive" 
                     />
