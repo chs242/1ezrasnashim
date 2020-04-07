@@ -45,7 +45,7 @@
             width: 320px;
         }
     }
-    @media (min-width: 1024px) and (max-width: 1800px) {
+    @media (min-width: 1024px) {
         #img{
             height: 750px;
             width: 320px;
