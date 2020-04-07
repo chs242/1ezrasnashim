@@ -7,5 +7,7 @@ tags:
   - Coronavirus
 cover_image: /images/uploads/measles-2-featured-img.jpg
 description: Read our statement on the Novel Coronavirus
+manuel_pdf: >-
+  /images/uploads/ezras-nashim-statement-on-the-novel-coronavirus-2019-ncov-1-1.pdf
 ---
-``
+**[Click here to read](https://ezrasnashim.netlify.com/images/uploads/ezras-nashim-statement-on-the-novel-coronavirus-2019-ncov-1-1.pdf)**
