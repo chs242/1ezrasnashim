@@ -6,7 +6,7 @@
     />
 
     <div id="donate-page" class="max-w-6xl mx-auto sm:px-0 lg:px-8 py-24">
-      <h1 class="w-full py-2 bg-black text-white text-center font-roboto font-bold text-3xl custom-opacity">Although The rest of this site is under Construction...</h1>
+      <h1 class="w-full py-2 bg-black text-white text-center font-roboto font-bold text-3xl custom-opacity">Although The rest of this site is under Construction</h1>
       <h3 class="w-full py-1 bg-black text-white text-center font-roboto font-bold text-2xl custom-opacity">Your Donation will be Processed as usual!</h3>
       <div class="flex flex-wrap items-center">
         <div class="steps flex-2 px-1 py-4 relative md:px-4">
