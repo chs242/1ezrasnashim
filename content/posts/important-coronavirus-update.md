@@ -9,4 +9,4 @@ cover_image: /images/uploads/measles-2-featured-img.jpg
 description: Read our important Coronavirus update
 manuel_pdf: /images/uploads/corona-virus-update.pdf
 ---
-**[Click here to read]()**
+**[Click here to read](https://ezrasnashim.netlify.com/images/uploads/corona-virus-update.pdf)**
