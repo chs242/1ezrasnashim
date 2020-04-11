@@ -111,7 +111,7 @@
                   <label>Interested in Course<br>
                     <input 
                       type="checkbox" 
-                      name="interestedNone" 
+                      name="certificationNone" 
                       value="course" 
                       v-model="formData.certificationNone" 
                     />

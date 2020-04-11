@@ -56,12 +56,12 @@
 
       <!-- Bear in mind there is additional CSS below in the styles tag -->
       <div id="mySidenav" :class="{open: isActive}" class="sidenav" @click="isActive = !isActive">
-        <g-link to="/" class="mobile donate">Home</g-link>
-        <g-link to="/volunteer/" class="mobile donate">Volunteer</g-link>
-        <g-link to="/contact/" class="mobile donate">Contact</g-link>
-        <g-link to="/about/" class="mobile donate">About</g-link>
-        <g-link to="/services/" class="mobile donate">Services</g-link>
-        <g-link to="/news/" class="mobile donate">News & Press</g-link>
+        <g-link to="/" class="mobile">Home</g-link>
+        <g-link to="/volunteer/" class="mobile">Volunteer</g-link>
+        <g-link to="/contact/" class="mobile">Contact</g-link>
+        <g-link to="/about/" class="mobile">About</g-link>
+        <g-link to="/services/" class="mobile">Services</g-link>
+        <g-link to="/news/" class="mobile">News & Press</g-link>
         <g-link to="/donate/" class="mobile donate">Donate</g-link>
       </div>
     </header>
