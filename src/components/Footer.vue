@@ -1,29 +1,68 @@
 <template>
   <footer class="footer bg-gray-200 flex flex-col md:text-xs">
-    <div id="subscribe" class="shadow-xl py-4 md:flex">
-      <div class="flex justify-center w-full px-6 text-center md:w-1/2 lg:pl-40">
-        <h1
-          class="font-source text-2xl lg:text-4xl lg:text-left text-pink-900 font-light"
-        >Keep up with the latest happenings at Ezras Nashim!</h1>
-      </div>
-      <div
-        class="flex justify-center w-full mt-4 md:mt-0 md:inline-flex md:w-1/2 md:relative md:pr-8 md:items-center lg:px-32 lg:pr-48"
+
+    <!-- Begin Mailchimp Signup Form -->
+
+    <div id="mc_embed_signup">
+      <form 
+        action="https://ezras-nashim.us7.list-manage.com/subscribe/post?u=595de164da802e29869878694&amp;id=5f22530505" 
+        method="post" 
+        id="mc-embedded-subscribe-form" 
+        name="mc-embedded-subscribe-form" 
+        class="validate" 
+        target="_blank" 
+        novalidate
       >
-        <input
-          type="email"
-          placeholder="Your Email..."
-          class="font-roboto text-base text-center md:text-left font-light border-2 rounded-full w-4/5 min-w-40 md:w-full md:px-2 py-2 lg:py-3 leading-normal shadow-2xl"
-        />
-        <button
-          class="hidden md:inline md:absolute md:right-0 md:w-1/3 lg:w-32 md:mr-4 lg:mr-24 xl:mr-40 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full w-4/5 py-2 lg:py-3 leading-normal shadow-2xl"
-        >Subscribe</button>
-      </div>
-      <div class="flex justify-center w-full mt-2 md:hidden">
-        <button
-          class="font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full w-4/5 py-2 leading-normal shadow-2xl"
-        >Subscribe</button>
-      </div>
+        <div id="mc_embed_signup_scroll">
+          <div id="subscribe" class="shadow-xl py-4 md:flex">
+            <div class="flex justify-center w-full px-6 text-center md:w-1/2 lg:pl-40">                     
+              <h2
+                for="mce-EMAIL"
+                class="font-source text-2xl lg:text-4xl lg:text-left text-pink-900 font-light"
+              >Keep up with the latest happenings at Ezras Nashim!
+              </h2>
+            </div>
+            
+            <div
+              class="flex justify-center w-full mt-4 md:mt-0 md:inline-flex md:w-1/2 md:relative md:pr-8 md:items-center lg:px-32 lg:pr-48"
+            >
+              <input 
+                type="email" 
+                value="" 
+                name="EMAIL" 
+                class="font-roboto text-base text-center md:text-left font-light border-2 rounded-full w-4/5 min-w-40 md:w-full md:px-2 py-2 lg:py-3 leading-normal shadow-2xl"
+                id="mce-EMAIL" 
+                placeholder="email address" 
+                required
+              >
+              <input
+                type="submit" 
+                value="Subscribe" 
+                name="subscribe" 
+                id="mc-embedded-subscribe"
+                class="hidden text-center md:inline md:absolute md:right-0 md:w-1/3 lg:w-32 md:mr-4 lg:mr-24 xl:mr-40 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full w-4/5 py-2 lg:py-3 leading-normal shadow-2xl"
+              />
+            </div>
+
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_595de164da802e29869878694_5f22530505" tabindex="-1" value=""></div>
+            
+            <div class="flex justify-center w-full mt-2 md:hidden">
+              <input
+                type="submit" 
+                value="Subscribe" 
+                name="subscribe" 
+                id="mc-embedded-subscribe"
+                class="font-roboto text-base font-semibold text-center text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full w-4/5 py-2 leading-normal shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
+
+    <!--End mc_embed_signup-->
+
 
     <div id="footer-end" class="mt-4">
       <div class="md:hidden flex flex-col text-center">
