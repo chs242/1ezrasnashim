@@ -12,6 +12,9 @@ import VolunteerSection1 from "~/components/VolunteerSection1"
 import VolunteerSection2 from "~/components/VolunteerSection2"
 
 export default {
+    metaInfo: {
+    title: "Volunteer"
+  },
     components:{
         VolunteerBanner,
         VolunteerSection1,

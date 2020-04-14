@@ -92,6 +92,9 @@
 <script>
 import EndorseLink from "~/components/EndorseLink"
 export default {
+    metaInfo: {
+    title: "Endorsements"
+  },
     components:{
         EndorseLink
     }

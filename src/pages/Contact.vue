@@ -12,6 +12,9 @@
 import ContactPhone from "~/components/ContactPhone"
 import ContactForm from "~/components/ContactForm"
 export default {
+    metaInfo: {
+    title: "Contact"
+  },
     components:{
         ContactPhone,
         ContactForm

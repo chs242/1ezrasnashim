@@ -142,6 +142,9 @@ import loadScript from "~/utils/loadScript";
 import { PAYMENT_METHODS, PLANS, PLAN_NAMES } from "~/utils/constants";
 
 export default {
+  metaInfo: {
+    title: "Donate"
+  },
   name: "Donate",
   components: {
     BaseButton,

@@ -16,6 +16,9 @@ import IndexSection3 from "~/components/IndexSection3"
 import IndexSection4 from "~/components/IndexSection4"
 
 export default {
+  metaInfo: {
+    title: "Ezras Nashim. Emergency Medical Care"
+  },
     components:{
         IndexBanner,
         IndexSection1,
