@@ -1,4 +1,5 @@
 <template>
+      <!-- Donate page created by yehuda neufeld -->
   <Layout bg-color="bg-gray-100">
     <img
       src="../assets/images/contact-tab/world-map.png"

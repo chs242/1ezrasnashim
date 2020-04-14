@@ -9,4 +9,11 @@ export default function (Vue, { router, head, isClient }) {
   
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+
+  // Add a meta tag
+  head.meta.push({
+    name: 'Ezras Nashim',
+    content: 'Bridging the gap for woman in Emergency Medical Care'
+  })
+
 }
