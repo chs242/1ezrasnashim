@@ -37,18 +37,24 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        cacheTime: 600000, // default
-        exclude: ['/exclude-me'],
-        config: {
-          '/donate/*': {
-            changefreq: 'weekly',
-            priority: 0.5
+        staticUrls:[
+          {
+            url: "/",
+            title: "Bridging the gap for woman in Emergency Medical Care"
           },
-          '/about': {
-            changefreq: 'monthly',
-            priority: 0.7
-          }
-        }
+          {
+            url: "/donate",
+            title: "Ezras nashim is expanding across America. We need your donation"
+          },
+          {
+            url: "/About",
+            title: "Who are Ezras Nashim, Our mission, Our Goals"
+          },
+          {
+            url: "/volunteer",
+            title: "Come and volunteer with Ezras Nashim, there are a number of roles you can fill"
+          },
+        ]
       }
     }
   ],

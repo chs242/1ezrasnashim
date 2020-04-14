@@ -181,7 +181,13 @@ import {
 
 export default {
   metaInfo: {
-    title: "Donate"
+    title: "Donate",
+    meta: [
+        {name: 'description', content: 'Ezras Nashim is rapidly expanding to new communities across America, and we are treating more patients every day. We are revolutionizing emergency medical care for women – but we need YOUR help! With a monthly or one time donation, you can sponsor much-needed equipment and training for our dedicated team of EMTs. Partner with Ezras Nashim and join us in our life-saving work!'}
+      ],
+      link: [
+        {rel: 'canonical', href: 'https://ezrasnashim.org/donate/'}
+      ]
   },
   name: "Donate",
   components: {
