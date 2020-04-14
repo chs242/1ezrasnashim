@@ -34,7 +34,23 @@ module.exports = {
       use: 'gridsome-plugin-tailwindcss',
     },
     //generating a sitemap for SEO purposes
-    
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        exclude: ['/exclude-me'],
+        config: {
+          '/donate/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/about': {
+            changefreq: 'monthly',
+            priority: 0.7
+          }
+        }
+      }
+    }
   ],
 
   transformers: {
