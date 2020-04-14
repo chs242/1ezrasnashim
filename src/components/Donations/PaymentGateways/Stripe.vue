@@ -39,6 +39,7 @@ export default {
     "recurring",
     "plan",
     "amount",
+    "currency",
     "formData"
   ],
   components: { BaseButton },
@@ -78,7 +79,8 @@ export default {
         user: { ...this.formData },
         recurring: this.recurring,
         plan: this.plan,
-        amount: this.amount
+        amount: this.amount,
+        currency: this.currency
       });
 
       if (result.data && result.data.status != "failed") {

@@ -8,6 +8,7 @@ export default async function (data) {
     const res = await axios.post("/.netlify/functions/stripe", {
       user: data.user,
       amount: data.amount * 100, //it expects the price in cents, as an integer
+      currency: data.currency.toLowerCase(),
       recurring: data.recurring,
       plan: data.plan,
       token: data.token.id,

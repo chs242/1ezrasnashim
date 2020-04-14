@@ -61,7 +61,9 @@
       </div>
       <div class="total my-6">
         <label class="label">Donation Total:</label>
-        <span class="font-bold text-2xl text-pink-900 mr-1">${{ amount }}</span>
+        <span
+          class="font-bold text-2xl text-pink-900 mr-1"
+        >{{ currencySymbols[currencyIndex] }}{{ amount }}</span>
         <span
           v-if="recurring"
           class="inline-flex items-center mx-2 px-3 py-0.5 rounded text-sm font-medium bg-green-100 text-green-800"
@@ -85,6 +87,7 @@
         :recurring="recurring"
         :plan="plan"
         :amount="amount"
+        :currency="currencies[currencyIndex]"
         :formData="formData"
       />
 
@@ -96,6 +99,7 @@
         :recurring="recurring"
         :plan="plan"
         :amount="amount"
+        :currency="currencies[currencyIndex]"
         :formData="formData"
       />
 
@@ -111,7 +115,8 @@
     </div>
     <div v-show="state == STATES.ERROR" class="my-16 text-center">
       <h1 class="text-3xl font-roboto font-bold uppercase tracking-wider text-pink-600">Sorry.</h1>
-      <p class="text-gray-700">There has been a problem processing your payment.</p>
+      <p class="mt-2 text-gray-700">There has been a problem processing your payment.</p>
+      <button @click="reload" class="mt-2 text-sm text-gray-500">Reload the page and try again.</button>
     </div>
   </div>
 </template>
@@ -121,13 +126,19 @@ import Loader from "~/components/UI/Loader";
 import Stripe from "~/components/Donations/PaymentGateways/Stripe";
 import Paypal from "~/components/Donations/PaymentGateways/Paypal";
 import Cheque from "~/components/Donations/PaymentGateways/Cheque";
-import { PLAN_NAMES, STATES } from "~/utils/constants";
+import {
+  CURRENCIES,
+  CURRENCY_SYMBOLS,
+  PLAN_NAMES,
+  STATES
+} from "~/utils/constants";
 
 export default {
   name: "PaymentMethods",
   props: [
     "formData",
     "amount",
+    "currencyIndex",
     "plan",
     "selectedMethod",
     "stripeLoaded",
@@ -140,6 +151,8 @@ export default {
       STATES: STATES,
       state: STATES.IDLE,
       plans: PLAN_NAMES,
+      currencies: Object.keys(CURRENCIES),
+      currencySymbols: CURRENCY_SYMBOLS,
       stripeComplete: false
     };
   },
@@ -151,6 +164,10 @@ export default {
         : ["Credit Card", "Paypal", "Cheque"];
     }
   },
-  methods: {}
+  methods: {
+    reload() {
+      window.location.reload();
+    }
+  }
 };
 </script>

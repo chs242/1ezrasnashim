@@ -34,7 +34,7 @@ async function getStripeCustomer(data) {
 async function createCharge(customer, data) {
   try {
     let charge = await stripe.charges.create({
-      currency: 'usd',
+      currency: data.currency,
       amount: data.amount,
       receipt_email: data.email,
       customer: customer.id,
@@ -55,7 +55,7 @@ async function createCharge(customer, data) {
 async function createSubscription(customer, data) {
   try {
 
-    let plan = getPlanId(data.plan);
+    let plan = getPlanId(data.plan, data.currency);
 
     let subscription = await stripe.subscriptions.create(
       {
@@ -78,18 +78,25 @@ async function createSubscription(customer, data) {
   }
 }
 
-function getPlanId(id) {
+function getPlanId(id, currency) {
+
+  // we append the currency to the plan id [except for USD]
+  let suffix = ''
+  if (currency !== 'usd') {
+    suffix = `_${currency}`
+  }
+
   switch (id) {
     case 1:
-      return 'daily';
+      return 'daily' + suffix;
     case 2:
-      return 'weekly';
+      return 'weekly' + suffix;
     case 3:
-      return 'monthly';
+      return 'monthly' + suffix;
     case 4:
-      return 'quarterly';
+      return 'quarterly' + suffix;
     case 5:
-      return 'yearly';
+      return 'yearly' + suffix;
   }
 }
 

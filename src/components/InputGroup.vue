@@ -21,7 +21,7 @@
         v-bind="$attrs"
         v-on="inputListeners"
         class="form-input block w-full sm:text-sm sm:leading-5"
-        :class="{'pl-8': !!$slots['addon-before'], 'pr-28': !!$slots['addon-after']}"
+        :class="{'pl-24': !!$slots['addon-before'], 'pr-28': !!$slots['addon-after']}"
         :placeholder="placeholder"
       />
       <slot name="addon-after" />

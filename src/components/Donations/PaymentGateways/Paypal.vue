@@ -12,7 +12,15 @@ import { STATES, PAYPAL_PLANS_IDS } from "~/utils/constants";
 
 export default {
   name: "Paypal",
-  props: ["state", "paypalLoaded", "recurring", "plan", "amount", "formData"],
+  props: [
+    "state",
+    "paypalLoaded",
+    "recurring",
+    "plan",
+    "amount",
+    "currency",
+    "formData"
+  ],
   components: { BaseButton },
   data() {
     return {
@@ -42,7 +50,7 @@ export default {
         ? {
             createSubscription: (data, actions) => {
               const amount = this.amount;
-              const planId = PAYPAL_PLANS_IDS[this.plan];
+              const planId = PAYPAL_PLANS_IDS[this.currency][this.plan];
               console.log({ amount }, { planId });
               return actions.subscription.create({
                 plan_id: planId,
@@ -60,7 +68,7 @@ export default {
                 purchase_units: [
                   {
                     amount: {
-                      currency_code: "USD",
+                      currency_code: this.currency,
                       value: this.amount
                     }
                   }

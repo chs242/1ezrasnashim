@@ -6,13 +6,32 @@
     />
 
     <div id="donate-page" class="max-w-6xl mx-auto sm:px-0 lg:px-8 py-24">
-      <h1 class="w-full py-2 bg-black text-white text-center font-roboto font-bold text-3xl custom-opacity">Although The rest of this site is under Construction</h1>
-      <h3 class="w-full py-1 bg-black text-white text-center font-roboto font-bold text-2xl custom-opacity">Your Donation will be Processed as usual!</h3>
+      <div class="text-center">
+        <div
+          class="inline-flex items-center px-5 py-3 text-xs font-bold leading-5 uppercase tracking-wider bg-pink-200 text-pink-800 rounded-lg font-roboto custom-opacity"
+        >
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 mr-4">
+            <path
+              fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <h1>
+            Although The rest of this site is under Construction,
+            <br />Your Donation will be Processed as usual
+          </h1>
+        </div>
+      </div>
       <div class="flex flex-wrap items-center">
         <div class="steps flex-2 px-1 py-4 relative md:px-4">
           <div class="step" key="1" v-show="step == 1">
             <DonateOptionsButtons :recurring.sync="recurring" />
-            <donate-options :amount.sync="amount" :recurring="recurring" />
+            <donate-options
+              :amount.sync="amount"
+              :recurring="recurring"
+              :currencyIndex="selectedCurrency"
+            />
 
             <input-group
               class="amount"
@@ -22,11 +41,22 @@
               placeholder="0.00"
               min="0"
             >
-              <div
-                slot="addon-before"
-                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-              >
-                <span class="text-gray-500 sm:text-sm sm:leading-5">$</span>
+              <div slot="addon-before" class="absolute inset-y-0 left-0 flex items-center">
+                <select
+                  v-model="selectedCurrency"
+                  aria-label="Currency"
+                  class="form-select h-full py-0 pl-3 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm sm:leading-5"
+                >
+                  <option
+                    v-for="(i, code) in currencies"
+                    :key="code"
+                    :value="i"
+                    class="font-normal"
+                  >{{code}}</option>
+                </select>
+                <span
+                  class="pl-1 text-gray-500 sm:text-sm sm:leading-5 font-semibold"
+                >{{currencySymbols[selectedCurrency]}}</span>
               </div>
 
               <div
@@ -48,7 +78,7 @@
               </div>
             </input-group>
 
-            <base-button cta @click="step = 2" class="mt-6">Continue</base-button>
+            <base-button cta @click="continueToPayment" class="mt-6">Continue</base-button>
           </div>
           <div class="step" key="2" v-show="step == 2">
             <!-- FORM -->
@@ -109,6 +139,7 @@
                 :form-data="form"
                 :plan="selectedPlan"
                 :amount="amount"
+                :currency-index="selectedCurrency"
                 :stripe-loaded="stripeLoaded"
                 :paypal-loaded="paypalLoaded"
                 @go-back="step = 1"
@@ -138,8 +169,14 @@ import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons";
 import DonateOptions from "~/components/Donations/DonateOptions";
 import PaymentMethods from "~/components/Donations/PaymentMethods";
 import InputGroup from "~/components/InputGroup";
-import loadScript from "~/utils/loadScript";
-import { PAYMENT_METHODS, PLANS, PLAN_NAMES } from "~/utils/constants";
+import { loadScript } from "~/utils/loadScript";
+import {
+  PAYMENT_METHODS,
+  CURRENCIES,
+  CURRENCY_SYMBOLS,
+  PLANS,
+  PLAN_NAMES
+} from "~/utils/constants";
 
 export default {
   name: "Donate",
@@ -155,8 +192,11 @@ export default {
       step: 1,
       selectedMethod: PAYMENT_METHODS.CC,
       selectedPlan: PLANS.MONTHLY,
+      selectedCurrency: CURRENCIES.USD,
       amount: 36,
       recurring: false,
+      currencies: CURRENCIES,
+      currencySymbols: CURRENCY_SYMBOLS,
       plans: PLAN_NAMES,
       form: {
         firstName: undefined,
@@ -173,7 +213,19 @@ export default {
       paypalLoaded: false
     };
   },
+  computed: {
+    paypalScriptUrl() {
+      const currencyCodes = Object.keys(this.currencies);
+      return `https://www.paypal.com/sdk/js?client-id=${
+        process.env.GRIDSOME_PAYPAL_CLIENT_ID
+      }&currency=${currencyCodes[this.selectedCurrency]}&vault=true`;
+    }
+  },
   methods: {
+    continueToPayment() {
+      this.loadPaypal();
+      this.step = 2;
+    },
     async loadStripe() {
       if (window.Stripe) {
         this.stripeLoaded = true;
@@ -189,12 +241,10 @@ export default {
     async loadPaypal() {
       if (window.paypal) {
         this.paypalLoaded = true;
-        return; // don't load Stripe twice
+        return; // don't load Paypal twice
       }
       try {
-        const result = await loadScript(
-          `https://www.paypal.com/sdk/js?client-id=${process.env.GRIDSOME_PAYPAL_CLIENT_ID}&vault=true`
-        );
+        const result = await loadScript(this.paypalScriptUrl, "paypalScript");
         this.paypalLoaded = result.successful;
       } catch (e) {
         console.log("PayPal error", e);
@@ -203,7 +253,6 @@ export default {
   },
   mounted() {
     this.loadStripe();
-    this.loadPaypal();
   }
 };
 </script>
@@ -246,7 +295,7 @@ export default {
   }
 }
 
-.custom-opacity{
+.custom-opacity {
   opacity: 0.6;
 }
 </style>
