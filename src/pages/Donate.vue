@@ -179,6 +179,9 @@ import {
 } from "~/utils/constants";
 
 export default {
+  metaInfo: {
+    title: "Donate"
+  },
   name: "Donate",
   components: {
     BaseButton,

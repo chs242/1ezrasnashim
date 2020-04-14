@@ -21,6 +21,9 @@ import AboutMission from "~/components/AboutMission"
 
 
 export default {
+    metaInfo: {
+    title: "About"
+  },
     components:{
         AboutTeam,
         AboutMission,

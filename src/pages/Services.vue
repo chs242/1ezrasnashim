@@ -20,6 +20,9 @@ import ServicesOutreach from "~/components/ServicesOutreach"
 
 
 export default {
+    metaInfo: {
+    title: "Services"
+  },
     components:{
         ServicesBanner,
         ServicesSection1,
