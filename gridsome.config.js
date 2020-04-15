@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Ezras Nashim',
+  siteUrl: 'https://www.ezrasnashim.org',
   siteDescription: 'Bridging the gap for women in Emergency Medical Care',
 
   templates: {
@@ -37,7 +38,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        staticUrls:[
+        staticUrls: [
           {
             url: "/",
             title: "Bridging the gap for woman in Emergency Medical Care"
