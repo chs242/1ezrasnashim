@@ -89,6 +89,7 @@
         :amount="amount"
         :currency="currencies[currencyIndex]"
         :formData="formData"
+        @error="errorMessage = $event"
       />
 
       <!-- PAYPAL -->
@@ -115,7 +116,9 @@
     </div>
     <div v-show="state == STATES.ERROR" class="my-16 text-center">
       <h1 class="text-3xl font-roboto font-bold uppercase tracking-wider text-pink-600">Sorry.</h1>
-      <p class="mt-2 text-gray-700">There has been a problem processing your payment.</p>
+      <p
+        class="mt-2 text-gray-700"
+      >{{ errorMessage || 'There has been a problem processing your payment.' }}</p>
       <button @click="reload" class="mt-2 text-sm text-gray-500">Reload the page and try again.</button>
     </div>
   </div>
@@ -153,7 +156,8 @@ export default {
       plans: PLAN_NAMES,
       currencies: Object.keys(CURRENCIES),
       currencySymbols: CURRENCY_SYMBOLS,
-      stripeComplete: false
+      stripeComplete: false,
+      errorMessage: ""
     };
   },
 

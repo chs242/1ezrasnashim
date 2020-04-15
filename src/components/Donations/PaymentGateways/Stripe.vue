@@ -87,6 +87,7 @@ export default {
         this.$emit("update:state", STATES.SUCCESS);
       } else {
         this.$emit("update:state", STATES.ERROR);
+        this.$emit("error", result.data.error.message);
       }
       console.log(result);
     },
