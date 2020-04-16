@@ -22,7 +22,13 @@ import AboutMission from "~/components/AboutMission"
 
 export default {
     metaInfo: {
-    title: "About"
+    title: "About",
+    meta: [
+        {name: 'description', content: 'Ezras Nashim strives to provide emergency care to women in the Orthodox Jewish community. Our goal is to expand our growing network of trained professional female EMTs that are available 24/7. It is our hope that Ezras Nashim will become an indispensable part of the Brooklyn community and then spread to Jewish communities around the globe. We will allow women to focus on their health, rather than the loss of their dignity, during an medical emergency.'}
+      ],
+      link: [
+        {rel: 'canonical', href: 'https://ezrasnashim.org/about/'}
+      ]
   },
     components:{
         AboutTeam,

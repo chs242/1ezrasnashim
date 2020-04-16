@@ -21,7 +21,13 @@ import ServicesOutreach from "~/components/ServicesOutreach"
 
 export default {
     metaInfo: {
-    title: "Services"
+    title: "Services",
+    meta: [
+        {name: 'description', content: 'When you call Ezras Nashim, you receive the highest quality emergency medical service as well as the extra support which is inherent in women as caregivers. We can assist when you find yourself as a loss and need a female caregiver… post-op, postpartum, ob/gyn, prehospital, pre-operative, terminal illnesses, blood pressure monitoring, pain management, geriatric issues… we fill in the gaps in emergency medical care. '}
+      ],
+      link: [
+        {rel: 'canonical', href: 'https://ezrasnashim.org/services/'}
+      ]
   },
     components:{
         ServicesBanner,

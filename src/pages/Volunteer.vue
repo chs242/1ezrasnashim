@@ -13,7 +13,13 @@ import VolunteerSection2 from "~/components/VolunteerSection2"
 
 export default {
     metaInfo: {
-    title: "Volunteer"
+    title: "Volunteer",
+    meta: [
+        {name: 'description', content: "Become a member of Esras Nashim's amazing Corps of Volunteers"}
+      ],
+      link: [
+        {rel: 'canonical', href: 'https://ezrasnashim.org/volunteer/'}
+      ]
   },
     components:{
         VolunteerBanner,

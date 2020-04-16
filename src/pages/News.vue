@@ -44,7 +44,13 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: 'News'
+    title: 'News',
+    meta: [
+        {name: 'description', content: 'Ezras Nashim operates under the auspices of rabbonim and is endorsed by gedolei hador.'}
+      ],
+      link: [
+        {rel: 'canonical', href: 'https://ezrasnashim.org/news/'}
+      ]
   }
 }
 </script>

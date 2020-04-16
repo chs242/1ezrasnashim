@@ -19,7 +19,7 @@
 
         <ul class="menu">
           <li
-            class="px-2 lg:px-4 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear"
+            class="px-2 lg:px-4 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg"
           >
             <g-link to="/about/">
               About
@@ -208,7 +208,7 @@ export default {
     transition: all 300ms ease-in-out;
 
     li {
-      @apply text-pink-700;
+      @apply text-purple-800;
       transition: all 300ms ease-in-out;
       &:last-child {
         border-bottom: 0;
@@ -216,10 +216,10 @@ export default {
       a {
         @apply px-3 flex items-center rounded;
         &:hover {
-          @apply bg-pink-50;
+          @apply bg-purple-50;
         }
         svg {
-          @apply text-pink-400 w-5 h-5;
+          @apply text-purple-500 w-5 h-5;
         }
       }
     }
