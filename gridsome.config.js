@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'Ezras Nashim',
   siteDescription: 'Bridging the gap for women in Emergency Medical Care',
+  siteUrl: 'http://ezrasnashim.netlify.com',
 
   templates: {
     Post: '/posts/:title',
@@ -37,24 +38,14 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        staticUrls:[
-          {
-            url: "/",
-            title: "Bridging the gap for woman in Emergency Medical Care"
-          },
-          {
-            url: "/donate",
-            title: "Ezras nashim is expanding across America. We need your donation"
-          },
-          {
-            url: "/About",
-            title: "Who are Ezras Nashim, Our mission, Our Goals"
-          },
-          {
-            url: "/volunteer",
-            title: "Come and volunteer with Ezras Nashim, there are a number of roles you can fill"
-          },
-        ]
+        cacheTime: 600000, // default
+        exclude: ['/exclude-me'],
+        config: {
+          '/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          }
+        }
       }
     }
   ],
