@@ -89,6 +89,7 @@
         :amount="amount"
         :currency="currencies[currencyIndex]"
         :formData="formData"
+        @error="errorMessage = $event"
       />
 
       <!-- PAYPAL -->
@@ -112,11 +113,19 @@
     <div v-show="state == STATES.SUCCESS" class="my-16 text-center">
       <h1 class="text-3xl font-roboto font-bold uppercase tracking-wider text-pink-600">Thank You!</h1>
       <p class="text-gray-700">Your donation will make a big difference to our organization.</p>
+      <base-button class="small" @click="startOver">Donate Again</base-button>
     </div>
     <div v-show="state == STATES.ERROR" class="my-16 text-center">
       <h1 class="text-3xl font-roboto font-bold uppercase tracking-wider text-pink-600">Sorry.</h1>
-      <p class="mt-2 text-gray-700">There has been a problem processing your payment.</p>
-      <button @click="reload" class="mt-2 text-sm text-gray-500">Reload the page and try again.</button>
+      <p
+        class="mt-2 text-gray-700"
+      >{{ errorMessage || 'There has been a problem processing your payment.' }}</p>
+      <button
+        v-if="selectedMethod == 1"
+        @click="reload"
+        class="mt-2 text-sm text-gray-500"
+      >Reload the page and try again.</button>
+      <base-button v-else class="small mt-4" @click="startOver">Start Over</base-button>
     </div>
   </div>
 </template>
@@ -126,6 +135,7 @@ import Loader from "~/components/UI/Loader";
 import Stripe from "~/components/Donations/PaymentGateways/Stripe";
 import Paypal from "~/components/Donations/PaymentGateways/Paypal";
 import Cheque from "~/components/Donations/PaymentGateways/Cheque";
+import BaseButton from "~/components/UI/BaseButton";
 import {
   CURRENCIES,
   CURRENCY_SYMBOLS,
@@ -145,7 +155,7 @@ export default {
     "paypalLoaded",
     "recurring"
   ],
-  components: { Loader, Stripe, Paypal, Cheque },
+  components: { Loader, Stripe, Paypal, Cheque, BaseButton },
   data() {
     return {
       STATES: STATES,
@@ -153,7 +163,8 @@ export default {
       plans: PLAN_NAMES,
       currencies: Object.keys(CURRENCIES),
       currencySymbols: CURRENCY_SYMBOLS,
-      stripeComplete: false
+      stripeComplete: false,
+      errorMessage: ""
     };
   },
 
@@ -165,6 +176,10 @@ export default {
     }
   },
   methods: {
+    startOver() {
+      this.state = STATES.IDLE;
+      this.$emit("go-back");
+    },
     reload() {
       window.location.reload();
     }

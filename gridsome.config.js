@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Ezras Nashim',
+  siteUrl: 'https://www.ezrasnashim.org',
   siteDescription: 'Bridging the gap for women in Emergency Medical Care',
   siteUrl: 'http://ezrasnashim.netlify.com',
 

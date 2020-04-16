@@ -2,7 +2,7 @@ import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
 export default async function (data) {
-  console.log({ data });
+  // console.log({ data });
 
   try {
     const res = await axios.post("/.netlify/functions/stripe", {
@@ -11,7 +11,7 @@ export default async function (data) {
       currency: data.currency.toLowerCase(),
       recurring: data.recurring,
       plan: data.plan,
-      token: data.token.id,
+      token: data.token,
       idempotencyKey: uuidv4(),
       description: 'Donation to Ezras Nashim',
     }, {

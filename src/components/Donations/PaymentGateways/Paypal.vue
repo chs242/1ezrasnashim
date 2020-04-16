@@ -92,8 +92,8 @@ export default {
       }
     },
     recurring() {
+      if (!window.paypal) return;
       console.log("rerender paypal btns");
-
       this.setupPayPalButton();
     }
   },
