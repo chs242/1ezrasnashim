@@ -73,9 +73,17 @@ export default {
   methods: {
     async payWithStripe() {
       this.$emit("update:state", STATES.PROCESSING);
-      const token = await createToken();
+
+      var res = await createToken();
+
+      if (res.error) {
+        this.$emit("update:state", STATES.ERROR);
+        this.$emit("error", res.error.message);
+        return;
+      }
+
       const result = await submitPaymentStripe({
-        ...token,
+        token: res.token.id,
         user: { ...this.formData },
         recurring: this.recurring,
         plan: this.plan,
@@ -87,9 +95,7 @@ export default {
         this.$emit("update:state", STATES.SUCCESS);
       } else {
         this.$emit("update:state", STATES.ERROR);
-        this.$emit("error", result.data.error.message);
       }
-      console.log(result);
     },
     validateEmail(email) {
       // StripeElement StripeElement--focus [hack against purge-css 🤪]
