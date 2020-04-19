@@ -22,3 +22,15 @@ collections:
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Manuel PDF", name: "manuel_pdf", widget: "file", default: "/uploads/general-manual.pdf", required: false}
+
+  - name: "testimonials" # Used in routes, e.g., /admin/collections/blog
+    label: "Testimonials" # Used in the UI
+    folder: "content/testimonials" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Comment", name: "title", widget: "string"}
+      - {label: "Published", name: "published", widget: "boolean", default: true}
+      - {label: "Name", name: "description", widget: "markdown"}
+      - {label: "Party", name: "body", widget: "markdown", required: false}
