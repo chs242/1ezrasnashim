@@ -175,6 +175,13 @@ export default {
         : ["Credit Card", "Paypal", "Cheque"];
     }
   },
+  watch: {
+    state(newState) {
+      if (newState == this.STATES.SUCCESS) {
+        this.$emit("payment-succeeded");
+      }
+    }
+  },
   methods: {
     startOver() {
       this.state = STATES.IDLE;

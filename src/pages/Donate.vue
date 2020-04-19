@@ -1,5 +1,5 @@
 <template>
-      <!-- Donate page created by yehuda neufeld -->
+  <!-- Donate page created by yehuda neufeld -->
   <Layout bg-color="bg-gray-100">
     <img
       src="../assets/images/contact-tab/world-map.png"
@@ -143,11 +143,30 @@
                 :currency-index="selectedCurrency"
                 :stripe-loaded="stripeLoaded"
                 :paypal-loaded="paypalLoaded"
+                @payment-succeeded="submitNetlifyForm"
                 @go-back="step = 1"
               />
               <base-button class="small" @click="step = 1">&larr; Back</base-button>
             </div>
             <!-- /FORM -->
+
+            <!-- Netlify Form (hidden) -->
+            <form
+              name="donation"
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              class="hidden"
+            >
+              <input type="hidden" name="form-name" value="donation" />
+              <input
+                v-for="(field, key) in form"
+                :key="key"
+                type="hidden"
+                :name="key"
+                :value="field"
+              />
+            </form>
           </div>
         </div>
         <div class="flex-1 px-4 text-gray-800 my-12 px-6" style="min-width: 360px">
@@ -183,11 +202,13 @@ export default {
   metaInfo: {
     title: "Donate",
     meta: [
-        {name: 'description', content: 'Ezras Nashim is rapidly expanding to new communities across America, and we are treating more patients every day. We are revolutionizing emergency medical care for women – but we need YOUR help! With a monthly or one time donation, you can sponsor much-needed equipment and training for our dedicated team of EMTs. Partner with Ezras Nashim and join us in our life-saving work!'}
-      ],
-      link: [
-        {rel: 'canonical', href: 'https://ezrasnashim.org/donate/'}
-      ]
+      {
+        name: "description",
+        content:
+          "Ezras Nashim is rapidly expanding to new communities across America, and we are treating more patients every day. We are revolutionizing emergency medical care for women – but we need YOUR help! With a monthly or one time donation, you can sponsor much-needed equipment and training for our dedicated team of EMTs. Partner with Ezras Nashim and join us in our life-saving work!"
+      }
+    ],
+    link: [{ rel: "canonical", href: "https://ezrasnashim.org/donate/" }]
   },
   name: "Donate",
   components: {
@@ -235,6 +256,22 @@ export default {
     continueToPayment() {
       this.loadPaypal();
       this.step = 2;
+    },
+    submitNetlifyForm() {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({ "form-name": "donation", ...this.form })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+    },
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
     },
     async loadStripe() {
       if (window.Stripe) {
