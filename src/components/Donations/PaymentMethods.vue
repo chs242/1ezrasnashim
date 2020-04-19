@@ -112,8 +112,8 @@
     </div>
     <div v-show="state == STATES.SUCCESS" class="my-16 text-center">
       <h1 class="text-3xl font-roboto font-bold uppercase tracking-wider text-pink-600">Thank You!</h1>
-      <p class="text-gray-700">Your donation will make a big difference to our organization.</p>
-      <base-button class="small" @click="startOver">Donate Again</base-button>
+      <p class="text-gray-700 mb-2">Your donation will make a big difference to our organization.</p>
+      <base-button class="small my-4" @click="startOver">Donate Again</base-button>
     </div>
     <div v-show="state == STATES.ERROR" class="my-16 text-center">
       <h1 class="text-3xl font-roboto font-bold uppercase tracking-wider text-pink-600">Sorry.</h1>

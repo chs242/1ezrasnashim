@@ -25,13 +25,13 @@
             <h3 class="custom-text-purple text-xl font-source font-semibold">Advisory Panel</h3>
         </div>
         <div class="mt-2">
-            <p class="text-sm md:text-base">Comprised of established members from the community who are involved in an advisory capacity on an ad hoc basis. These volunteers are a combination of businessmen and professionals.</p>
+            <p class="text-sm md:text-base">Representing both the men and woman of our communities, these individuals have a broad range of life and business experience, which enables them to be involved in an advisory capacity. They volunteer their time and expertise for consults on an ad hoc basis.</p>
         </div>
         <div class="mt-8">
             <h3 class="custom-text-purple text-xl font-source font-semibold">Rabbinical Panel</h3>
         </div>
         <div class="mt-2">
-            <p class="text-sm md:text-base">Handling halachic and hashkafic issues as they arise, this group of prominent rabbis provide the organisation's rabbinical guidence.</p>
+            <p class="text-sm md:text-base">Handling halachic and hashkafic issues as they arise, this group of prominent rabbis provide the organization's rabbinical guidence.</p>
         </div>
     </div>
     <div class="hidden lg:block mx-auto relative lg:pt-20 xl:pt-12">

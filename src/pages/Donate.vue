@@ -88,14 +88,12 @@
               <div class="-mx-2 flex flex-wrap justify-between mb-4">
                 <input-group
                   v-model="form.firstName"
-                  name="first name"
-                  placeholder="John"
+                  name="first name"                  
                   class="flex-1"
                 />
                 <input-group
                   v-model="form.lastName"
-                  name="last name"
-                  placeholder="Doe"
+                  name="last name"                  
                   class="flex-1"
                 />
               </div>
@@ -103,8 +101,7 @@
                 <input-group
                   v-model="form.email"
                   name="email"
-                  type="email"
-                  placeholder="johndoe@gmail.com"
+                  type="email"                  
                   class="flex-1"
                 />
               </div>
@@ -126,8 +123,8 @@
               <div class="-mx-2 flex flex-wrap mb-4">
                 <input-group
                   v-model="form.HonoureeEmailAddress"
-                  name="Do you know the Honouree's email address?"
-                  placeholder="honouree@gmail.com"
+                  name="notify honouree of donation?"
+                  placeholder="Tell us their email address"
                   class="flex-1"
                 /> 
               </div>
