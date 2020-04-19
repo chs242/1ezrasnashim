@@ -93,7 +93,13 @@
 import EndorseLink from "~/components/EndorseLink"
 export default {
     metaInfo: {
-    title: "Endorsements"
+    title: "Endorsements",
+    meta: [
+        {name: 'description', content: 'Ezras Nashim operates under the auspices of rabbonim and is endorsed by gedolei hador.'}
+      ],
+      link: [
+        {rel: 'canonical', href: 'https://ezrasnashim.org/endorsements/'}
+      ]
   },
     components:{
         EndorseLink

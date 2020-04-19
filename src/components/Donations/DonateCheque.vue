@@ -7,8 +7,8 @@
         Please mail your check to:<b><b>
 
         Ezras Nashim<b>
-        123 G Street<b>
-        San Diego, CA 92101<b><b>
+        1716 56th St<b>
+        Brooklyn, NY 11204<b><b>
 
         All contributions will be gratefully acknowledged and are tax deductible.<b>
         </p>

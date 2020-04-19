@@ -25,7 +25,7 @@
             <h3 class="custom-text-purple text-xl font-source font-semibold">Advisory Panel</h3>
         </div>
         <div class="mt-2">
-            <p class="text-sm md:text-base">Comprised of established men from the community who are involved in an advisory capacity on an ad hoc basis. They volunteers are a combination of businessmen and professionals.</p>
+            <p class="text-sm md:text-base">Comprised of established members from the community who are involved in an advisory capacity on an ad hoc basis. These volunteers are a combination of businessmen and professionals.</p>
         </div>
         <div class="mt-8">
             <h3 class="custom-text-purple text-xl font-source font-semibold">Rabbinical Panel</h3>
