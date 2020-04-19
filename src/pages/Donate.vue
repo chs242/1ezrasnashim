@@ -88,30 +88,30 @@
               <div class="-mx-2 flex flex-wrap justify-between mb-4">
                 <input-group
                   v-model="form.firstName"
-                  name="first name"                  
-                  class="flex-1"
+                  name="first name "                  
+                  class="star flex-1"
                 />
                 <input-group
                   v-model="form.lastName"
-                  name="last name"                  
+                  name="last name "                  
                   class="flex-1"
                 />
               </div>
               <div class="-mx-2 mb-4 flex flex-wrap justify-between">
                 <input-group
                   v-model="form.email"
-                  name="email"
+                  name="email "
                   type="email"                  
                   class="flex-1"
                 />
               </div>
               
               <div class="-mx-2 mb-4 flex flex-wrap">
-                <input-group v-model="form.phone" name="phone number" type="tel" class="flex-1" />
+                <input-group-no-star v-model="form.phone" name="phone number" type="tel" class="flex-1" />
               </div>
 
               <div class="-mx-2 mb-4 flex flex-wrap">
-                <input-group
+                <input-group-no-star
                   v-model="form.InHonourOf"
                   name="Dedication"
                   placeholder="In honor of..."
@@ -121,7 +121,7 @@
               </div>
 
               <div class="-mx-2 flex flex-wrap mb-4">
-                <input-group
+                <input-group-no-star
                   v-model="form.HonoureeEmailAddress"
                   name="notify honouree of donation?"
                   placeholder="Tell us their email address"
@@ -189,6 +189,7 @@ import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons";
 import DonateOptions from "~/components/Donations/DonateOptions";
 import PaymentMethods from "~/components/Donations/PaymentMethods";
 import InputGroup from "~/components/InputGroup";
+import InputGroupNoStar from "~/components/InputGroupNoStar";
 import { loadScript } from "~/utils/loadScript";
 import {
   PAYMENT_METHODS,
@@ -216,6 +217,7 @@ export default {
     DonateOptionsButtons,
     DonateOptions,
     InputGroup,
+    InputGroupNoStar,
     PaymentMethods
   },
   data() {
