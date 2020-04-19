@@ -7,7 +7,14 @@ async function getStripeCustomer(data) {
   if (existingCustomers.data.length) {
     // use existing customer
     customer = existingCustomers.data[0];
-    console.log(`found existing customer:`, customer)
+    console.log(`found existing customer:`, customer.default_source)
+
+    // update customers card
+    customer = await stripe.customers.update(customer.id, {
+      source: data.token
+    })
+    console.log(`updated existing customer:`, customer.default_source)
+
   } else {
     // create new customer
     try {
