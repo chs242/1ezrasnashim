@@ -107,6 +107,8 @@
       <!-- CHEQUE -->
       <cheque v-if="selectedMethod == 2" />
     </div>
+
+    
     <div v-show="state == STATES.PROCESSING" class="my-14 my-16">
       <loader />
     </div>
