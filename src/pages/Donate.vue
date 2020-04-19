@@ -143,6 +143,7 @@
                 @go-back="step = 1"
               />
               <base-button class="small" @click="step = 1">&larr; Back</base-button>
+              <base-button class="small" @click="submitNetlifyForm">test Netlify form</base-button>
             </div>
             <!-- /FORM -->
 
@@ -155,6 +156,11 @@
               class="hidden"
             >
               <input type="hidden" name="form-name" value="donation" />
+              <input
+                type="hidden"
+                name="amount"
+                :value="`${amount} ${Object.keys(currencies)[selectedCurrency]} ${recurring ? plans[selectedPlan] : 'once'}`"
+              />
               <input
                 v-for="(field, key) in form"
                 :key="key"
@@ -250,10 +256,18 @@ export default {
       this.step = 2;
     },
     submitNetlifyForm() {
-      fetch("/", {
+      console.log(this.encode({ "form-name": "donation", ...this.form }));
+
+      fetch("/donate", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({ "form-name": "donation", ...this.form })
+        body: this.encode({
+          "form-name": "donation",
+          amount: `${this.amount} ${
+            Object.keys(this.currencies)[this.selectedCurrency]
+          } ${this.recurring ? this.plans[this.selectedPlan] : "once"}`,
+          ...this.form
+        })
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
