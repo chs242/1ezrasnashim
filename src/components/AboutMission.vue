@@ -5,8 +5,8 @@
         <div class="px-2 lg:flex flex-col lg:w-3/4 lg:mx-auto">
             <div class="bg-gray-200 text-gray-800 my-3 py-8 px-4 rounded-xl shadow-md lg:px-16">
                 <h1 class="text-3xl font-semibold font-source mt-2">What is Ezras Nashim</h1>
-                <p class="text-xs md:text-sm lg:text-base">Ezras Nashim is a newly NYS Certified Basic Life Support First Response organization (BLS-FR) endorsed by prominent Rabbonim.<br><br>
-                                                           We received privileges for training and rotations at Northshore University Medical Center and Brookdale Hospital. Ezras Nashim’s primary purpose is to train women as Emergency Medical Technicians (EMTs) who can then assist women in emergency situations, and preserve her dignity. Ezras Nashim is also obligated by law to serve anyone who calls for their service regardless of gender and race.</p>
+                <p class="text-xs md:text-sm lg:text-base">Ezras Nashim is a NYS Certified Basic Life Support First Response organization (BLS-FR) endorsed by prominent Rabbonim.<br><br>
+                                                           Ezras Nashim’s primary purpose is to train women as Emergency Medical Technicians (EMTs) who can then assist women in emergency situations, and preserve her dignity. Ezras Nashim is also obligated by law to serve anyone who calls for their service regardless of gender and race.</p>
             </div>
             <div class="custom-bg my-3 py-8 px-2 rounded-xl shadow-md lg:px-16">
                 <h1 class="text-3xl font-semibold font-source mt-2">Our Goals</h1>

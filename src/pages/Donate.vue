@@ -108,7 +108,7 @@
                   class="flex-1"
                 />
               </div>
-              <div class="-mx-2 flex flex-wrap mb-4">
+              <!-- <div class="-mx-2 flex flex-wrap mb-4">
                 <input-group
                   v-model="form.address"
                   name="billing address"
@@ -120,7 +120,7 @@
                 <input-group v-model="form.city" name="city" class="flex-1" />
                 <input-group v-model="form.state" name="state" class="flex-1" />
                 <input-group v-model="form.zip" name="Zip/Postal Code" class="flex-1" />
-              </div>
+              </div> -->
               <div class="-mx-2 flex flex-wrap">
                 <input-group v-model="form.phone" name="phone number" type="tel" class="flex-1" />
               </div>
@@ -239,10 +239,10 @@ export default {
         firstName: undefined,
         lastName: undefined,
         email: undefined,
-        address: undefined,
-        city: undefined,
-        state: undefined,
-        zip: undefined,
+        // address: undefined,
+        // city: undefined,
+        // state: undefined,
+        // zip: undefined,
         phone: undefined,
         comment: undefined
       },

@@ -9,7 +9,7 @@
                 <h6 class="m-3 ml-6 text-base md:text-lg font-roboto font-semibold"><i>Director</i></h6>
             </div>
             <div class="px-1 md:px-2 xl:px-8">
-                <p class="text-sm md:text-base">Rachel Freier, known as Ruchie by her friends and family, was elected as Civil Court Judge in November 2016 and is currently assigned to Kings County Criminal Court. Prior to becoming a judge, she maintained law offices in Borough Park and Monroe, N. Y. licensed to practice in NY, NJ and Washington DC.<br><br>
+                <p class="text-sm md:text-base">Rachel Freier, known as Ruchie by her friends and family, was elected as Civil Court Judge in November 2016. Prior to becoming a judge, she maintained law offices in Borough Park and Monroe, N. Y. licensed to practice in NY, NJ and Washington DC.<br><br>
                 Rachel attended Bais Yaakov from elementary school through seminary. Her teachers, many of whom were students of Sara Schneirer impressed upon her that each person is created with a Tzelem Elokim, in the image of G-D with incredible potential, which inspired her to reach great heights in public service.<br><br>
                 After graduating Bais Yaakov, Rachel worked as a legal secretary and then worked her way up to paralegal while supporting her husband, Tzi David Freier, who studied the Talmud in Kollel during the first ten years of her marriage. Subsequently, Rachel attended Touro College, where she majored in Political Science and directed the Women’s Pre-Law Society.<br><br>
                 After graduating Touro College with honors, she attended Brooklyn Law School part time so that she would have time to study law while raising her six children. She was recently honored as one of Brooklyn Law School’s Trailblazers for being the first Chassidic woman to be elected to public office.<br><br>
@@ -25,4 +25,6 @@
     .custom-text-color{
         color: #72298f;
     }
+
+
 </style>
