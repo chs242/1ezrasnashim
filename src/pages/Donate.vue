@@ -99,35 +99,37 @@
                   class="flex-1"
                 />
               </div>
-              <div class="-mx-2 flex flex-wrap justify-between mb-4">
+              <div class="-mx-2 mb-4 flex flex-wrap justify-between">
                 <input-group
                   v-model="form.email"
                   name="email"
                   type="email"
-                  placeholder="John"
+                  placeholder="johndoe@gmail.com"
                   class="flex-1"
                 />
               </div>
-              <!-- <div class="-mx-2 flex flex-wrap mb-4">
-                <input-group
-                  v-model="form.address"
-                  name="billing address"
-                  placeholder="1234 Washington Avenue"
-                  class="flex-1"
-                /> 
-              </div> -->
               
-              <div class="-mx-2 flex flex-wrap">
+              <div class="-mx-2 mb-4 flex flex-wrap">
                 <input-group v-model="form.phone" name="phone number" type="tel" class="flex-1" />
               </div>
-              <div class="-mx-2 flex flex-wrap">
+
+              <div class="-mx-2 mb-4 flex flex-wrap">
                 <input-group
                   v-model="form.InHonourOf"
-                  name="comments"
+                  name="Dedication"
                   placeholder="In honor of..."
                   type="textarea"
                   class="flex-1"
                 />
+              </div>
+
+              <div class="-mx-2 flex flex-wrap mb-4">
+                <input-group
+                  v-model="form.HonoureeEmailAddress"
+                  name="Do you know the Honouree's email address?"
+                  placeholder="honouree@gmail.com"
+                  class="flex-1"
+                /> 
               </div>
 
               <payment-methods
@@ -143,7 +145,6 @@
                 @go-back="step = 1"
               />
               <base-button class="small" @click="step = 1">&larr; Back</base-button>
-              <base-button class="small" @click="submitNetlifyForm">test Netlify form</base-button>
             </div>
             <!-- /FORM -->
 
@@ -159,7 +160,7 @@
               <input
                 type="hidden"
                 name="amount"
-                :value="`${amount} ${Object.keys(currencies)[selectedCurrency]} ${recurring ? plans[selectedPlan] : 'once'}`"
+                :value="`${amount} ${Object.keys(currencies)[selectedCurrency]} ${recurring ? plans[selectedPlan] : 'One time donation'}`"
               />
               <input
                 v-for="(field, key) in form"
@@ -236,7 +237,8 @@ export default {
         lastName: undefined,
         email: undefined,
         phone: undefined,
-        InHonourOf: undefined 
+        InHonourOf: undefined,
+        HonoureeEmailAddress: undefined
       },
       stripeLoaded: false,
       paypalLoaded: false
@@ -263,10 +265,10 @@ export default {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
           "form-name": "donation",
+          ...this.form,
           amount: `${this.amount} ${
             Object.keys(this.currencies)[this.selectedCurrency]
-          } ${this.recurring ? this.plans[this.selectedPlan] : "once"}`,
-          ...this.form
+          } ${this.recurring ? this.plans[this.selectedPlan] : "One time donation"}`
         })
       })
         .then(() => alert("Success!"))
