@@ -25,4 +25,6 @@
     .custom-text-color{
         color: #72298f;
     }
+
+
 </style>
