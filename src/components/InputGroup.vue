@@ -1,6 +1,6 @@
 <template>
   <div class="input-group text-start px-2 mb-2">
-    <label :for="name" class="label">{{name}}<span class="text-red-600">*</span></label>
+    <label :for="name" class="label">{{name}}</label>
     <div class="mt-1 relative rounded-md shadow-sm">
       <slot name="addon-before" />
       <textarea
