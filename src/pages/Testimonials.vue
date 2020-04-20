@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <TestimonialCard v-for="edge in $page.testimonials.edges" :key="edge.node.id" :testimonial="edge.node" />
+        <TestimonialCard v-for="edge in $page.posts.edges" :key="edge.node.id" :testimonial="edge.node" />
     </Layout>
 </template>
 

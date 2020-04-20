@@ -16,10 +16,10 @@
           to="/contact/"
           class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
         >Contact</g-link>
-        <!-- <g-link
+        <g-link
           to="/testimonials/"
           class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
-        >Testimonials</g-link> -->
+        >Testimonials</g-link>
 
         <ul class="menu">
           <li

@@ -2,10 +2,10 @@
   <div class="w-full p-1 font-source custom-radius-bottom md:p-2 lg:pt-4">
       <div class="bg-white px-3 text-left">
         <div class="custom-height">
-          <h2 class="pt-4 pr-12 text-xl text-left font-bold font-roboto" v-html="testimonial.title" />
+          <h2 class="pt-4 pr-12 text-xl text-left font-bold font-roboto" v-html="post.title" />
         </div>
         <div class="custom-height">
-          <p class="pt-4 text-lg font-source" v-html="testimonial.description" />
+          <p class="pt-4 text-lg font-source" v-html="post.description" />
         </div>
       </div>
   </div>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  props: ["testimonial"]
+  props: ["post"]
 };
 </script>
 
