@@ -107,7 +107,7 @@
               </div>
               
               <div class="-mx-2 mb-4 flex flex-wrap">
-                <input-group-with-star v-model="form.phone" name="phone number" type="tel" class="flex-1" />
+                <input-group-with-star v-model="form.phone " name="phone number " type="tel" class="flex-1" />
               </div>
 
               <div class="-mx-2 mb-4 flex flex-wrap">
