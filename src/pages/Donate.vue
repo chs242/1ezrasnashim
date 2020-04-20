@@ -123,7 +123,7 @@
               <div class="-mx-2 flex flex-wrap mb-4">
                 <input-group
                   v-model="form.HonoureeEmailAddress"
-                  name="notify honouree of donation?"
+                  name="notify the honouree of your donation?"
                   placeholder="Tell us their email address"
                   class="flex-1"
                 /> 
