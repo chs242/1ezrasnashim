@@ -1,19 +1,31 @@
 <template>
     <Layout>
-        <TestimonialCard v-for="edge in $page.posts.edges" :key="edge.node.id" :testimonial="edge.node" />
+        <TestimonialCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
     </Layout>
 </template>
 
 <page-query>
 query {
-  Posts : allPost(filter: { published: { eq: true }}) {
+  posts: allPost(filter: { published: { eq: true }}) {
     edges {
       node {
         id
         title
         date (format: "D. MMMM YYYY")
+        timeToRead
         description
+        cover_image (width: 770, height: 380, blur: 10)
+        ...on Post {
+        id
+        title
         path
+        }
+        path
+        tags {
+          id
+          title
+          path
+        }
       }
     }
   }
