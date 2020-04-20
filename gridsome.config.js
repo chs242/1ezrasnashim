@@ -33,6 +33,14 @@ module.exports = {
       }
     },
     {
+      // Create posts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Testimonial',
+        path: 'content/testimonials/*.md',
+      }
+    },
+    {
       use: 'gridsome-plugin-tailwindcss',
     },
     //generating a sitemap for SEO purposes
