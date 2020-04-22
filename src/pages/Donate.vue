@@ -271,13 +271,13 @@ export default {
       this.step = 2;
     },
     submitNetlifyForm() {
-      console.log(this.encode({ "form-name": "donation", ...this.form }));
+      console.log(this.encode({ "form-name": "DONATION", ...this.form }));
 
       fetch("/donate", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
-          "form-name": "donation",
+          "form-name": "DONATION",
           ...this.form,
           amount: `${this.amount} ${
             Object.keys(this.currencies)[this.selectedCurrency]
