@@ -41,8 +41,8 @@
         <input
           type="text"
           id="subject"
-          name="subject"
-          v-model="formData.subject"
+          name="subjectMatter"
+          v-model="formData.subjectMatter"
           placeholder="Subject"
           class="w-full custom-width py-1 text-center custom-border"
         />

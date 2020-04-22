@@ -284,7 +284,7 @@ export default {
           "form-name": "donation",
           amount: `${this.amount} ${
             Object.keys(this.currencies)[this.selectedCurrency]
-          } ${this.recurring ? this.plans[this.selectedPlan] : "once"}`,
+          } ${this.recurring ? this.plans[this.selectedPlan] : "One time donation"}`,
           ...this.form
         })
       })
