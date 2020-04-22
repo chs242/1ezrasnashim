@@ -86,52 +86,62 @@
             <div class="max-w-lg px-2 py-8 mt-8 bg-white shadow rounded-xl md:p-8 my-2">
               <h2 class="text-xl font-bold text-pink-900 mb-2">Personal Info</h2>
               <div class="-mx-2 flex flex-wrap justify-between mb-4">
-                <input-group
+                <input-group-with-star
                   v-model="form.firstName"
-                  name="first name"
+                  name="first name "
                   placeholder="John"
                   class="flex-1"
                 />
-                <input-group
+                <input-group-with-star
                   v-model="form.lastName"
-                  name="last name"
+                  name="last name "
                   placeholder="Doe"
                   class="flex-1"
                 />
               </div>
               <div class="-mx-2 flex flex-wrap justify-between mb-4">
-                <input-group
+                <input-group-with-star
                   v-model="form.email"
-                  name="email"
+                  name="email "
                   type="email"
                   placeholder="John"
                   class="flex-1"
                 />
               </div>
               <div class="-mx-2 flex flex-wrap mb-4">
-                <input-group
+                <input-group-with-star
                   v-model="form.address"
-                  name="billing address"
+                  name="billing address "
                   placeholder="1234 Washington Avenue"
                   class="flex-1"
                 />
               </div>
               <div class="-mx-2 flex flex-wrap">
-                <input-group v-model="form.city" name="city" class="flex-1" />
-                <input-group v-model="form.state" name="state" class="flex-1" />
-                <input-group v-model="form.zip" name="Zip/Postal Code" class="flex-1" />
+                <input-group-with-star v-model="form.city" name="city " class="flex-1" />
+                <input-group-with-star v-model="form.state" name="state " class="flex-1" />
+                <input-group-with-star v-model="form.zip" name="Zip/Postal Code " class="flex-1" />
               </div>
               <div class="-mx-2 flex flex-wrap">
-                <input-group v-model="form.phone" name="phone number" type="tel" class="flex-1" />
+                <input-group-with-star v-model="form.phone" name="phone number " type="tel" class="flex-1" />
               </div>
-              <div class="-mx-2 flex flex-wrap">
+
+              <div class="-mx-2 mb-4 flex flex-wrap">
                 <input-group
-                  v-model="form.comment"
-                  name="comments"
+                  v-model="form.InHonourOf"
+                  name="Dedication"
                   placeholder="In honor of..."
                   type="textarea"
                   class="flex-1"
                 />
+              </div>
+
+              <div class="-mx-2 flex flex-wrap mb-4">
+                <input-group
+                  v-model="form.HonoureeEmailAddress"
+                  name="notify the honouree of your donation?"
+                  placeholder="Tell us their email address"
+                  class="flex-1"
+                /> 
               </div>
 
               <payment-methods
@@ -195,6 +205,7 @@ import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons";
 import DonateOptions from "~/components/Donations/DonateOptions";
 import PaymentMethods from "~/components/Donations/PaymentMethods";
 import InputGroup from "~/components/InputGroup";
+import InputGroupWithStar from "~/components/InputGroupWithStar";
 import { loadScript } from "~/utils/loadScript";
 import {
   PAYMENT_METHODS,
@@ -221,6 +232,7 @@ export default {
     DonateOptionsButtons,
     DonateOptions,
     InputGroup,
+    InputGroupWithStar,
     PaymentMethods
   },
   data() {
@@ -243,7 +255,8 @@ export default {
         state: undefined,
         zip: undefined,
         phone: undefined,
-        comment: undefined
+        InHonourOf: undefined,
+        HonoureeEmailAddress: undefined
       },
       stripeLoaded: false,
       paypalLoaded: false
