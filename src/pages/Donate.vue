@@ -18,10 +18,6 @@
               clip-rule="evenodd"
             />
           </svg>
-          <h1>
-            Although The rest of this site is under Construction,
-            <br />Your Donation will be Processed as usual
-          </h1>
         </div>
       </div>
       <div class="flex flex-wrap items-center">
