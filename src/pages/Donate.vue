@@ -233,6 +233,9 @@ export default {
         lastName: undefined,
         email: undefined,
         phone: undefined,
+        city: undefined,
+        state: undefined,
+        zip: undefined,
         InHonourOf: undefined,
         HonoureeEmailAddress: undefined
       },
