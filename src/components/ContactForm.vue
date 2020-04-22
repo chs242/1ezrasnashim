@@ -1,7 +1,7 @@
 <template>
   <div class="px-2 my-4 lg:my-0 lg:w-3/5">
       <form
-        name="contact"
+        name="CONTACT"
         method="post"
         v-on:submit.prevent="handleSubmit"
         action="/Success/"
@@ -9,7 +9,7 @@
         data-netlify-honeypot="bot-field"
         class="bg-white py-8 px-8 mx-auto shadow-md text-center rounded-xl md:mx-auto lg:py-12 lg:flex lg:flex-wrap lg:justify-center lg:mx-0 custom-m-width custom-opacity"
       >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="CONTACT" />
       <p hidden>
         <label>
           Don’t fill this out:

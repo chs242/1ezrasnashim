@@ -110,6 +110,20 @@
                 <input-group-with-star v-model="form.phone " name="phone number " type="tel" class="flex-1" />
               </div>
 
+              <div class="-mx-2 flex flex-wrap mb-4">
+                  <input-group-with-star
+                    v-model="form.address"
+                    name="billing address "
+                    class="flex-1"
+                  />
+                </div>
+
+                <div class="-mx-2 flex flex-wrap">
+                  <input-group-with-star v-model="form.city" name="city " class="flex-1" />
+                  <input-group-with-star v-model="form.state" name="state " class="flex-1" />
+                  <input-group-with-star v-model="form.zip" name="Zip/Postal Code " class="flex-1" />
+                </div>
+
               <div class="-mx-2 mb-4 flex flex-wrap">
                 <input-group
                   v-model="form.InHonourOf"
@@ -147,13 +161,13 @@
 
             <!-- Netlify Form (hidden) -->
             <form
-              name="donation"
+              name="DONATION"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               class="hidden"
             >
-              <input type="hidden" name="form-name" value="donation" />
+              <input type="hidden" name="form-name" value="DONATION" />
               <input
                 type="hidden"
                 name="amount"
