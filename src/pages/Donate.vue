@@ -7,6 +7,23 @@
     />
 
     <div id="donate-page" class="max-w-6xl mx-auto sm:px-0 lg:px-8 py-24">
+      <div class="text-center">
+        <div
+          class="inline-flex items-center px-5 py-3 text-xs font-bold leading-5 uppercase tracking-wider bg-pink-200 text-pink-800 rounded-lg font-roboto custom-opacity"
+        >
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 mr-4">
+            <path
+              fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <h1>
+            Although The rest of this site is under Construction,
+            <br />Your Donation will be Processed as usual
+          </h1>
+        </div>
+      </div>
       <div class="flex flex-wrap items-center">
         <div class="steps flex-2 px-1 py-4 relative md:px-4">
           <div class="step" key="1" v-show="step == 1">
@@ -69,61 +86,52 @@
             <div class="max-w-lg px-2 py-8 mt-8 bg-white shadow rounded-xl md:p-8 my-2">
               <h2 class="text-xl font-bold text-pink-900 mb-2">Personal Info</h2>
               <div class="-mx-2 flex flex-wrap justify-between mb-4">
-                <input-group-with-star
-                  v-model="form.firstName"
-                  name="first name "                  
-                  class="star flex-1"
-                />
-                <input-group-with-star
-                  v-model="form.lastName"
-                  name="last name "                  
-                  class="flex-1"
-                />
-              </div>
-              <div class="-mx-2 mb-4 flex flex-wrap justify-between">
-                <input-group-with-star
-                  v-model="form.email"
-                  name="email "
-                  type="email"                  
-                  class="flex-1"
-                />
-              </div>
-              
-              <div class="-mx-2 mb-4 flex flex-wrap">
-                <input-group-with-star v-model="form.phone " name="phone number " type="tel" class="flex-1" />
-              </div>
-
-              <div class="-mx-2 flex flex-wrap mb-4">
-                  <input-group-with-star
-                    v-model="form.address"
-                    name="billing address "
-                    class="flex-1"
-                  />
-                </div>
-
-                <div class="-mx-2 flex flex-wrap">
-                  <input-group-with-star v-model="form.city" name="city " class="flex-1" />
-                  <input-group-with-star v-model="form.state" name="state " class="flex-1" />
-                  <input-group-with-star v-model="form.zip" name="Zip/Postal Code " class="flex-1" />
-                </div>
-
-              <div class="-mx-2 mb-4 flex flex-wrap">
                 <input-group
-                  v-model="form.InHonourOf"
-                  name="Dedication"
+                  v-model="form.firstName"
+                  name="first name"
+                  placeholder="John"
+                  class="flex-1"
+                />
+                <input-group
+                  v-model="form.lastName"
+                  name="last name"
+                  placeholder="Doe"
+                  class="flex-1"
+                />
+              </div>
+              <div class="-mx-2 flex flex-wrap justify-between mb-4">
+                <input-group
+                  v-model="form.email"
+                  name="email"
+                  type="email"
+                  placeholder="John"
+                  class="flex-1"
+                />
+              </div>
+              <div class="-mx-2 flex flex-wrap mb-4">
+                <input-group
+                  v-model="form.address"
+                  name="billing address"
+                  placeholder="1234 Washington Avenue"
+                  class="flex-1"
+                />
+              </div>
+              <div class="-mx-2 flex flex-wrap">
+                <input-group v-model="form.city" name="city" class="flex-1" />
+                <input-group v-model="form.state" name="state" class="flex-1" />
+                <input-group v-model="form.zip" name="Zip/Postal Code" class="flex-1" />
+              </div>
+              <div class="-mx-2 flex flex-wrap">
+                <input-group v-model="form.phone" name="phone number" type="tel" class="flex-1" />
+              </div>
+              <div class="-mx-2 flex flex-wrap">
+                <input-group
+                  v-model="form.comment"
+                  name="comments"
                   placeholder="In honor of..."
                   type="textarea"
                   class="flex-1"
                 />
-              </div>
-
-              <div class="-mx-2 flex flex-wrap mb-4">
-                <input-group
-                  v-model="form.HonoureeEmailAddress"
-                  name="notify the honouree of your donation?"
-                  placeholder="Tell us their email address"
-                  class="flex-1"
-                /> 
               </div>
 
               <payment-methods
@@ -139,22 +147,23 @@
                 @go-back="step = 1"
               />
               <base-button class="small" @click="step = 1">&larr; Back</base-button>
+              <base-button class="small" @click="submitNetlifyForm">test Netlify form</base-button>
             </div>
             <!-- /FORM -->
 
             <!-- Netlify Form (hidden) -->
             <form
-              name="DONATION"
+              name="donation"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               class="hidden"
             >
-              <input type="hidden" name="form-name" value="DONATION" />
+              <input type="hidden" name="form-name" value="donation" />
               <input
                 type="hidden"
                 name="amount"
-                :value="`${amount} ${Object.keys(currencies)[selectedCurrency]} ${recurring ? plans[selectedPlan] : 'One time donation'}`"
+                :value="`${amount} ${Object.keys(currencies)[selectedCurrency]} ${recurring ? plans[selectedPlan] : 'once'}`"
               />
               <input
                 v-for="(field, key) in form"
@@ -186,7 +195,6 @@ import DonateOptionsButtons from "~/components/Donations/DonateOptionsButtons";
 import DonateOptions from "~/components/Donations/DonateOptions";
 import PaymentMethods from "~/components/Donations/PaymentMethods";
 import InputGroup from "~/components/InputGroup";
-import InputGroupWithStar from "~/components/InputGroupWithStar";
 import { loadScript } from "~/utils/loadScript";
 import {
   PAYMENT_METHODS,
@@ -195,7 +203,6 @@ import {
   PLANS,
   PLAN_NAMES
 } from "~/utils/constants";
-
 export default {
   metaInfo: {
     title: "Donate",
@@ -214,7 +221,6 @@ export default {
     DonateOptionsButtons,
     DonateOptions,
     InputGroup,
-    InputGroupWithStar,
     PaymentMethods
   },
   data() {
@@ -232,12 +238,12 @@ export default {
         firstName: undefined,
         lastName: undefined,
         email: undefined,
-        phone: undefined,
+        address: undefined,
         city: undefined,
         state: undefined,
         zip: undefined,
-        InHonourOf: undefined,
-        HonoureeEmailAddress: undefined
+        phone: undefined,
+        comment: undefined
       },
       stripeLoaded: false,
       paypalLoaded: false
@@ -257,17 +263,16 @@ export default {
       this.step = 2;
     },
     submitNetlifyForm() {
-      console.log(this.encode({ "form-name": "DONATION", ...this.form }));
-
+      console.log(this.encode({ "form-name": "donation", ...this.form }));
       fetch("/donate", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
-          "form-name": "DONATION",
-          ...this.form,
+          "form-name": "donation",
           amount: `${this.amount} ${
             Object.keys(this.currencies)[this.selectedCurrency]
-          } ${this.recurring ? this.plans[this.selectedPlan] : "One time donation"}`
+          } ${this.recurring ? this.plans[this.selectedPlan] : "once"}`,
+          ...this.form
         })
       })
         .then(() => alert("Success!"))
@@ -324,11 +329,9 @@ export default {
     transform: scale(0.9);
   }
 }
-
 .root-form {
   max-width: 800px;
 }
-
 .step {
   overflow: hidden;
   display: flex;
@@ -336,19 +339,16 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-
 .amount {
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
-
   input[type="number"] {
     -moz-appearance: textfield;
   }
 }
-
 .custom-opacity {
   opacity: 0.6;
 }
