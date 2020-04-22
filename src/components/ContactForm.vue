@@ -75,8 +75,20 @@
         <img src="../assets/images/contact-tab/register-icon.png" alt class="h-8 mx-2" />
         <h5 class="w-full py-1 font-source text-left text-sm font-bold text-pink-600">Register</h5>
       </div>
-
+      <div
+        class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:shadow-none lg:my-3"
+      >
+        <input
+          type="text"
+          name="address"
+          v-model="formData.address"
+          form="contact-form"
+          placeholder="Full address"
+          class="w-full custom-width py-1 text-center custom-border"
+        />
+      </div>
       <div class="relative w-full mx-auto my-4 font-source text-lg lg:shadow-none custom-border">
+
         <textarea
           rows="4"
           cols="30"

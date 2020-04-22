@@ -1,9 +1,11 @@
 <template>
     <Layout>
+        <div class="lg:min-h-screen">
        <img src="../assets/images/contact-tab/world-map.png" alt="" class="hidden md:block mx-auto md-custom-margin">
        <div id="contact-page" class="w-full py-2 lg:flex md:absolute">
            <ContactPhone></ContactPhone>
            <ContactForm></ContactForm>
+       </div>
        </div>
     </Layout>
 </template>
@@ -49,4 +51,5 @@ export default {
         margin-bottom: 25rem;
     }
 } 
+
 </style>
