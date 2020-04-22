@@ -157,7 +157,7 @@
                 @go-back="step = 1"
               />
               <base-button class="small" @click="step = 1">&larr; Back</base-button>
-              <base-button class="small" @click="submitNetlifyForm">test Netlify form</base-button>
+              <!-- <base-button class="small" @click="submitNetlifyForm">test Netlify form</base-button> -->
             </div>
             <!-- /FORM -->
 
