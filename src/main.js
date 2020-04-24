@@ -16,4 +16,10 @@ export default function (Vue, { router, head, isClient }) {
     content: 'Bridging the gap for woman in Emergency Medical Care'
   })
 
+  // Add a meta tag
+  head.meta.push({
+    name: 'keywords',
+    content: 'womans ambulance,ambulance,new york hatzola,boro park,hatzola,hatzola boro park,boro park hatzola,emergency ambulance,emergency medical care,'
+  })
 }
+
