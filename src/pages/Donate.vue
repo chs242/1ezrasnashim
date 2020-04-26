@@ -97,7 +97,7 @@
               <div class="-mx-2 flex flex-wrap mb-4">
                 <input-group-with-star
                   v-model="form.address"
-                  name="billing address "
+                  name="address "
                   placeholder="1234 Washington Avenue"
                   class="flex-1"
                 />
