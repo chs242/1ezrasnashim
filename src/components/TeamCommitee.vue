@@ -6,16 +6,16 @@
             <div><img src="../assets/images/team-tab/commitee-icon.png" class="w-12 mx-4 md:mx-4 md:py-3"></div>
         </div>
         <div class="mt-8">
-            <h3 class="custom-text-purple text-xl font-source font-semibold">Steering Commitee</h3>
+            <h3 class="custom-text-purple text-xl font-source font-semibold">Steering Committee</h3>
         </div>
         <div class="mt-2">
             <p class="text-sm md:text-base">Forming this committee are the orginal founders of Ezras Nashim, in addition to woman with vast experience and knowledge in the medical field, nurses and doctors amongst them. These woman are involved in leading Ezras Nashim and making decisions on objectives, policies & goals.</p>
         </div>
         <div class="mt-8">
-            <h3 class="custom-text-purple text-xl font-source font-semibold">Operations Commitee</h3>
+            <h3 class="custom-text-purple text-xl font-source font-semibold">Operations Committee</h3>
         </div>
         <div class="mt-2">
-            <p class="text-sm md:text-base">Comprised of EMT's who are active within the organization and have direct patient contact, these women are involved in making decisions that enable the smooth running of daily operations.</p>
+            <p class="text-sm md:text-base">Comprises EMT's who are active within the organization and have direct patient contact. These women are involved in making decisions that enable the smooth running of daily operations.</p>
         </div>
         <div class="custom-purple mt-8 flex items-center justify-between rounded-xl">
             <div><h2 class="text-white text-2xl font-roboto font-bold pl-6">Advisory Panels</h2></div>

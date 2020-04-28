@@ -99,7 +99,7 @@
             <img src="../assets/images/logo-footer.png" alt="Logo" class="w-16" />
           </div>
           <p>Email: Leah@ezrasnashim.org</p>
-          <p>Address: 1716 56th St. Brokklyn, NY 11204</p>
+          <p>Address: 1716 56th St. Brooklyn, NY 11204</p>
         </div>
 
         <div class="w-1/2 flex flex-col text-center">
