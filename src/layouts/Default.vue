@@ -16,10 +16,6 @@
           to="/contact/"
           class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
         >Contact</g-link>
-        <!-- <g-link
-          to="/testimonials/"
-          class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
-        >Testimonials</g-link> -->
 
         <ul class="menu">
           <li
@@ -111,6 +107,10 @@
             </ul>
           </li>
         </ul>
+        <g-link
+          to="/testimonials/"
+          class="px-2 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear lg:px-3 lg:pl-1 lg:-ml-28 xl:px-0 xl:text-lg truncate"
+        >Testimonials</g-link>
       </div>
 
       <g-link
@@ -142,6 +142,8 @@
         <g-link to="/about/" class="mobile">About</g-link>
         <g-link to="/services/" class="mobile">Services</g-link>
         <g-link to="/news/" class="mobile">News & Press</g-link>
+        <g-link to="/testimonials/" class="mobile">Testimonials</g-link>
+        <g-link to="/endorsements/" class="mobile">Endorsements</g-link>
         <g-link to="/donate/" class="mobile donate">Donate</g-link>
       </div>
     </header>
@@ -259,9 +261,16 @@ export default {
   align-items: center;
 }
 
+.donate{
+  font-weight: bold;
+}
+
 @media (min-width: 320px) and (max-width: 1024px) {
+  .sidenav {
+    top: 4rem;
+  }
   .open {
-    height: 20rem !important;
+    height: 27rem !important;
     background: #cbd5e0;
   }
 }
@@ -271,7 +280,7 @@ export default {
     top: 5rem;
   }
   .open {
-    height: 20rem !important;
+    height: 27rem !important;
     background: #cbd5e0;
   }
 }

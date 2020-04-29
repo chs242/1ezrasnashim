@@ -40,6 +40,7 @@
         <TestimonialReview class="yiddish lg:rounded-xl"
           review="I had always been of the opininon Ezras Nashim is an organization of great importance, but one cannot compare hearing to seeing. After seeing firsthand the care with which they treated my wife I've become their biggest supporter!"
           newline="The presence of a caring and professional woman during such a frightening and emotional time was both reassuring and calming for my wife. I'm so grateful to this wonderful organization for continuing to persevere and help woman."
+          name="M. lowy"
           location="(Translated from Yiddish)"
         />
 

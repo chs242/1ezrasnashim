@@ -92,6 +92,10 @@
             to="/about/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >About Us</g-link>
+          <g-link
+            to="/testimonials/"
+            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
+          >Testimonials</g-link>
         </div>
 
         <div class="hidden md:block text-xs lg:text-sm text-center">
@@ -112,6 +116,10 @@
             to="/volunteer/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >Volunteer</g-link>
+          <g-link
+            to="/about/#about-team"
+            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
+          >Branches</g-link>
           <g-link
             to="/donate"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
