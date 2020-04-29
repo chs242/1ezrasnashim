@@ -69,8 +69,8 @@
         <div class="flex justify-center">
           <img src="../assets/images/logo-footer.png" alt="Logo" class="w-16" />
         </div>
-        <p>Email: leah@ezrasnashim.org</p>
-        <p>Address: 1716 56th St. Brokklyn, NY 11204</p>
+        <p>Email: Leah@ezrasnashim.org</p>
+        <p>Address: 1716 56th St. Brooklyn, NY 11204</p>
       </div>
 
       <div class="w-full pb-4 mt-4 flex flex-row shadow-sm md:mt-24">

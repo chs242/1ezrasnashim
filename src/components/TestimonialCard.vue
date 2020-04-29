@@ -32,15 +32,15 @@
         />
 
         <TestimonialReview class="moshe lg:rounded-xl"
-          review="I have no words to thank you fo being there for me in my most vulnarable time in my life."
+          review="I have no words to thank you for being there for me in my most vulnarable time in my life."
           newline="there was absolutely no way i would allow men to see me and treat me in this state."
           name="Ezras Nashim volunteers came within minutes and kept me calm and took care of me in the most proffesional manner. May you all be gebentched."
-          location="moshe"
+          location="Haddasah"
         />
         <TestimonialReview class="yiddish lg:rounded-xl"
           review="I had always been of the opininon Ezras Nashim is an organization of great importance, but one cannot compare hearing to seeing. After seeing firsthand the care with which they treated my wife I've become their biggest supporter!"
           newline="The presence of a caring and professional woman during such a frightening and emotional time was both reassuring and calming for my wife. I'm so grateful to this wonderful organization for continuing to persevere and help woman."
-          name="M. lowy"
+          name="Mendel lowy"
           location="(Translated from Yiddish)"
         />
 
