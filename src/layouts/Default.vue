@@ -115,7 +115,7 @@
 
       <g-link
         to="/donate/"
-        class="hidden lg:flex ml-4 font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md lg:text-base"
+        class="hidden lg:flex ml-4 font-roboto text-sm font-bold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md lg:text-base"
       >Donate</g-link>
 
       <Logo class="lg:absolute bottom-0 right-0 left-0 lg:mx-auto lg:transform lg:translate-y-2/3" />
