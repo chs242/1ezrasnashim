@@ -2,6 +2,7 @@
 <html ${htmlAttrs}>
   <head>
     ${head}
+  </head>
     <!-- Start of HubSpot Embed Code -->
 
     <!-- Set up the path for the initial page view -->
@@ -19,39 +20,27 @@
       var _hsq = window._hsq = window._hsq || [];
       _hsq.push(['setPath', '/about']);
       _hsq.push(['trackPageView']);
-    </script>
     
-    <script>
       var _hsq = window._hsq = window._hsq || [];
       _hsq.push(['setPath', 'contact']);
       _hsq.push(['trackPageView']);
-    </script>
-
-    <script>
+    
       var _hsq = window._hsq = window._hsq || [];
       _hsq.push(['setPath', '/volunteer']);
       _hsq.push(['trackPageView']);
-    </script>
-
-    <script>
+    
       var _hsq = window._hsq = window._hsq || [];
       _hsq.push(['setPath', '/testimonials']);
       _hsq.push(['trackPageView']);
-    </script>
     
-    <script>
       var _hsq = window._hsq = window._hsq || [];
       _hsq.push(['setPath', 'donate']);
       _hsq.push(['trackPageView']);
-    </script>
-
-    <script>
+    
       var _hsq = window._hsq = window._hsq || [];
       _hsq.push(['setPath', '/news']);
       _hsq.push(['trackPageView']);
-    </script>
-
-    <script>
+    
       var _hsq = window._hsq = window._hsq || [];
       _hsq.push(['setPath', '/endorsements']);
       _hsq.push(['trackPageView']);
@@ -59,11 +48,9 @@
     
     <!-- End of HubSpot Embed Code -->
 
-
-  </head>
   <body ${bodyAttrs}>
 
-    <script>
+    <!-- <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
@@ -73,7 +60,7 @@
           }
         });
       }
-    </script>
+    </script> -->
 
     ${app}
     ${scripts}
