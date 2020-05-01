@@ -31,7 +31,7 @@
                 />
               </svg>
             </g-link>
-            <ul class="sub-menu bg-white p-2 rounded-lg shadow-2xl">
+            <ul class="sub-menu bg-gray-200 p-2 rounded-lg shadow-2xl">
               <li>
                 <g-link to="/services/">
                   <svg
@@ -222,7 +222,7 @@ export default {
       a {
         @apply px-3 flex items-center rounded;
         &:hover {
-          @apply bg-purple-50;
+          @apply bg-gray-100;
         }
         svg {
           @apply text-purple-500 w-5 h-5;
