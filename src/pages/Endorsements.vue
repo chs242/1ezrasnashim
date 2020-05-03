@@ -54,7 +54,7 @@
                 <div class="w-full flex flex-col md:flex-row md:flex-wrap justify-center">
                     <EndorseLink
                     class="my-4 mx-auto md:mx-4" 
-                    aHref="https://www.ezrasnashim.org/wp-content/uploads/2016/03/Silberstein.jpg"
+                    aHref="https://www.eznatransport.org/wp-content/uploads/2016/03/Silberstein.jpg"
                     :imgSrc="require('../assets/images/endorsement-tab/thumb-silberstein.jpg')"
                     caption="R' Silberstein Shlita"
                     >
@@ -62,7 +62,7 @@
 
                     <EndorseLink
                     class="my-4 mx-auto md:mx-4" 
-                    aHref="https://www.ezrasnashim.org/wp-content/uploads/2016/03/kanievsky.jpg"
+                    aHref="https://www.eznatransport.org/wp-content/uploads/2016/03/kanievsky.jpg"
                     :imgSrc="require('../assets/images/endorsement-tab/thumb-kanievsky.jpg')"
                     caption="Rebbetzin Kolodetsky (Kanievsky)"
                     >
@@ -70,7 +70,7 @@
 
                     <EndorseLink
                     class="my-4 mx-auto md:mx-4" 
-                    aHref="https://www.ezrasnashim.org/wp-content/uploads/2016/03/Wachtfogel-english.pdf"
+                    aHref="https://www.eznatransport.org/wp-content/uploads/2016/03/Wachtfogel-english.pdf"
                     :imgSrc="require('../assets/images/endorsement-tab/thumb-wachtfogel1.jpg')"
                     caption="R' Elya Wachtfogal Shlita"
                     >
@@ -78,7 +78,7 @@
 
                     <EndorseLink
                     class="my-4 mx-auto md:mx-4" 
-                    aHref="https://www.ezrasnashim.org/wp-content/uploads/2016/03/Wachtfogel-hebrew.pdf"
+                    aHref="https://www.eznatransport.org/wp-content/uploads/2016/03/Wachtfogel-hebrew.pdf"
                     :imgSrc="require('../assets/images/endorsement-tab/thumb-wachtfogel2.jpg')"
                     caption="R' Elya Wachtfogal Shlita"
                     >
