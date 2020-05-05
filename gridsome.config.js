@@ -33,11 +33,9 @@ module.exports = {
       }
     },
     {
-      // Create posts from markdown files
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/plugin-google-analytics',
       options: {
-        typeName: 'Testimonial',
-        path: 'content/testimonials/*.md',
+        id: 'UA-165571559-1'
       }
     },
     {

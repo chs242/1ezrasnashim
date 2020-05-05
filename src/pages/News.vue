@@ -2,30 +2,33 @@
   <Layout>
 
     <div class="min-h-screen bg-gray-100">
-      <div class="w-4/5 pt-32 mx-auto flex flex-row justify-center font-roboto text-lg text-pink-800 md:pb-6 lg:pb-10">
+      <!-- <div class="w-4/5 pt-32 mx-auto flex flex-row justify-center font-roboto text-lg text-pink-800 md:pb-6 lg:pb-10">
         <div
           class="bg-pink-100 border border-pink-300 rounded-full rounded-r-none" 
-          :class="{'bg-pink-600 text-white': decoratedPatient}">
+          :class="{'bg-pink-600 text-white': decoratedBlog}">
           <TestimonialButton
             class="py-1 px-7 md:py-4" 
             @click="blogPosts">Blog Posts
           </TestimonialButton>
         </div>
-        <div class="bg-pink-100 border border-pink-300 bg-pink-600 text-white" >
+        <div 
+          class="bg-pink-100 border border-pink-300" 
+          :class="{'bg-pink-600 text-white': decoratedMedia}">
           <TestimonialButton
             class="py-1 px-8 md:py-4" 
-            @click="allMedia">All Media
+            @click="allMedia"
+          >All Media
           </TestimonialButton>
         </div>
         <div 
           class="bg-pink-100 border border-pink-300 rounded-full rounded-l-none"
-          :class="{'bg-pink-600 text-white': decoratedFan}">
+          :class="{'bg-pink-600 text-white': decoratedNews}">
           <TestimonialButton
             class="py-1 px-6 md:py-4"
             @click="inTheNews">In the News
           </TestimonialButton>
         </div>
-      </div>
+      </div> -->
 
       <div class="w-full bg-gray-100 px-3 pb-12 mt-20 md:pt-12 md:flex md:flex-row md:flex-wrap md:justify-start lg:mx-auto lg:mt-0 lg-custom-width">
         <PostCard class="md:w-1/2 lg:w-1/3 xl:w-1/3" v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
@@ -71,21 +74,28 @@ import PostCard from '~/components/PostCard.vue'
 export default {
   data(){
     return{
-      decoratedPatient: false,
-      decoratedFan: false,
+      decoratedBlog: false,
+      decoratedMedia: true,
+      decoratedNews: false,
 
     }
   },
   methods:{
+    allMedia(){
+      this.decoratedBlog = false;
+      this.decoratedMedia = true;
+      this.decoratedNews = false;
+    },
     blogPosts(){
-      this.decoratedFan = false;
-      this.decoratedPatient = true;
-      console.log(this.step)
+      this.decoratedBlog = true;
+      this.decoratedMedia = false;
+      this.decoratedNews = false;
+
     },
     inTheNews(){
-      this.decoratedFan = true
-      this.decoratedPatient = false;
-      console.log(this.step)
+      this.decoratedBlog = false;
+      this.decoratedMedia = false;
+      this.decoratedNews = true;
     },
   },
   components: {
