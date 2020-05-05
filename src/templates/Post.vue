@@ -7,7 +7,7 @@
 
       <div class="bg-white shadow-xl lg-custom-width rounded-xl overflow-hidden">
         <g-image
-          class="mx-auto custom-height max-h-96 object-cover"
+          class="mx-auto custom-height object-cover"
           alt="Cover image"
           v-if="$page.post.cover_image"
           :src="$page.post.cover_image"
@@ -89,7 +89,7 @@ query Post ($id: ID!) {
 }
 @media (min-width: 1280px) {
   .custom-height {
-    height: auto;
+    height: 600px;
     width: 850px;
   }
   .lg-custom-width {
