@@ -3,7 +3,7 @@ title: Statement on Vaccinations
 date: 2019-07-07T13:01:35.866Z
 published: true
 tags:
-  - statement
+  - Blog
   - vaccination
 cover_image: /images/uploads/virus-4809549_960_720.jpg
 description: Read our statement on vaccinations
