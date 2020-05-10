@@ -23,6 +23,7 @@
         class="form-input block w-full sm:text-sm sm:leading-5"
         :class="{'pl-24': !!$slots['addon-before'], 'pr-28': !!$slots['addon-after']}"
         :placeholder="placeholder"
+        required
       />
       <slot name="addon-after" />
     </div>
