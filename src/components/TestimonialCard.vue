@@ -60,6 +60,13 @@
           review="Thank you for giving new opportunities for women; thank you for making the world a better place to live for women. Thank you for making us proud to be religious women. Keep going."
           name="Elicheva M."
         />
+
+        <TestimonialReview class="rochel lg:rounded-xl"
+          review="Honestly at first I didn’t see the immense need for an all- woman’s emergency care program until yesterday. I like to consider myself a typical chassidishe woman. Im comfortable using male doctors and I didn’t see why it would be different in an emergency case, to have a man assisting my medical needs. As  a newlywed I suffered from a bad case of flu barely 3 weeks after my wedding. After being in terrible pain for 3 days I was getting ready for bed when I started having difficulty breathing. My husband quickly called EMS and 3 guys showed up within minutes, overwhelmed, my breathing became more difficult."
+          newline="Not long after, 3 woman showed up composed and understanding they coaxed me into concentrating on my breathing and calming me down. One woman even put Rachel Freier on the phone to help guide me to breathe properly. She was so firm caring and clear at once I felt much calmer. I was transferred to hospital in an ambulance , again these wonderful woman were there with me patiently explaining what’s happening all the way to hospital and for a couple of hours they were for me. "
+          name="Thank you so much Ezras Nashim! I will be forever grateful "
+          location="Rochel Lowey"
+        />
         
       </div>
     </div>
@@ -214,7 +221,7 @@ h3 {
   color: #fff;
 }
 
-.feature, .photos, .photos-2, .news, .news-2, .special, .special-2, .amazing, .amazing-2, .cta, .cta-2, .fantastic-2, .devoiry, .moshe, .yiddish, .tzippy, .chany, .elisheva {
+.feature, .photos, .photos-2, .news, .news-2, .special, .special-2, .amazing, .amazing-2, .cta, .cta-2, .fantastic-2, .devoiry, .moshe, .yiddish, .tzippy, .chany, .elisheva, .rochel {
   background-image: linear-gradient(rgba(114,41,143,.8), rgba(0,0,0,0.9)), url("../assets/images/logo.png"); 
    background-position: center;
   background-repeat: no-repeat; 
@@ -226,7 +233,7 @@ h3 {
   .home-hero {
     grid-template-columns: 1fr 1fr;
   }
-  
+  /* ----------------fan reviews-------------- */
   .feature {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
@@ -257,6 +264,9 @@ h3 {
     grid-column: 1;
     grid-row: 3 / 6;
   }
+  /* -------end of fan reviews-------------- */
+
+  /* ------------patietn reviews-------------- */
   .yiddish {
     grid-column: 1;
     grid-row: 2 / 4;
@@ -282,6 +292,10 @@ h3 {
     grid-column: 1;
     grid-row: 1 / 2;
   }
+  .rochel{
+    grid-column:1 / span 2;
+  }
+  /* -----end of patietn reviews-------------- */
 }
 
 @media (min-width: 800px) {
@@ -290,6 +304,7 @@ h3 {
     grid-template-rows: minmax(150px, auto) minmax(150px, auto);
     grid-auto-rows: minmax(100px, auto);
   }
+  /* ----------------fan reviews-------------- */
   .feature {
     grid-column: 1 ;    
     grid-row: 1 / 6;
@@ -337,13 +352,15 @@ h3 {
     grid-column: 3;
     grid-row: 3 / 4;
   }
+  /* ---------end of fan reviews-------------- */
+  /* --------------paitent reviews-------------- */
   .devoiry {
-    grid-column: 2;
-    grid-row: 1 / 2;
+    grid-column: 1;
+    grid-row: 5 / 8;
   }
   .moshe {
-    grid-column: 2;
-    grid-row: 2 / 6;
+    grid-column: 3;
+    grid-row: 6 / 8;
   }
   .yiddish {
     grid-column: 1;
@@ -352,7 +369,7 @@ h3 {
 
   .tzippy{
     grid-column: 1;
-    grid-row: 3 / 6;
+    grid-row: 3 / 5;
   }
   .chany {
     grid-column: 3;
@@ -362,5 +379,10 @@ h3 {
     grid-column: 3;
     grid-row: 4 / 6;
   }
+  .rochel{
+    grid-column: 2 ;
+    grid-row: 1 / 8
+  }
+  /* ----------end of fan reviews-------------- */
 }
 </style>
