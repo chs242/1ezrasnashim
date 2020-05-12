@@ -6,7 +6,7 @@ tags:
   - News
   - Israel
 cover_image: /images/uploads/93-queen.jpg
-description: "**[Click here to read the
-  article](https://www.makorrishon.co.il/news/227371.html)**"
+description: Makor Rishon Israel
 manuel_pdf: /uploads/general-manual.pdf
 ---
+**[Click here to read the article](https://www.makorrishon.co.il/news/227371.html)**
