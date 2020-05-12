@@ -9,4 +9,4 @@ cover_image: /images/uploads/93-queen.jpg
 description: Makor Rishon Israel
 manuel_pdf: /uploads/general-manual.pdf
 ---
-**[Click here to read the article](https://www.makorrishon.co.il/news/227371.html)**
+**[Click here to read the article](https://www.makorrishon.co.il/news/227371/)**
