@@ -9,4 +9,4 @@ cover_image: /images/uploads/neo-natal-emts.jpg
 description: JPost
 manuel_pdf: /uploads/general-manual.pdf
 ---
-**[Click here to read the article](https://www.jpost.com/israel-news/haredi-woman-around-the-world-on-the-frontlines-of-coronavirus-fight-627509)**
+**[Click here to read the article](https://www.jpost.com/israel-news/haredi-women-around-the-world-on-the-frontlines-of-coronavirus-fight-627509)**
