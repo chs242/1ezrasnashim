@@ -3,15 +3,13 @@
   <Layout bg-color="bg-gray-100">
     <img
       src="../assets/images/contact-tab/world-map.png"
-      class="bg-img hidden lg:block absolute m-auto left-0 right-0"
+      class="absolute left-0 right-0 hidden m-auto bg-img lg:block"
     />
 
-    <div id="donate-page" class="max-w-6xl mx-auto sm:px-0 lg:px-8 py-24">
-      <div class="text-center">
-        
-      </div>
+    <div id="donate-page" class="max-w-6xl py-24 mx-auto sm:px-0 lg:px-8">
+      <div class="text-center"></div>
       <div class="flex flex-wrap items-center">
-        <div class="steps flex-2 px-1 py-4 relative md:px-4">
+        <div class="relative px-1 py-4 steps flex-2 md:px-4">
           <div class="step" key="1" v-show="step == 1">
             <DonateOptionsButtons :recurring.sync="recurring" />
             <donate-options
@@ -32,7 +30,7 @@
                 <select
                   v-model="selectedCurrency"
                   aria-label="Currency"
-                  class="form-select h-full py-0 pl-3 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm sm:leading-5"
+                  class="h-full py-0 pl-3 text-gray-500 bg-transparent border-transparent form-select pr-7 sm:text-sm sm:leading-5"
                 >
                   <option
                     v-for="(i, code) in currencies"
@@ -42,7 +40,7 @@
                   >{{code}}</option>
                 </select>
                 <span
-                  class="pl-1 text-gray-500 sm:text-sm sm:leading-5 font-semibold"
+                  class="pl-1 font-semibold text-gray-500 sm:text-sm sm:leading-5"
                 >{{currencySymbols[selectedCurrency]}}</span>
               </div>
 
@@ -53,7 +51,7 @@
               >
                 <select
                   v-model.number="selectedPlan"
-                  class="text-gray-800 font-semibold form-select h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm sm:leading-5"
+                  class="h-full py-0 pl-2 font-semibold text-gray-500 text-gray-800 bg-transparent border-transparent form-select pr-7 sm:text-sm sm:leading-5"
                 >
                   <option
                     v-for="(plan, i) in plans"
@@ -69,9 +67,9 @@
           </div>
           <div class="step" key="2" v-show="step == 2">
             <!-- FORM -->
-            <div class="max-w-lg px-2 py-8 mt-8 bg-white shadow rounded-xl md:p-8 my-2">
-              <h2 class="text-xl font-bold text-pink-900 mb-2">Personal Info</h2>
-              <div class="-mx-2 flex flex-wrap justify-between mb-4">
+            <div class="max-w-lg px-2 py-8 my-2 mt-8 bg-white shadow rounded-xl md:p-8">
+              <h2 class="mb-2 text-xl font-bold text-pink-900">Personal Info</h2>
+              <div class="flex flex-wrap justify-between mb-4 -mx-2">
                 <input-group-with-star
                   v-model="form.firstName"
                   name="first name "
@@ -85,7 +83,7 @@
                   class="flex-1"
                 />
               </div>
-              <div class="-mx-2 flex flex-wrap justify-between mb-4">
+              <div class="flex flex-wrap justify-between mb-4 -mx-2">
                 <input-group-with-star
                   v-model="form.email"
                   name="email "
@@ -94,7 +92,7 @@
                   class="flex-1"
                 />
               </div>
-              <div class="-mx-2 flex flex-wrap mb-4">
+              <div class="flex flex-wrap mb-4 -mx-2">
                 <input-group-with-star
                   v-model="form.address"
                   name="address "
@@ -102,16 +100,21 @@
                   class="flex-1"
                 />
               </div>
-              <div class="-mx-2 flex flex-wrap">
+              <div class="flex flex-wrap -mx-2">
                 <input-group-with-star v-model="form.city" name="city " class="flex-1" />
                 <input-group-with-star v-model="form.state" name="state " class="flex-1" />
                 <input-group-with-star v-model="form.zip" name="Zip/Postal Code " class="flex-1" />
               </div>
-              <div class="-mx-2 flex flex-wrap">
-                <input-group-with-star v-model="form.phone" name="phone number " type="tel" class="flex-1" />
+              <div class="flex flex-wrap -mx-2">
+                <input-group-with-star
+                  v-model="form.phone"
+                  name="phone number "
+                  type="tel"
+                  class="flex-1"
+                />
               </div>
 
-              <div class="-mx-2 mb-4 flex flex-wrap">
+              <div class="flex flex-wrap mb-4 -mx-2">
                 <input-group
                   v-model="form.InHonourOf"
                   name="Dedication"
@@ -121,13 +124,13 @@
                 />
               </div>
 
-              <div class="-mx-2 flex flex-wrap mb-4">
+              <div class="flex flex-wrap mb-4 -mx-2">
                 <input-group
                   v-model="form.HonoureeEmailAddress"
                   name="notify the honouree of your donation?"
                   placeholder="Tell us their email address"
                   class="flex-1"
-                /> 
+                />
               </div>
 
               <payment-methods
@@ -171,9 +174,9 @@
             </form>
           </div>
         </div>
-        <div class="flex-1 px-4 text-gray-800 my-12 px-6" style="min-width: 360px">
+        <div class="flex-1 px-4 px-6 my-12 text-gray-800" style="min-width: 360px">
           <h2
-            class="text-brand-100 text-4xl font-semibold leading-tight mb-5"
+            class="mb-5 text-4xl font-semibold leading-tight text-brand-100"
           >Lights. Sirens. Passion!</h2>
           <p
             class="mb-3"
@@ -198,8 +201,9 @@ import {
   CURRENCIES,
   CURRENCY_SYMBOLS,
   PLANS,
-  PLAN_NAMES
+  PLAN_NAMES,
 } from "~/utils/constants";
+
 export default {
   metaInfo: {
     title: "Donate",
@@ -207,10 +211,10 @@ export default {
       {
         name: "description",
         content:
-          "Ezras Nashim is rapidly expanding to new communities across America, and we are treating more patients every day. We are revolutionizing emergency medical care for women – but we need YOUR help! With a monthly or one time donation, you can sponsor much-needed equipment and training for our dedicated team of EMTs. Partner with Ezras Nashim and join us in our life-saving work!"
-      }
+          "Ezras Nashim is rapidly expanding to new communities across America, and we are treating more patients every day. We are revolutionizing emergency medical care for women – but we need YOUR help! With a monthly or one time donation, you can sponsor much-needed equipment and training for our dedicated team of EMTs. Partner with Ezras Nashim and join us in our life-saving work!",
+      },
     ],
-    link: [{ rel: "canonical", href: "https://ezrasnashim.org/donate/" }]
+    link: [{ rel: "canonical", href: "https://ezrasnashim.org/donate/" }],
   },
   name: "Donate",
   components: {
@@ -219,7 +223,7 @@ export default {
     DonateOptions,
     InputGroup,
     InputGroupWithStar,
-    PaymentMethods
+    PaymentMethods,
   },
   data() {
     return {
@@ -242,10 +246,10 @@ export default {
         zip: undefined,
         phone: undefined,
         InHonourOf: undefined,
-        HonoureeEmailAddress: undefined
+        HonoureeEmailAddress: undefined,
       },
       stripeLoaded: false,
-      paypalLoaded: false
+      paypalLoaded: false,
     };
   },
   computed: {
@@ -253,8 +257,10 @@ export default {
       const currencyCodes = Object.keys(this.currencies);
       return `https://www.paypal.com/sdk/js?client-id=${
         process.env.GRIDSOME_PAYPAL_CLIENT_ID
-      }&currency=${currencyCodes[this.selectedCurrency]}&vault=true`;
-    }
+      }&currency=${
+        currencyCodes[this.selectedCurrency]
+      }&vault=true&disable-funding=credit,card`;
+    },
   },
   methods: {
     continueToPayment() {
@@ -270,17 +276,19 @@ export default {
           "form-name": "donation",
           amount: `${this.amount} ${
             Object.keys(this.currencies)[this.selectedCurrency]
-          } ${this.recurring ? this.plans[this.selectedPlan] : "One time donation"}`,
-          ...this.form
-        })
+          } ${
+            this.recurring ? this.plans[this.selectedPlan] : "One time donation"
+          }`,
+          ...this.form,
+        }),
       })
         .then(() => alert("Success!"))
-        .catch(error => alert(error));
+        .catch((error) => alert(error));
     },
     encode(data) {
       return Object.keys(data)
         .map(
-          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+          (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
         )
         .join("&");
     },
@@ -307,11 +315,11 @@ export default {
       } catch (e) {
         console.log("PayPal error", e);
       }
-    }
+    },
   },
   mounted() {
     this.loadStripe();
-  }
+  },
 };
 </script>
 
