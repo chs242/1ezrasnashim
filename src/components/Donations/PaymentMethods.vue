@@ -1,9 +1,9 @@
 <template>
-  <div class="md:w-full mx-auto">
-    <h2 class="text-xl font-bold text-pink-900 mt-6 mb-2">Payment Details</h2>
+  <div class="mx-auto md:w-full">
+    <h2 class="mt-6 mb-2 text-xl font-bold text-pink-900">Payment Method</h2>
 
     <div v-show="state === STATES.IDLE" class="payment-method">
-      <div class="text-center my-6">
+      <div class="my-6 text-center">
         <span class="relative z-0 inline-flex shadow-sm">
           <button
             v-for="(method, i) in paymentMethods"
@@ -15,11 +15,11 @@
             'rounded-r-md': i === paymentMethods.length - 1,
             'shadow-outline-brand bg-pink-100 text-pink-900 z-20' : selectedMethod === i
           }"
-            class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm uppercase tracking-wider leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
+            class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 tracking-wider text-gray-700 uppercase transition duration-150 ease-in-out bg-white border border-gray-300 hover:text-gray-500 focus:z-10 focus:outline-none active:bg-gray-100 active:text-gray-700"
           >
             <svg
               v-if="method == 'Paypal'"
-              class="w-5 h-5 inline mr-2"
+              class="inline w-5 h-5 mr-2"
               viewBox="0 0 256 302"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -44,7 +44,7 @@
             </svg>
             <svg
               v-else-if="method == 'Credit Card'"
-              class="w-5 h-5 inline mr-2 text-pink-800"
+              class="inline w-5 h-5 mr-2 text-pink-800"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -55,14 +55,14 @@
                 clip-rule="evenodd"
               />
             </svg>
-            <span class="truncate text-xs md:text-sm">{{method}}</span>
+            <span class="text-xs truncate md:text-sm">{{method}}</span>
           </button>
         </span>
       </div>
-      <div class="total my-6">
+      <div class="my-6 total">
         <label class="label">Donation Total:</label>
         <span
-          class="font-bold text-2xl text-pink-900 mr-1"
+          class="mr-1 text-2xl font-bold text-pink-900"
         >{{ currencySymbols[currencyIndex] }}{{ amount }}</span>
         <span
           v-if="recurring"
@@ -75,7 +75,7 @@
         </span>
         <span
           @click="$emit('go-back')"
-          class="underline text-xs text-gray-400 hover:text-gray-600 cursor-pointer"
+          class="text-xs text-gray-400 underline cursor-pointer hover:text-gray-600"
         >change</span>
       </div>
       <!-- STRIPE -->
@@ -107,16 +107,17 @@
       <!-- CHEQUE -->
       <cheque v-if="selectedMethod == 2" />
     </div>
-    <div v-show="state == STATES.PROCESSING" class="my-14 my-16">
+
+    <div v-show="state == STATES.PROCESSING" class="my-16 my-14">
       <loader />
     </div>
     <div v-show="state == STATES.SUCCESS" class="my-16 text-center">
-      <h1 class="text-3xl font-roboto font-bold uppercase tracking-wider text-pink-600">Thank You!</h1>
-      <p class="text-gray-700">Your donation will make a big difference to our organization.</p>
-      <base-button class="small" @click="startOver">Donate Again</base-button>
+      <h1 class="text-3xl font-bold tracking-wider text-pink-600 uppercase font-roboto">Thank You!</h1>
+      <p class="mb-2 text-gray-700">Your donation will make a big difference to our organization.</p>
+      <base-button class="my-4 small" @click="startOver">Donate Again</base-button>
     </div>
     <div v-show="state == STATES.ERROR" class="my-16 text-center">
-      <h1 class="text-3xl font-roboto font-bold uppercase tracking-wider text-pink-600">Sorry.</h1>
+      <h1 class="text-3xl font-bold tracking-wider text-pink-600 uppercase font-roboto">Sorry.</h1>
       <p
         class="mt-2 text-gray-700"
       >{{ errorMessage || 'There has been a problem processing your payment.' }}</p>
@@ -125,7 +126,7 @@
         @click="reload"
         class="mt-2 text-sm text-gray-500"
       >Reload the page and try again.</button>
-      <base-button v-else class="small mt-4" @click="startOver">Start Over</base-button>
+      <base-button v-else class="mt-4 small" @click="startOver">Start Over</base-button>
     </div>
   </div>
 </template>
@@ -140,7 +141,7 @@ import {
   CURRENCIES,
   CURRENCY_SYMBOLS,
   PLAN_NAMES,
-  STATES
+  STATES,
 } from "~/utils/constants";
 
 export default {
@@ -153,7 +154,7 @@ export default {
     "selectedMethod",
     "stripeLoaded",
     "paypalLoaded",
-    "recurring"
+    "recurring",
   ],
   components: { Loader, Stripe, Paypal, Cheque, BaseButton },
   data() {
@@ -164,7 +165,7 @@ export default {
       currencies: Object.keys(CURRENCIES),
       currencySymbols: CURRENCY_SYMBOLS,
       stripeComplete: false,
-      errorMessage: ""
+      errorMessage: "",
     };
   },
 
@@ -173,14 +174,14 @@ export default {
       return this.recurring
         ? ["Credit Card", "Paypal"]
         : ["Credit Card", "Paypal", "Cheque"];
-    }
+    },
   },
   watch: {
     state(newState) {
       if (newState == this.STATES.SUCCESS) {
         this.$emit("payment-succeeded");
       }
-    }
+    },
   },
   methods: {
     startOver() {
@@ -189,7 +190,7 @@ export default {
     },
     reload() {
       window.location.reload();
-    }
-  }
+    },
+  },
 };
 </script>

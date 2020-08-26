@@ -1,7 +1,7 @@
 <template>
   <div class="px-2 my-4 lg:my-0 lg:w-3/5">
       <form
-        name="contact"
+        name="CONTACT"
         method="post"
         v-on:submit.prevent="handleSubmit"
         action="/Success/"
@@ -9,7 +9,7 @@
         data-netlify-honeypot="bot-field"
         class="bg-white py-8 px-8 mx-auto shadow-md text-center rounded-xl md:mx-auto lg:py-12 lg:flex lg:flex-wrap lg:justify-center lg:mx-0 custom-m-width custom-opacity"
       >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="CONTACT" />
       <p hidden>
         <label>
           Don’t fill this out:
@@ -41,8 +41,8 @@
         <input
           type="text"
           id="subject"
-          name="subject"
-          v-model="formData.subject"
+          name="subjectMatter"
+          v-model="formData.subjectMatter"
           placeholder="Subject"
           class="w-full custom-width py-1 text-center custom-border"
         />
@@ -75,8 +75,20 @@
         <img src="../assets/images/contact-tab/register-icon.png" alt class="h-8 mx-2" />
         <h5 class="w-full py-1 font-source text-left text-sm font-bold text-pink-600">Register</h5>
       </div>
-
+      <div
+        class="star relative w-full my-4 mx-auto lg:text-left font-source text-lg shadow-md lg:shadow-none lg:my-3"
+      >
+        <input
+          type="text"
+          name="address"
+          v-model="formData.address"
+          form="contact-form"
+          placeholder="Full address"
+          class="w-full custom-width py-1 text-center custom-border"
+        />
+      </div>
       <div class="relative w-full mx-auto my-4 font-source text-lg lg:shadow-none custom-border">
+
         <textarea
           rows="4"
           cols="30"

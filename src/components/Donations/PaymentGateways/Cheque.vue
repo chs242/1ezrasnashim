@@ -17,8 +17,8 @@
         <div class="block mt-2 p-3 bg-pink-50 rounded-lg text-pink-800">
           <strong class="uppercase">Ezras Nashim</strong>
           <span class="block text-sm">
-            123 G Street
-            <br />San Diego, CA 92101
+            1716 56th St
+            <br />Brooklyn, NY 11204
           </span>
         </div>
       </li>

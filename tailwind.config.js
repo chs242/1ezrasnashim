@@ -2,8 +2,9 @@
 module.exports = {
   theme: {
     fontFamily: {
-      'roboto': ['roboto', 'arial', 'san-serif'],
+      'roboto': ['raleway', 'arial', 'san-serif'],//added raleway font post development
       'source': ['source sans pro', 'arial', 'san-serif'],
+      'raleway': ['source sans pro', 'arial', 'san-serif'],
     },
     extend: {
       colors: {

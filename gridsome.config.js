@@ -33,6 +33,12 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-165571559-1'
+      }
+    },
+    {
       use: 'gridsome-plugin-tailwindcss',
     },
     //generating a sitemap for SEO purposes

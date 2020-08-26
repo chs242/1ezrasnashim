@@ -1,7 +1,7 @@
 <template>
   <div class="method stripe">
     <label
-      class="block uppercase tracking-wide text-grey-darker text-xs font-bold"
+      class="block text-xs font-bold tracking-wide uppercase text-grey-darker"
       for="grid-password"
     >Credit Card Details</label>
     <component
@@ -14,6 +14,10 @@
       id="card"
     />
     <div class="text-center">
+      <p
+        v-if="!complete"
+        class="mt-8 -mb-6 text-sm text-red-500"
+      >Please fill out the required fields above.</p>
       <base-button
         :cta="complete"
         @click="payWithStripe"
@@ -29,6 +33,7 @@ import BaseButton from "~/components/UI/BaseButton";
 import { Card, createToken } from "vue-stripe-elements-plus";
 import submitPaymentStripe from "~/utils/paymentWithStripe";
 import { STATES } from "~/utils/constants";
+import formComplete from "~/utils/formValidation";
 
 export default {
   name: "Stripe",
@@ -40,9 +45,10 @@ export default {
     "plan",
     "amount",
     "currency",
-    "formData"
+    "formData",
   ],
   components: { BaseButton },
+  mixins: [formComplete],
   data() {
     return {
       stripePublicKey: process.env.GRIDSOME_STRIPE_PUBLISHABLE_KEY,
@@ -55,11 +61,11 @@ export default {
             color: "#192734",
             lineHeight: "25px",
             "::placeholder": {
-              color: "#889aab"
-            }
-          }
-        }
-      }
+              color: "#889aab",
+            },
+          },
+        },
+      },
     };
   },
   computed: {
@@ -67,8 +73,8 @@ export default {
       return this.stripeLoaded && Card;
     },
     complete() {
-      return this.stripeComplete && this.validateEmail(this.formData.email);
-    }
+      return this.stripeComplete && this.formComplete(this.formData);
+    },
   },
   methods: {
     async payWithStripe() {
@@ -88,7 +94,7 @@ export default {
         recurring: this.recurring,
         plan: this.plan,
         amount: this.amount,
-        currency: this.currency
+        currency: this.currency,
       });
 
       if (result.data && result.data.status != "failed") {
@@ -97,12 +103,7 @@ export default {
         this.$emit("update:state", STATES.ERROR);
       }
     },
-    validateEmail(email) {
-      // StripeElement StripeElement--focus [hack against purge-css 🤪]
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(email).toLowerCase());
-    }
-  }
+  },
 };
 </script>
 

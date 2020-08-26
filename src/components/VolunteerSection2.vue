@@ -4,14 +4,14 @@
     <!-- Hidden input, inputs wrapped in labels are in place to ensure netlify parses the form correctly
     Note: checkbox inputs have to have a unique name that matches the formData node to work -->
     <form 
-      name="volunteer"
+      name="VOLUNTEER"
       method="post"
       v-on:submit.prevent="handleSubmit"
       action="/Success/"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="VOLUNTEER" />
       <p hidden>
         <label>
           Don’t fill this out:

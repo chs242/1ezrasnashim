@@ -9,7 +9,7 @@
             </div>
             <div>
                 <p class="font-source text-xs lg:text-sm text-gray-700 font-light py-4 px-2 md:mt-2">
-                    We are here to serve and educate the community. For women interested in becoming an EMT, we offer EMT classes which include lectures and skills/lab training. Qualified applicants who join Ezras Nashim pay be eligible for partial reimbursement of EMT training tuition.
+                    We are here to serve and educate the community. For women interested in becoming an EMT, we offer EMT classes which include lectures and skills/lab training. Qualified applicants who join Ezras Nashim may be eligible for partial reimbursement of EMT training tuition.
                 </p>
             </div>
             <div class="mt-4">

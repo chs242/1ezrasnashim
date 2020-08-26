@@ -1,7 +1,10 @@
 <template>
-  <div class="input-group text-start px-2 mb-2">
-    <label :for="name" class="label">{{name}}</label>
-    <div class="mt-1 relative rounded-md shadow-sm">
+  <div class="px-2 mb-2 input-group text-start">
+    <label :for="name" class="label">
+      {{name}}
+      <span v-if="required" class="font-bold text-red-600">*</span>
+    </label>
+    <div class="relative mt-1 rounded-md shadow-sm">
       <slot name="addon-before" />
       <textarea
         v-if="type === 'textarea'"
@@ -11,7 +14,7 @@
         v-on="inputListeners"
         :placeholder="placeholder"
         :class="[validation]"
-        class="form-input block w-full sm:text-sm sm:leading-5"
+        class="block w-full form-input sm:text-sm sm:leading-5"
       ></textarea>
       <input
         v-else
@@ -20,7 +23,7 @@
         :type="type"
         v-bind="$attrs"
         v-on="inputListeners"
-        class="form-input block w-full sm:text-sm sm:leading-5"
+        class="block w-full form-input sm:text-sm sm:leading-5"
         :class="{'pl-24': !!$slots['addon-before'], 'pr-28': !!$slots['addon-after']}"
         :placeholder="placeholder"
       />
@@ -31,34 +34,38 @@
 
 <script>
 export default {
-  name: "BaseInput",
+  name: "InputGroup",
   props: {
     type: {
       type: String,
-      default: "text"
+      default: "text",
     },
     name: String,
     placeholder: String,
     value: [String, Number],
+    required: {
+      type: Boolean,
+      default: false,
+    },
     validation: {
       type: String,
       default: "",
-      validator: function(value) {
+      validator: function (value) {
         return ["", "error", "info", "warning"].indexOf(value) !== -1;
-      }
-    }
+      },
+    },
   },
   inheritAttrs: false,
   computed: {
-    inputListeners: function() {
+    inputListeners: function () {
       var vm = this;
       return Object.assign({}, this.$listeners, {
-        input: function(event) {
+        input: function (event) {
           vm.$emit("input", event.target.value);
-        }
+        },
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

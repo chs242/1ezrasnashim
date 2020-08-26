@@ -69,8 +69,8 @@
         <div class="flex justify-center">
           <img src="../assets/images/logo-footer.png" alt="Logo" class="w-16" />
         </div>
-        <p>Email: leah@ezrasnashim.org</p>
-        <p>Address: 1716 56th St. Brokklyn, NY 11204</p>
+        <p>Email: Leah@ezrasnashim.org</p>
+        <p>Address: 1716 56th St. Brooklyn, NY 11204</p>
       </div>
 
       <div class="w-full pb-4 mt-4 flex flex-row shadow-sm md:mt-24">
@@ -92,14 +92,18 @@
             to="/about/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >About Us</g-link>
+          <g-link
+            to="/testimonials/"
+            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
+          >Testimonials</g-link>
         </div>
 
         <div class="hidden md:block text-xs lg:text-sm text-center">
           <div class="flex justify-center">
             <img src="../assets/images/logo-footer.png" alt="Logo" class="w-16" />
           </div>
-          <p>Email: leah@ezrasnashim.org</p>
-          <p>Address: 1716 56th St. Brokklyn, NY 11204</p>
+          <p>Email: Leah@ezrasnashim.org</p>
+          <p>Address: 1716 56th St. Brooklyn, NY 11204</p>
         </div>
 
         <div class="w-1/2 flex flex-col text-center">
@@ -112,6 +116,10 @@
             to="/volunteer/"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
           >Volunteer</g-link>
+          <g-link
+            to="/about/#about-team"
+            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
+          >Branches</g-link>
           <g-link
             to="/donate"
             class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"

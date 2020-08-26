@@ -3,29 +3,13 @@
   <Layout bg-color="bg-gray-100">
     <img
       src="../assets/images/contact-tab/world-map.png"
-      class="bg-img hidden lg:block absolute m-auto left-0 right-0"
+      class="absolute left-0 right-0 hidden m-auto bg-img lg:block"
     />
 
-    <div id="donate-page" class="max-w-6xl mx-auto sm:px-0 lg:px-8 py-24">
-      <div class="text-center">
-        <div
-          class="inline-flex items-center px-5 py-3 text-xs font-bold leading-5 uppercase tracking-wider bg-pink-200 text-pink-800 rounded-lg font-roboto custom-opacity"
-        >
-          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 mr-4">
-            <path
-              fill-rule="evenodd"
-              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-              clip-rule="evenodd"
-            />
-          </svg>
-          <h1>
-            Although The rest of this site is under Construction,
-            <br />Your Donation will be Processed as usual
-          </h1>
-        </div>
-      </div>
+    <div id="donate-page" class="max-w-6xl py-24 mx-auto sm:px-0 lg:px-8">
+      <div class="text-center"></div>
       <div class="flex flex-wrap items-center">
-        <div class="steps flex-2 px-1 py-4 relative md:px-4">
+        <div class="relative px-1 py-4 steps flex-2 md:px-4">
           <div class="step" key="1" v-show="step == 1">
             <DonateOptionsButtons :recurring.sync="recurring" />
             <donate-options
@@ -46,7 +30,7 @@
                 <select
                   v-model="selectedCurrency"
                   aria-label="Currency"
-                  class="form-select h-full py-0 pl-3 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm sm:leading-5"
+                  class="h-full py-0 pl-3 text-gray-500 bg-transparent border-transparent form-select pr-7 sm:text-sm sm:leading-5"
                 >
                   <option
                     v-for="(i, code) in currencies"
@@ -56,7 +40,7 @@
                   >{{code}}</option>
                 </select>
                 <span
-                  class="pl-1 text-gray-500 sm:text-sm sm:leading-5 font-semibold"
+                  class="pl-1 font-semibold text-gray-500 sm:text-sm sm:leading-5"
                 >{{currencySymbols[selectedCurrency]}}</span>
               </div>
 
@@ -67,7 +51,7 @@
               >
                 <select
                   v-model.number="selectedPlan"
-                  class="text-gray-800 font-semibold form-select h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm sm:leading-5"
+                  class="h-full py-0 pl-2 font-semibold text-gray-500 text-gray-800 bg-transparent border-transparent form-select pr-7 sm:text-sm sm:leading-5"
                 >
                   <option
                     v-for="(plan, i) in plans"
@@ -83,53 +67,83 @@
           </div>
           <div class="step" key="2" v-show="step == 2">
             <!-- FORM -->
-            <div class="max-w-lg px-2 py-8 mt-8 bg-white shadow rounded-xl md:p-8 my-2">
-              <h2 class="text-xl font-bold text-pink-900 mb-2">Personal Info</h2>
-              <div class="-mx-2 flex flex-wrap justify-between mb-4">
+            <div class="max-w-lg px-2 py-8 my-2 mt-8 bg-white shadow rounded-xl md:p-8">
+              <h2 class="mb-2 text-xl font-bold text-pink-900">Personal Info</h2>
+              <div class="flex flex-wrap justify-between mb-4 -mx-2">
                 <input-group
+                  required
                   v-model="form.firstName"
-                  name="first name"
+                  name="first name "
                   placeholder="John"
                   class="flex-1"
                 />
                 <input-group
+                  required
                   v-model="form.lastName"
-                  name="last name"
+                  name="last name "
                   placeholder="Doe"
                   class="flex-1"
                 />
               </div>
-              <div class="-mx-2 flex flex-wrap justify-between mb-4">
+              <div class="flex flex-wrap justify-between mb-4 -mx-2">
                 <input-group
+                  required
                   v-model="form.email"
-                  name="email"
+                  name="email "
                   type="email"
                   placeholder="John"
                   class="flex-1"
                 />
               </div>
-              <!-- <div class="-mx-2 flex flex-wrap mb-4">
+              <div class="flex flex-wrap mb-4 -mx-2">
                 <input-group
+                  required
                   v-model="form.address"
-                  name="billing address"
+                  name="address "
                   placeholder="1234 Washington Avenue"
                   class="flex-1"
                 />
               </div>
-              <div class="-mx-2 flex flex-wrap">
+<<<<<<< HEAD
+              <div class="flex flex-wrap -mx-2">
                 <input-group v-model="form.city" name="city" class="flex-1" />
                 <input-group v-model="form.state" name="state" class="flex-1" />
                 <input-group v-model="form.zip" name="Zip/Postal Code" class="flex-1" />
               </div>-->
-              <div class="-mx-2 flex flex-wrap">
+              <div class="flex flex-wrap -mx-2">
                 <input-group v-model="form.phone" name="phone number" type="tel" class="flex-1" />
+=======
+              <div class="flex flex-wrap -mx-2">
+                <input-group required v-model="form.city" name="city " class="flex-1" />
+                <input-group required v-model="form.state" name="state " class="flex-1" />
+                <input-group required v-model="form.zip" name="Zip/Postal Code " class="flex-1" />
+>>>>>>> 0b1057d99c7742c0eb33a93b00947a97667c9aa1
               </div>
-              <div class="-mx-2 flex flex-wrap">
+              <div class="flex flex-wrap -mx-2">
                 <input-group
-                  v-model="form.comment"
-                  name="comments"
+                  required
+                  v-model="form.phone"
+                  name="phone number "
+                  type="tel"
+                  class="flex-1"
+                />
+              </div>
+
+              <div class="flex flex-wrap mb-4 -mx-2">
+                <input-group
+                  v-model="form.InHonourOf"
+                  name="Dedication"
                   placeholder="In honor of..."
                   type="textarea"
+                  class="flex-1"
+                />
+              </div>
+
+              <div class="flex flex-wrap mb-4 -mx-2">
+                <input-group
+                  v-model="form.HonoureeEmailAddress"
+                  name="notify the honouree of your donation?"
+                  placeholder="Tell us their email address"
                   class="flex-1"
                 />
               </div>
@@ -147,7 +161,7 @@
                 @go-back="step = 1"
               />
               <base-button class="small" @click="step = 1">&larr; Back</base-button>
-              <base-button class="small" @click="submitNetlifyForm">test Netlify form</base-button>
+              <!-- <base-button class="small" @click="submitNetlifyForm">test Netlify form</base-button> -->
             </div>
             <!-- /FORM -->
 
@@ -175,9 +189,9 @@
             </form>
           </div>
         </div>
-        <div class="flex-1 px-4 text-gray-800 my-12 px-6" style="min-width: 360px">
+        <div class="flex-1 px-4 px-6 my-12 text-gray-800" style="min-width: 360px">
           <h2
-            class="text-brand-100 text-4xl font-semibold leading-tight mb-5"
+            class="mb-5 text-4xl font-semibold leading-tight text-brand-100"
           >Lights. Sirens. Passion!</h2>
           <p
             class="mb-3"
@@ -201,7 +215,7 @@ import {
   CURRENCIES,
   CURRENCY_SYMBOLS,
   PLANS,
-  PLAN_NAMES
+  PLAN_NAMES,
 } from "~/utils/constants";
 
 export default {
@@ -211,10 +225,10 @@ export default {
       {
         name: "description",
         content:
-          "Ezras Nashim is rapidly expanding to new communities across America, and we are treating more patients every day. We are revolutionizing emergency medical care for women – but we need YOUR help! With a monthly or one time donation, you can sponsor much-needed equipment and training for our dedicated team of EMTs. Partner with Ezras Nashim and join us in our life-saving work!"
-      }
+          "Ezras Nashim is rapidly expanding to new communities across America, and we are treating more patients every day. We are revolutionizing emergency medical care for women – but we need YOUR help! With a monthly or one time donation, you can sponsor much-needed equipment and training for our dedicated team of EMTs. Partner with Ezras Nashim and join us in our life-saving work!",
+      },
     ],
-    link: [{ rel: "canonical", href: "https://ezrasnashim.org/donate/" }]
+    link: [{ rel: "canonical", href: "https://ezrasnashim.org/donate/" }],
   },
   name: "Donate",
   components: {
@@ -222,7 +236,7 @@ export default {
     DonateOptionsButtons,
     DonateOptions,
     InputGroup,
-    PaymentMethods
+    PaymentMethods,
   },
   data() {
     return {
@@ -236,18 +250,19 @@ export default {
       currencySymbols: CURRENCY_SYMBOLS,
       plans: PLAN_NAMES,
       form: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        // address: '',
-        // city: '',
-        // state: '',
-        // zip: '',
-        phone: "",
-        comment: ""
+        firstName: '',
+        lastName: '',
+        email: '',
+        address: '',
+        city: '',
+        state: '',
+        zip: '',
+        phone: '',
+        InHonourOf: '',
+        HonoureeEmailAddress: '',
       },
       stripeLoaded: false,
-      paypalLoaded: false
+      paypalLoaded: false,
     };
   },
   computed: {
@@ -255,8 +270,10 @@ export default {
       const currencyCodes = Object.keys(this.currencies);
       return `https://www.paypal.com/sdk/js?client-id=${
         process.env.GRIDSOME_PAYPAL_CLIENT_ID
-      }&currency=${currencyCodes[this.selectedCurrency]}&vault=true`;
-    }
+      }&currency=${
+        currencyCodes[this.selectedCurrency]
+      }&vault=true&disable-funding=credit,card`;
+    },
   },
   methods: {
     continueToPayment() {
@@ -265,7 +282,6 @@ export default {
     },
     submitNetlifyForm() {
       console.log(this.encode({ "form-name": "donation", ...this.form }));
-
       fetch("/donate", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -273,17 +289,19 @@ export default {
           "form-name": "donation",
           amount: `${this.amount} ${
             Object.keys(this.currencies)[this.selectedCurrency]
-          } ${this.recurring ? this.plans[this.selectedPlan] : "once"}`,
-          ...this.form
-        })
+          } ${
+            this.recurring ? this.plans[this.selectedPlan] : "One time donation"
+          }`,
+          ...this.form,
+        }),
       })
         .then(() => alert("Success!"))
-        .catch(error => alert(error));
+        .catch((error) => alert(error));
     },
     encode(data) {
       return Object.keys(data)
         .map(
-          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+          (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
         )
         .join("&");
     },
@@ -310,11 +328,11 @@ export default {
       } catch (e) {
         console.log("PayPal error", e);
       }
-    }
+    },
   },
   mounted() {
     this.loadStripe();
-  }
+  },
 };
 </script>
 
@@ -331,11 +349,9 @@ export default {
     transform: scale(0.9);
   }
 }
-
 .root-form {
   max-width: 800px;
 }
-
 .step {
   overflow: hidden;
   display: flex;
@@ -343,19 +359,16 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-
 .amount {
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
-
   input[type="number"] {
     -moz-appearance: textfield;
   }
 }
-
 .custom-opacity {
   opacity: 0.6;
 }

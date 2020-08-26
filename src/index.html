@@ -3,9 +3,55 @@
   <head>
     ${head}
   </head>
+    
   <body ${bodyAttrs}>
+    <!-- Start of HubSpot Embed Code -->
 
+    <!-- Set up the path for the initial page view -->
     <script>
+      var _hsq = window._hsq = window._hsq || [];
+      _hsq.push(['setPath', '/index']);
+    </script>
+
+    <!-- Load the HubSpot tracking code -->
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7494985.js"></script>
+
+    <!-- Tracking subsequent page views -->
+    <script>
+      var _hsq = window._hsq = window._hsq || [];
+      _hsq.push(['setPath', '/about']);
+      _hsq.push(['trackPageView']);
+    
+      var _hsq = window._hsq = window._hsq || [];
+      _hsq.push(['setPath', 'contact']);
+      _hsq.push(['trackPageView']);
+    
+      var _hsq = window._hsq = window._hsq || [];
+      _hsq.push(['setPath', '/volunteer']);
+      _hsq.push(['trackPageView']);
+    
+      var _hsq = window._hsq = window._hsq || [];
+      _hsq.push(['setPath', '/testimonials']);
+      _hsq.push(['trackPageView']);
+    
+      var _hsq = window._hsq = window._hsq || [];
+      _hsq.push(['setPath', 'donate']);
+      _hsq.push(['trackPageView']);
+    
+      var _hsq = window._hsq = window._hsq || [];
+      _hsq.push(['setPath', '/news']);
+      _hsq.push(['trackPageView']);
+    
+      var _hsq = window._hsq = window._hsq || [];
+      _hsq.push(['setPath', '/endorsements']);
+      _hsq.push(['trackPageView']);
+    </script>
+    
+    <!-- End of HubSpot Embed Code -->
+
+
+    <!-- <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
@@ -15,7 +61,7 @@
           }
         });
       }
-    </script>
+    </script> -->
 
     ${app}
     ${scripts}

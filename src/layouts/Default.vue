@@ -31,7 +31,7 @@
                 />
               </svg>
             </g-link>
-            <ul class="sub-menu bg-white p-2 rounded-lg shadow-2xl">
+            <ul class="sub-menu bg-gray-200 p-2 rounded-lg shadow-2xl">
               <li>
                 <g-link to="/services/">
                   <svg
@@ -107,11 +107,15 @@
             </ul>
           </li>
         </ul>
+        <g-link
+          to="/testimonials/"
+          class="px-2 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear lg:px-3 lg:pl-1 lg:-ml-28 xl:px-0 xl:text-lg truncate"
+        >Testimonials</g-link>
       </div>
 
       <g-link
         to="/donate/"
-        class="hidden lg:flex ml-4 font-roboto text-sm font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md lg:text-base"
+        class="hidden lg:flex ml-4 font-roboto text-sm font-bold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md lg:text-base"
       >Donate</g-link>
 
       <Logo class="lg:absolute bottom-0 right-0 left-0 lg:mx-auto lg:transform lg:translate-y-2/3" />
@@ -138,6 +142,8 @@
         <g-link to="/about/" class="mobile">About</g-link>
         <g-link to="/services/" class="mobile">Services</g-link>
         <g-link to="/news/" class="mobile">News & Press</g-link>
+        <g-link to="/testimonials/" class="mobile">Testimonials</g-link>
+        <g-link to="/endorsements/" class="mobile">Endorsements</g-link>
         <g-link to="/donate/" class="mobile donate">Donate</g-link>
       </div>
     </header>
@@ -216,7 +222,7 @@ export default {
       a {
         @apply px-3 flex items-center rounded;
         &:hover {
-          @apply bg-purple-50;
+          @apply bg-gray-100;
         }
         svg {
           @apply text-purple-500 w-5 h-5;
@@ -255,9 +261,16 @@ export default {
   align-items: center;
 }
 
+.donate{
+  font-weight: bold;
+}
+
 @media (min-width: 320px) and (max-width: 1024px) {
+  .sidenav {
+    top: 4rem;
+  }
   .open {
-    height: 20rem !important;
+    height: 27rem !important;
     background: #cbd5e0;
   }
 }
@@ -267,7 +280,7 @@ export default {
     top: 5rem;
   }
   .open {
-    height: 20rem !important;
+    height: 27rem !important;
     background: #cbd5e0;
   }
 }
