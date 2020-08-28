@@ -104,20 +104,10 @@
                   class="flex-1"
                 />
               </div>
-<<<<<<< HEAD
-              <div class="flex flex-wrap -mx-2">
-                <input-group v-model="form.city" name="city" class="flex-1" />
-                <input-group v-model="form.state" name="state" class="flex-1" />
-                <input-group v-model="form.zip" name="Zip/Postal Code" class="flex-1" />
-              </div>-->
-              <div class="flex flex-wrap -mx-2">
-                <input-group v-model="form.phone" name="phone number" type="tel" class="flex-1" />
-=======
               <div class="flex flex-wrap -mx-2">
                 <input-group required v-model="form.city" name="city " class="flex-1" />
                 <input-group required v-model="form.state" name="state " class="flex-1" />
                 <input-group required v-model="form.zip" name="Zip/Postal Code " class="flex-1" />
->>>>>>> 0b1057d99c7742c0eb33a93b00947a97667c9aa1
               </div>
               <div class="flex flex-wrap -mx-2">
                 <input-group
@@ -250,16 +240,16 @@ export default {
       currencySymbols: CURRENCY_SYMBOLS,
       plans: PLAN_NAMES,
       form: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        address: '',
-        city: '',
-        state: '',
-        zip: '',
-        phone: '',
-        InHonourOf: '',
-        HonoureeEmailAddress: '',
+        firstName: "",
+        lastName: "",
+        email: "",
+        address: "",
+        city: "",
+        state: "",
+        zip: "",
+        phone: "",
+        InHonourOf: "",
+        HonoureeEmailAddress: "",
       },
       stripeLoaded: false,
       paypalLoaded: false,
