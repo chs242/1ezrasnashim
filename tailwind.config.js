@@ -1,10 +1,10 @@
 // tailwind.config.js
 module.exports = {
   purge: [
-    '**/*.html',
-    '**/*.vue',
-    '**/*.css',
-    '**/*.scss',
+    './src/**/*.html',
+    './src/**/*.vue',
+    './src/**/*.css',
+    './src/**/*.scss',
   ],
   theme: {
     fontFamily: {
