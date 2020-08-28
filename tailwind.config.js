@@ -1,5 +1,11 @@
 // tailwind.config.js
 module.exports = {
+  purge: [
+    '**/*.html',
+    '**/*.vue',
+    '**/*.css',
+    '**/*.scss',
+  ],
   theme: {
     fontFamily: {
       'roboto': ['raleway', 'arial', 'san-serif'],//added raleway font post development
@@ -25,6 +31,5 @@ module.exports = {
   variants: {},
   plugins: [
     require('@tailwindcss/ui'),
-    require('@tailwindcss/custom-forms')
   ],
 }

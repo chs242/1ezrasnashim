@@ -1,25 +1,25 @@
 <template>
-  <div id="app" class="min-h-screen flex flex-col">
+  <div id="app" class="flex flex-col min-h-screen">
     <header
-      class="fixed w-full lg:relative py-2 lg:py-4 px-6 bg-gray-200 flex justify-between items-center custom-border"
+      class="fixed z-10 flex items-center justify-between w-full px-6 py-2 bg-gray-200 lg:relative lg:py-4 custom-border"
     >
-      <div class="hidden lg:flex -ml-4 justify-center items-center">
+      <div class="items-center justify-center hidden -ml-4 lg:flex">
         <g-link
           to="/"
-          class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
+          class="px-2 text-sm font-semibold truncate transition duration-100 ease-linear lg:px-3 font-roboto lg:text-base hover:text-purple-800 xl:text-lg"
         >Home</g-link>
         <g-link
           to="/volunteer/"
-          class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
+          class="px-2 text-sm font-semibold truncate transition duration-100 ease-linear lg:px-3 font-roboto lg:text-base hover:text-purple-800 xl:text-lg"
         >Volunteer</g-link>
         <g-link
           to="/contact/"
-          class="px-2 lg:px-3 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg truncate"
+          class="px-2 text-sm font-semibold truncate transition duration-100 ease-linear lg:px-3 font-roboto lg:text-base hover:text-purple-800 xl:text-lg"
         >Contact</g-link>
 
         <ul class="menu">
           <li
-            class="px-2 lg:px-4 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear xl:text-lg"
+            class="px-2 text-sm font-semibold transition duration-100 ease-linear lg:px-4 font-roboto lg:text-base hover:text-purple-800 xl:text-lg"
           >
             <g-link to="/about/">
               About
@@ -31,7 +31,7 @@
                 />
               </svg>
             </g-link>
-            <ul class="sub-menu bg-gray-200 p-2 rounded-lg shadow-2xl">
+            <ul class="p-2 bg-gray-200 rounded-lg shadow-2xl sub-menu">
               <li>
                 <g-link to="/services/">
                   <svg
@@ -109,22 +109,22 @@
         </ul>
         <g-link
           to="/testimonials/"
-          class="px-2 font-roboto text-sm lg:text-base font-semibold hover:text-purple-800 transition duration-100 ease-linear lg:px-3 lg:pl-1 lg:-ml-28 xl:px-0 xl:text-lg truncate"
+          class="px-2 text-sm font-semibold truncate transition duration-100 ease-linear font-roboto lg:text-base hover:text-purple-800 lg:px-3 lg:pl-1 lg:-ml-28 xl:px-0 xl:text-lg"
         >Testimonials</g-link>
       </div>
 
       <g-link
         to="/donate/"
-        class="hidden lg:flex ml-4 font-roboto text-sm font-bold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full px-12 py-2 leading-normal shadow-md lg:text-base"
+        class="hidden px-12 py-2 ml-4 text-sm font-bold leading-normal text-white bg-pink-600 border-2 border-pink-600 rounded-full shadow-md lg:flex font-roboto hover:text-pink-600 hover:bg-white lg:text-base"
       >Donate</g-link>
 
-      <Logo class="lg:absolute bottom-0 right-0 left-0 lg:mx-auto lg:transform lg:translate-y-2/3" />
+      <Logo class="bottom-0 left-0 right-0 lg:absolute lg:mx-auto lg:transform lg:translate-y-2/3" />
 
       <!-- Bear in mind there is additional CSS below in the styles tag -->
       <div class="lg:hidden" :class="{ 'is-drawerActive': isActive }">
         <button
           type="button"
-          class="c-button p-hamburger self-end lg:hidden absolute"
+          class="absolute self-end c-button p-hamburger lg:hidden"
           @click="isActive = !isActive"
           aria-controls="global-nav"
           :aria-expanded="isActive ? 'true' : 'false'"
@@ -148,52 +148,54 @@
       </div>
     </header>
     <transition name="slideUp" appear>
-      <main class="main flex-1" :class="[bgColor]">
+      <main class="flex-1 main" :class="[bgColor]">
         <slot />
       </main>
     </transition>
     <Footer />
+    <popup />
   </div>
 </template>
 
 <script>
 import Logo from "~/components/Logo.vue";
 import Footer from "~/components/Footer.vue";
+import Popup from "~/components/Popup.vue";
 export default {
   props: {
     showLogo: { default: true },
-    bgColor: String
+    bgColor: String,
   },
   components: {
     Logo,
-    Footer
+    Footer,
+    Popup,
   },
   data() {
     return {
       links: [
         {
           name: "Home",
-          url: "/"
+          url: "/",
         },
         {
           name: "Volunteer",
-          url: "/volunteer/"
+          url: "/volunteer/",
         },
         {
           name: "Contact",
-          url: "/contact/"
-        }
+          url: "/contact/",
+        },
       ],
-      isActive: false
+      isActive: false,
     };
-  }
+  },
 };
 </script>
 
 <style scoped lang="scss">
 .custom-border {
   border-bottom: 2px solid #72298f;
-  z-index: 100000;
 }
 
 /* about: dropdown menu */
@@ -261,7 +263,7 @@ export default {
   align-items: center;
 }
 
-.donate{
+.donate {
   font-weight: bold;
 }
 

@@ -1,16 +1,7 @@
 // @import url("https://fonts.googleapis.com/css?family=Roboto:500,700|Source+Sans+Pro&display=swap");
 // @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
-
-@import "reset";
-@import "content-box";
-
-// Default
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
 
 body {
   // background-color: #F3F7F9;
@@ -24,3 +15,6 @@ label.label {
   @apply block uppercase tracking-wide text-xs font-medium leading-5 text-gray-700;
   font-weight: bold !important;
 }
+
+@tailwind components;
+@tailwind utilities;

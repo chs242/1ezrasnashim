@@ -1,3 +1,4 @@
+const tailwindcss = require("tailwindcss")
 // This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
@@ -38,9 +39,6 @@ module.exports = {
         id: 'UA-165571559-1'
       }
     },
-    {
-      use: 'gridsome-plugin-tailwindcss',
-    },
     //generating a sitemap for SEO purposes
     {
       use: '@gridsome/plugin-sitemap',
@@ -67,5 +65,15 @@ module.exports = {
         '@gridsome/remark-prismjs'
       ]
     }
+  },
+
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          tailwindcss
+        ],
+      },
+    },
   }
 }
