@@ -1,9 +1,11 @@
 <template>
   <transition name="modal-fade">
     <div v-show="isOpen" class="fixed z-50 flex items-center justify-center w-screen h-screen">
+      <!-- overlay -->
       <div @click="closePopup" class="fixed w-screen h-screen bg-purple-200 bg-opacity-75"></div>
+      <!-- modal -->
       <section
-        class="relative flex flex-col items-stretch max-w-2xl m-2 overflow-hidden bg-white rounded-lg shadow-2xl modal sm:flex-row"
+        class="relative flex flex-col items-stretch max-w-2xl max-h-full m-2 overflow-hidden bg-white rounded-lg shadow-2xl modal sm:flex-row"
       >
         <button @click="closePopup" class="absolute top-4 left-4 focus:outline-none">
           <svg
@@ -27,7 +29,7 @@
             class="object-cover w-full h-full"
           />
         </div>
-        <div class="flex-1 p-6">
+        <div class="flex-1 p-6 overflow-auto">
           <h2
             class="text-3xl font-extrabold leading-7 text-purple-900"
           >We have the most exciting news to share with you!</h2>
