@@ -38,15 +38,7 @@
           >This past Thursday, August.., Ezras Nashim won the vote in State EMS Counsil (SEMSCO) by a landslide. 23 for Ezras Nashim and only 2 against.</p>
           <p
             class="mt-4 text-sm"
-          >We were granted the operating authority under NYS Public Health Law Article 30. Finally we will be able to transport our own patients and own our own ambulance! Now our EMTs will be able to use lights and sirens in their cars (once they go through certain trainings and inspections) thereby making our response time go up!</p>
-          <div class="flex justify-center mt-4">
-            <a
-              href="https://www.causematch.com/en/projects/ezras-nashim/"
-              target="_blank"
-              role="nofollow"
-              class="px-4 py-3 font-bold leading-4 text-white rounded-full bg-gradient-to-br from-pink-600 to-purple-500"
-            >Donate to the Campaign</a>
-          </div>
+          >We were granted the operating authority under NYS Public Health Law Article 30. Finally we will be able to transport our own patients and own our own ambulance! Now our EMTs will be able to use lights and sirens in their cars (once they go through certain trainings and inspections) thereby making our response time go down!</p>
         </div>
       </section>
     </div>
