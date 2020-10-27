@@ -153,7 +153,7 @@
       </main>
     </transition>
     <Footer />
-    <popup />
+    
   </div>
 </template>
 
