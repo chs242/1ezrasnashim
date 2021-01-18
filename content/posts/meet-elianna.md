@@ -1,5 +1,5 @@
 ---
-title: Meet Elianna!
+title: Meet Elianna
 date: 2021-01-18T03:25:26.727Z
 published: true
 tags:
