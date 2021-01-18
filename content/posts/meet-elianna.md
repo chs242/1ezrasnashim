@@ -3,8 +3,8 @@ title: Meet Elianna!
 date: 2020-06-15T02:14:38.820Z
 published: true
 tags:
-  - "#Blog"
-  - "#MeetEzrasNashim"
+  - "# Blog"
+  - "# MeetEzrasNashim"
 cover_image: /images/uploads/eliannaashendorfblogpostimage.jpeg
 description: Meet Elianna Ashendorf, an 18 year old student at Yeshiva
   University’s Stern College for Women, and one of 3 coordinators of the Ezras
