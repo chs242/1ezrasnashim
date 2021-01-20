@@ -12,7 +12,7 @@ description: |-
   Meet Nana, a premed student and EMT. 
 
   <!--EndFragment-->
-manuel_pdf: /uploads/general-manual.pdf
+manuel_pdf: ""
 ---
 <!--StartFragment-->
 
