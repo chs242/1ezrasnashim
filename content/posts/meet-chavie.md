@@ -3,7 +3,7 @@ title: Meet Chavie
 date: 2021-01-20T02:20:52.291Z
 published: true
 tags:
-  - tag
+  - Blog
 cover_image: /images/uploads/chavieweisshausblogpic.jpeg
 description: >-
   <!--StartFragment-->
