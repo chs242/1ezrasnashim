@@ -3,13 +3,13 @@ title: Meet Chavie
 date: 2021-01-20T02:20:52.291Z
 published: true
 tags:
-  - Blog
+  - tag
 cover_image: /images/uploads/chavieweisshausblogpic.jpeg
 description: >-
   <!--StartFragment-->
 
 
-  Chavi, an experienced EMT and longtime Ezras Nashim volunteer, shares her experience of a recent call:
+  Chavi, an experienced EMT and longtime Ezras Nashim volunteer, shares her experience of a recent call.
 
 
   <!--EndFragment-->
