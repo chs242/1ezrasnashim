@@ -3,7 +3,7 @@ title: Power Stretcher Training
 date: 2021-01-20T02:27:35.416Z
 published: true
 tags:
-  - tag
+  - Blog
   - ENTraining
 cover_image: /images/uploads/powerstretchertraining2.jpeg
 description: >-
