@@ -3,7 +3,8 @@ title: Meet Nana
 date: 2021-01-20T02:10:20.056Z
 published: true
 tags:
-  - tag
+  - Blog
+  - MeetEzrasNashim
 cover_image: /images/uploads/nanamagradzeblogpic.jpeg
 description: |-
   <!--StartFragment-->
