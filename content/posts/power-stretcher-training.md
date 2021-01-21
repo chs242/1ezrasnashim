@@ -18,8 +18,6 @@ manuel_pdf: ""
 ---
 <!--StartFragment-->
 
-The Ezras Nashim headquarters has been bustling with activity ever since the arrival of the new ambulance and equipment.\
-The team has gone through rigorous training sessions relative to the new equipment, such as proper stair chair and power stretcher operation.\
-The power stretcher training includes operation during power malfunction.
+The Ezras Nashim headquarters has been bustling with activity ever since the arrival of the new ambulance and equipment. The team has gone through rigorous training sessions relative to the new equipment, such as proper stair chair and power stretcher operation. The power stretcher training includes operation during power malfunction.
 
 <!--EndFragment-->
