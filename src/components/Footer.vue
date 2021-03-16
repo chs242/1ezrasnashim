@@ -1,59 +1,68 @@
 <template>
-  <footer class="footer bg-gray-200 flex flex-col md:text-xs">
-
+  <footer class="flex flex-col bg-gray-200 footer md:text-xs">
     <!-- Begin Mailchimp Signup Form -->
 
     <div id="mc_embed_signup">
-      <form 
-        action="https://ezras-nashim.us7.list-manage.com/subscribe/post?u=595de164da802e29869878694&amp;id=5f22530505" 
-        method="post" 
-        id="mc-embedded-subscribe-form" 
-        name="mc-embedded-subscribe-form" 
-        class="validate" 
-        target="_blank" 
+      <form
+        action="https://ezras-nashim.us7.list-manage.com/subscribe/post?u=595de164da802e29869878694&amp;id=5f22530505"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate"
+        target="_blank"
         novalidate
       >
         <div id="mc_embed_signup_scroll">
-          <div id="subscribe" class="shadow-xl py-4 md:flex">
-            <div class="flex justify-center w-full px-6 text-center md:w-1/2 lg:pl-40">                     
+          <div id="subscribe" class="py-4 shadow-xl md:flex">
+            <div
+              class="flex justify-center w-full px-6 text-center md:w-1/2 lg:pl-40"
+            >
               <h2
                 for="mce-EMAIL"
-                class="font-source text-2xl lg:text-4xl lg:text-left text-pink-900 font-light"
-              >Keep up with the latest happenings at Ezras Nashim!
+                class="text-2xl font-light text-pink-900 font-source lg:text-4xl lg:text-left"
+              >
+                Keep up with the latest happenings at Ezras Nashim!
               </h2>
             </div>
-            
+
             <div
               class="flex justify-center w-full mt-4 md:mt-0 md:inline-flex md:w-1/2 md:relative md:pr-8 md:items-center lg:px-32 lg:pr-48"
             >
-              <input 
-                type="email" 
-                value="" 
-                name="EMAIL" 
-                class="font-roboto text-base text-center md:text-left font-light border-2 rounded-full w-4/5 min-w-40 md:w-full md:px-2 py-2 lg:py-3 leading-normal shadow-2xl"
-                id="mce-EMAIL" 
-                placeholder="email address" 
-                required
-              >
               <input
-                type="submit" 
-                value="Subscribe" 
-                name="subscribe" 
+                type="email"
+                value=""
+                name="EMAIL"
+                class="w-4/5 py-2 text-base font-light leading-normal text-center border-2 rounded-full shadow-2xl font-roboto md:text-left min-w-40 md:w-full md:px-2 lg:py-3"
+                id="mce-EMAIL"
+                placeholder="email address"
+                required
+              />
+              <input
+                type="submit"
+                value="Subscribe"
+                name="subscribe"
                 id="mc-embedded-subscribe"
-                class="hidden text-center md:inline md:absolute md:right-0 md:w-1/3 lg:w-32 md:mr-4 lg:mr-24 xl:mr-40 font-roboto text-base font-semibold text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full w-4/5 py-2 lg:py-3 leading-normal shadow-2xl"
+                class="hidden w-4/5 py-2 text-base font-semibold leading-normal text-center text-white bg-pink-600 border-2 border-pink-600 rounded-full shadow-2xl md:inline md:absolute md:right-0 md:w-1/3 lg:w-32 md:mr-4 lg:mr-24 xl:mr-40 font-roboto hover:text-pink-600 hover:bg-white lg:py-3"
               />
             </div>
 
             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_595de164da802e29869878694_5f22530505" tabindex="-1" value=""></div>
-            
+            <div style="position: absolute; left: -5000px" aria-hidden="true">
+              <input
+                type="text"
+                name="b_595de164da802e29869878694_5f22530505"
+                tabindex="-1"
+                value=""
+              />
+            </div>
+
             <div class="flex justify-center w-full mt-2 md:hidden">
               <input
-                type="submit" 
-                value="Subscribe" 
-                name="subscribe" 
+                type="submit"
+                value="Subscribe"
+                name="subscribe"
                 id="mc-embedded-subscribe"
-                class="font-roboto text-base font-semibold text-center text-white hover:text-pink-600 bg-pink-600 hover:bg-white border-2 border-pink-600 rounded-full w-4/5 py-2 leading-normal shadow-2xl"
+                class="w-4/5 py-2 text-base font-semibold leading-normal text-center text-white bg-pink-600 border-2 border-pink-600 rounded-full shadow-2xl font-roboto hover:text-pink-600 hover:bg-white"
               />
             </div>
           </div>
@@ -63,79 +72,219 @@
 
     <!--End mc_embed_signup-->
 
+    <section class="bg-white" aria-labelledby="footerHeading">
+      <h2 id="footerHeading" class="sr-only">Footer</h2>
+      <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+        <div class="xl:grid xl:grid-cols-2 xl:gap-8">
+          <div class="space-y-7 xl:col-span-1">
+            <img
+              class="h-14"
+              src="../assets/images/logo-footer.png"
+              alt="Ezras Nashim"
+            />
+            <p class="text-base text-gray-500">
+              Ezras Nashim is a 501(c)3<br />
+              Our legal name is: Chasdei Devorah Inc. DBA Ezras Nashim.<br />
+              Our EIN number is: 34-2006065<br />
+              Address: 1716 56th St. Brooklyn, NY 11204
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="mailto:Leah@ezrasnashim.org"
+                target="_blank"
+                class="text-gray-400 hover:text-pink-500"
+              >
+                <span class="sr-only">Email</span>
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </a>
 
-    <div id="footer-end" class="mt-4">
-      <div class="md:hidden flex flex-col text-center">
-        <div class="flex justify-center">
-          <img src="../assets/images/logo-footer.png" alt="Logo" class="w-16" />
-        </div>
-        <p>Email: Leah@ezrasnashim.org</p>
-        <p>Address: 1716 56th St. Brooklyn, NY 11204</p>
-      </div>
+              <a
+                href="https://m.facebook.com/ezrasnashim/"
+                target="_blank"
+                class="text-gray-400 hover:text-pink-500"
+              >
+                <span class="sr-only">Facebook</span>
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
 
-      <div class="w-full pb-4 mt-4 flex flex-row shadow-sm md:mt-24">
-        <div class="w-1/2 flex flex-col text-center">
-          <p class="w-full font-roboto text-sm lg:text-lg font-medium md:mb-6">Service</p>
-          <g-link
-            to="/about/"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >Our Team</g-link>
-          <g-link
-            to="/volunteer/"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >Our Services</g-link>
-          <g-link
-            to="/endorsements/"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >Endorsments</g-link>
-          <g-link
-            to="/about/"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >About Us</g-link>
-          <g-link
-            to="/testimonials/"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >Testimonials</g-link>
-        </div>
+              <a
+                href="https://www.instagram.com/ezrasnashim/?hl=en"
+                target="_blank"
+                class="text-gray-400 hover:text-pink-500"
+              >
+                <span class="sr-only">Instagram</span>
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
 
-        <div class="hidden md:block text-xs lg:text-sm text-center">
-          <div class="flex justify-center">
-            <img src="../assets/images/logo-footer.png" alt="Logo" class="w-16" />
+              <a
+                href="https://mobile.twitter.com/ezrasnashimemts?lang=en"
+                target="_blank"
+                class="text-gray-400 hover:text-pink-500"
+              >
+                <span class="sr-only">Twitter</span>
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
-          <p>Email: Leah@ezrasnashim.org</p>
-          <p>Address: 1716 56th St. Brooklyn, NY 11204</p>
-        </div>
+          <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0">
+            <div>
+              <h3
+                class="text-sm font-semibold tracking-wider text-gray-400 uppercase"
+              >
+                Service
+              </h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a
+                    href="/about"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Our Team
+                  </a>
+                </li>
 
-        <div class="w-1/2 flex flex-col text-center">
-          <p class="w-full font-roboto text-sm lg:text-lg font-medium md:mb-6">Popular</p>
-          <g-link
-            to="/news/"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >News & Press</g-link>
-          <g-link
-            to="/volunteer/"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >Volunteer</g-link>
-          <g-link
-            to="/about/#about-team"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >Branches</g-link>
-          <g-link
-            to="/donate"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >Donate</g-link>
-          <g-link
-            to="/contact/"
-            class="w-full font-source text-gray-700 text-xs lg:text-sm font-medium hover:text-purple-800"
-          >Contact Us</g-link>
+                <li>
+                  <a
+                    href="/volunteer"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Our services
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/endorsements"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Endorsements
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/about"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    About Us
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/testimonials"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Testimonials
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-12 md:mt-0">
+              <h3
+                class="text-sm font-semibold tracking-wider text-gray-400 uppercase"
+              >
+                Popular
+              </h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a
+                    href="/news"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    News & Press
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/volunteer"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Volunteer
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/about#about-team"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Branches
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/donate"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Donate
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/contact"
+                    class="text-base text-gray-500 hover:text-gray-900"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8 mt-12 border-t border-gray-200">
+          <p class="text-base text-gray-400 xl:text-center">
+            &copy; {{ new Date().getFullYear() }} Ezras Nashim. All rights
+            reserved.
+          </p>
         </div>
       </div>
-      <div id="softwarebuild" class="my-4 px-4 text-sm flex justify-center md:justify-end">
-        <h4>&copy; 2020 Powered by</h4>
-        <a href="https://www.softwarebuild.co.uk/" target="_blank" class="inline-block">
-          <img src="../assets/images/SVGLogo.svg" alt class="w-12" />
-        </a>
-      </div>
-    </div>
+    </section>
   </footer>
 </template>
