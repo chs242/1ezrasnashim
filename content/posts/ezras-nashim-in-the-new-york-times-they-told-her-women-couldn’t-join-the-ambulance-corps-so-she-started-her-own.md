@@ -4,8 +4,8 @@ title: "Ezras Nashim in The New York Times: They Told Her Women Couldn’t Join
 date: 2021-05-30T14:23:38.533Z
 published: true
 tags:
-  - News
-  - Ambulance
+  - " News"
+  - " Ambulance"
 description: <https://www.nytimes.com/2021/04/19/us/ezras-nashim-womens-EMT.html>
 manuel_pdf: ""
 ---
