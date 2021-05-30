@@ -8,6 +8,6 @@ tags:
   - " Ambulance"
 cover_image: /images/uploads/en-nyt-article.png
 description: <https://www.nytimes.com/2021/04/19/us/ezras-nashim-womens-EMT.html>
-manuel_pdf: ""
+manuel_pdf: /images/uploads/en-nyt-article.png
 ---
 Click here to read about the newest Ezras Nashim article in The New York Times.
