@@ -46,7 +46,9 @@ curl -v -k -X POST https://api.sandbox.paypal.com/v1/billing/plans \
         "interval_unit": "MONTH", // options: ['DAY', 'WEEK', 'MONTH', 'YEAR']
         "interval_count": 1
       },
-      "tenure_type": "REGULAR", "sequence": 1,
+      "tenure_type": "REGULAR",
+      "sequence": 1,
+      "total_cycles": 12,
       "pricing_scheme": {
         "fixed_price": {
           "value": "1",
@@ -65,4 +67,14 @@ curl -v -k -X POST https://api.sandbox.paypal.com/v1/billing/plans \
     "payment_failure_threshold": 0
   }
 }'
+```
+
+## 4: List plans
+
+```bash
+curl -v -k -X GET https://api.sandbox.paypal.com/v1/billing/plans \
+-H "Accept: application/json" \
+-H "Authorization: Bearer PAYPAL_BEARER_TOKEN" \
+-H "Prefer: return=representation" \
+-H "Content-Type: application/json" \
 ```

@@ -1,17 +1,17 @@
 <template>
-  <div class="mb-4 method paypal" :class="{ 'opacity-50 pointer-events-none': !complete }">
-    <p
-      v-if="!complete"
-      class="text-sm text-center text-red-600"
-    >Please fill out the required fields above.</p>
+  <div
+    class="mb-4 method paypal"
+    :class="{ 'opacity-50 pointer-events-none': !complete }"
+  >
+    <p v-if="!complete" class="text-sm text-center text-red-600">
+      Please fill out the required fields above.
+    </p>
     <div ref="paypalBtns" id="paypal-button-container"></div>
   </div>
 </template>
 
 <script>
 import BaseButton from "~/components/UI/BaseButton";
-import { Card, createToken } from "vue-stripe-elements-plus";
-import submitPaymentStripe from "~/utils/paymentWithStripe";
 import { STATES, PAYPAL_PLANS_IDS } from "~/utils/constants";
 import formComplete from "~/utils/formValidation";
 
@@ -28,25 +28,6 @@ export default {
   ],
   components: { BaseButton },
   mixins: [formComplete],
-  data() {
-    return {
-      stripePublicKey: process.env.GRIDSOME_STRIPE_PUBLISHABLE_KEY,
-      stripeOptions: {
-        hidePostalCode: true,
-        style: {
-          base: {
-            fontSize: "1rem",
-            fontFamily: "Roboto, sans serif",
-            color: "#192734",
-            lineHeight: "25px",
-            "::placeholder": {
-              color: "#889aab",
-            },
-          },
-        },
-      },
-    };
-  },
   computed: {
     complete() {
       return this.paypalLoaded && this.formComplete(this.formData);
