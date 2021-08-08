@@ -41,39 +41,39 @@ export const PLAN_NAMES = {
 // live Donation Plan IDs
 export const PAYPAL_PLANS_IDS = {
   USD: {
-    "1": 'P-36H45967138134333L2EYDWI', // Daily -
-    "2": 'P-52T23091AV280332KL2EYDNA', // Weekly -
-    "3": 'P-53V65927J7453921AL2EYDCA', // Monthly -
-    "4": 'P-4RP35237P2872091XL2EYD7A', // Quarterly -
-    "5": 'P-706593662R139444HL2EYEII', // Yearly -
+    "1": 'P-8BR65618NG362520JMEIGGNQ', // Daily -
+    "2": 'P-2H566191W87222818MEIGH3I', // Weekly -
+    "3": 'P-3P589682261985541MEIGH3Q', // Monthly -
+    "4": 'P-2KY29368A1140344UMEIGH3Y', // Quarterly -
+    "5": 'P-0P4851666L6007052MEIGH4A', // Yearly -
   },
   CAD: {
-    "1": 'P-98R76062CP011270CL2K2DDQ', // Daily -
-    "2": 'P-1NA69093FU109733EL2K2DSI', // Weekly -
-    "3": 'P-0V027413CA3925926L2K2DYQ', // Monthly -
-    "4": 'P-8J418447YE4603003L2K2D5I', // Quarterly -
-    "5": 'P-4N366725NF3479213L2K2EDA', // Yearly -
+    "1": 'P-8AG04350H0178884HMEIGIOA', // Daily -
+    "2": 'P-65N74712HP316324CMEIGIOI', // Weekly -
+    "3": 'P-0BK66566HN996500MMEIGIOQ', // Monthly -
+    "4": 'P-2AP10377G2887142SMEIGIOY', // Quarterly -
+    "5": 'P-9AS64292LG4100541MEIGIOY', // Yearly -
   },
   EUR: {
-    "1": 'P-0C412737L6895720AL2K2EJQ', // Daily -
-    "2": 'P-0EJ89532KS825774NL2K2ENQ', // Weekly -
-    "3": 'P-67883046X3406591ML2K2EQY', // Monthly -
-    "4": 'P-73B28517GT826974BL2K2EUY', // Quarterly -
-    "5": 'P-9291255963919054FL2K2E3I', // Yearly -
+    "1": 'P-9BJ36004PP102144EMEIGI5Q', // Daily -
+    "2": 'P-57P25999ES357372YMEIGI5Y', // Weekly -
+    "3": 'P-3VP281689W791054TMEIGI6A', // Monthly -
+    "4": 'P-7HR89882FJ130491EMEIGI6I', // Quarterly -
+    "5": 'P-8Y0221385V451093UMEIGI6Q', // Yearly -
   },
   GBP: {
-    "1": 'P-7T2467823K5922435L2K2FBY', // Daily -
-    "2": 'P-0YG376172T075015CL2K2FFY', // Weekly -
-    "3": 'P-61846199JC389184SL2K2FJQ', // Monthly -
-    "4": 'P-58398628BA388270DL2K2FNA', // Quarterly -
-    "5": 'P-86F69602H0101442WL2K2FSA', // Yearly -
+    "1": 'P-3N564801P0507291YMEIGJGA', // Daily -
+    "2": 'P-5WH83087LB5267412MEIGJGI', // Weekly -
+    "3": 'P-5B473500E60838711MEIGJGQ', // Monthly -
+    "4": 'P-2WH834806Y667964PMEIGJGY', // Quarterly -
+    "5": 'P-9LU345526X8302208MEIGJGY', // Yearly -
   },
   ILS: {
-    "1": 'P-5TK81494YX8941412L2K2FYI', // Daily -
-    "2": 'P-39V13516JW380591BL2K2F4I', // Weekly -
-    "3": 'P-58N12866R9099515ML2K2F7Q', // Monthly -
-    "4": 'P-8X363223HB439653TL2K2GDI', // Quarterly -
-    "5": 'P-1TB44025MM499341JL2K2GHI', // Yearly -
+    "1": 'P-1DY065845X561360DMEIGJRA', // Daily -
+    "2": 'P-8A7743085A115782VMEIGJRI', // Weekly -
+    "3": 'P-1BN99737B4503522BMEIGJRQ', // Monthly -
+    "4": 'P-1WX09920P7997632BMEIGJRY', // Quarterly -
+    "5": 'P-3ET32577AH6305036MEIGJSA', // Yearly -
   },
 }
 

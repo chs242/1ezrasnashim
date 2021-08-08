@@ -5,7 +5,8 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "dev": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "script": "node scripts/paypal.js"
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
