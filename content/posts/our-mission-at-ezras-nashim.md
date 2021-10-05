@@ -11,13 +11,13 @@ description: >-
   <!--StartFragment-->
 
 
-  Ezras Nashim. Our mission. Our purpose and our commitment to the community.
+  **Ezras Nashim. Our mission. Our purpose and our commitment to the community.**
 
 
   Ezras Nashim was founded on the belief that no woman should have to hesitate calling for emergency medical care. Primarily intended for women experiencing emergency labor or OB/GYN emergencies, it soon became apparent that the needs of the community surpassed that of just gynecological services. Beyond that, Ezras Nashim participates in many ways to serve communities. 
 
 
-  Coronavirus community care: During the Coronavirus pandemic, our EMT staff was responding to calls 24/7 and enabling the sick to receive treatment in their own homes, as many were very reluctant to go to hospitals for care. The elderly suffering from the virus were especially hesitant about checking into hospitals for treatment, knowing they would be alone and isolated from their families and advocates, due to Covid restrictions. 
+  **Coronavirus community care:** During the Coronavirus pandemic, our EMT staff was responding to calls 24/7 and enabling the sick to receive treatment in their own homes, as many were very reluctant to go to hospitals for care. The elderly suffering from the virus were especially hesitant about checking into hospitals for treatment, knowing they would be alone and isolated from their families and advocates, due to Covid restrictions. 
 
 
   Instead, they called us.
@@ -29,7 +29,7 @@ description: >-
   This is just one example of how committed Ezras Nashim is to support everyone in our communities.  
 
 
-  Coronavirus community educational services: At Ezras Nashim we believe prevention is key, which is why the Home Visit Program is such a vital part of our organization.
+  **Coronavirus community educational services:** At Ezras Nashim we believe prevention is key, which is why the Home Visit Program is such a vital part of our organization.
 
 
   When responding to certain calls our EMTs often observe a situation in which they determine the patient would benefit from consistent monitoring. Whether these women often experience sudden spikes in their blood pressure or frequently forget to take their medications, checking in on them weekly, monitoring their vitals and ensuring they’re taking their medications properly, prevents them from becoming frequent callers for emergency medical care. 
@@ -59,9 +59,7 @@ description: >-
   We ask for your help us realize our mission, our purpose and our commitment to the community with professionalism and compassion.
 
 
-  Join us!
-
-
+  **Join us!**
 
 
   <!--EndFragment-->
